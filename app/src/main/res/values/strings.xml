@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">BiblioUnifor</string>
+
+    <string name="titulo_redefinir">Redefinir Senha</string>
+    <string name="descricao_redefinir">
+        Preencha os campos abaixo com a sua nova senha.
+    </string>
+
+    <string name="nova_senha">Nova senha</string>
+    <string name="confirmar_senha">Confirme a senha</string>
+
+    <string name="btn_redefinir">Redefinir senha</string>
+    <string name="voltar">&lt; Voltar</string>
+
+    <string name="erro_campo">Campo obrigatório</string>
+
+    <string name="requisitos_senha">
+    A senha deve conter:
+    \n• Pelo menos 8 caracteres
+    \n• Uma letra maiúscula
+    \n• Um número
+    </string>
 </resources>
