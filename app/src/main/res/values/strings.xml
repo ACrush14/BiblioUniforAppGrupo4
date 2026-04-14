@@ -6,13 +6,23 @@
         Preencha os campos abaixo com a sua nova senha.
     </string>
 
+    <string name="descricao_confirmacao_codigo">
+        Por favor, insira abaixo o código de
+        verificação enviado ao seu e-mail.
+        O código será expirado em 2:00.
+    </string>
+
     <string name="nova_senha">Nova senha</string>
     <string name="confirmar_senha">Confirme a senha</string>
+    <string name="digite_codigo">Digite aqui seu código</string>
 
-    <string name="btn_redefinir">Redefinir senha</string>
+    <string name="btn_redefinir">Redefinir Senha</string>
+    <string name="btn_enviar">Enviar</string>
     <string name="voltar">&lt; Voltar</string>
+    <string name="reenviar">Reenviar Código</string>
 
-    <string name="erro_campo">Campo obrigatório</string>
+    <string name="erro_campo">Campo Obrigatório</string>
+    <string name="erro_codigo">Codigo Incorreto</string>
 
     <string name="requisitos_senha">
     A senha deve conter:
@@ -20,4 +30,8 @@
     \n• Uma letra maiúscula
     \n• Um número
     </string>
+
+    <string name="erro_senha_igual">A senha é a mesma da antiga</string>
+    <string name="erro_senha_diferente">As senhas estão diferentes, verifique!</string>
+
 </resources>
