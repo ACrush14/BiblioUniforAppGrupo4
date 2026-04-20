@@ -8,8 +8,8 @@
 
     <string name="descricao_confirmacao_codigo">
         Por favor, insira abaixo o código de
-        verificação enviado ao seu e-mail.
-        O código será expirado em 2:00.
+        \n verificação enviado ao seu e-mail.
+        \n O código será expirado em 2:00.
     </string>
 
     <string name="nova_senha">Nova senha</string>
@@ -33,5 +33,18 @@
 
     <string name="erro_senha_igual">A senha é a mesma da antiga</string>
     <string name="erro_senha_diferente">As senhas estão diferentes, verifique!</string>
+
+    <string name="descricao_renovacao_aluguel">
+        Por quantos dias a mais você deseja
+        \n estender o aluguel desse livro?
+    </string>
+    <string name="btn_confirmar">Confirmar</string>
+
+    <string name="btn_solicitar_pdf">Solicitar PDF</string>
+    <string name="btn_solicitar_braile">Solicitar Braile</string>
+    <string name="btn_solicitar_audiobook">Solicitar Audiobook</string>
+    <string name="btn_reservar">Reservar</string>
+    <string name="btn_comprar_amazon">Comprar (Amazon)</string>
+    <string name="btn_setor_localizado">Setor Localizado</string>
 
 </resources>
