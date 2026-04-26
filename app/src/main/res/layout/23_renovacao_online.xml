@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:gravity="center"
-        android:text="@string/descricao_renovacao_aluguel"
+        android:text="Renovação de Aluguel"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,19 +31,20 @@
         android:id="@+id/btnConfirmarData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
-        android:text="@string/btn_confirmar"
+        android:layout_marginTop="32dp"
+        android:text="Confirmar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/calendarView" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textVoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
-        android:text="@string/voltar"
+        android:layout_marginTop="16dp"
+        android:text="Voltar"
+        android:textColor="#2196F3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/btnConfirmarData" />
 </androidx.constraintlayout.widget.ConstraintLayout>

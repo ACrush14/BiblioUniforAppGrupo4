@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".rf6telarecuperasenha">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -33,7 +33,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Redefinir Senha"
-            android:textSize="16sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView5"
@@ -49,7 +50,8 @@
         <EditText
             android:id="@+id/editTextEmaiREC"
             android:layout_width="match_parent"
-            android:layout_height="66dp"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
             android:ems="10"
             android:hint="Digite seu e-mail"
             android:inputType="textEmailAddress" />
@@ -58,12 +60,16 @@
             android:id="@+id/buttonEnviarCOD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="Enviar Código" />
 
         <Button
             android:id="@+id/buttonVoltarLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Retornar à tela de login" />
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Retornar à tela de login"
+            android:textAllCaps="false"
+            android:textColor="#2196F3" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

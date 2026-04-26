@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,9 @@
             android:layout_width="match_parent"
             android:layout_height="73dp"
             android:gravity="center"
-            android:text="Seja bem vindo ao BiblioUnifor!" />
+            android:text="Seja bem vindo ao BiblioUnifor!"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView2"
@@ -41,35 +43,35 @@
         <EditText
             android:id="@+id/editTextNome"
             android:layout_width="match_parent"
-            android:layout_height="68dp"
-            android:height="50dp"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
             android:ems="10"
-            android:inputType="text"
-            android:text="Digite seu nome completo" />
+            android:hint="Digite seu nome completo"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/editTextUsuario"
             android:layout_width="match_parent"
-            android:layout_height="67dp"
-            android:height="50dp"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
             android:ems="10"
-            android:inputType="text"
-            android:text="Digite seu nome de usuário" />
+            android:hint="Digite seu nome de usuário"
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/editTextTextEmail"
             android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:height="50dp"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
             android:ems="10"
-            android:inputType="textEmailAddress"
-            android:text="Digite seu e-mail" />
+            android:hint="Digite seu e-mail"
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/editTextTextSenha"
             android:layout_width="match_parent"
-            android:layout_height="69dp"
-            android:height="50dp"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
             android:ems="10"
             android:hint="Digite sua senha"
             android:inputType="textPassword" />
@@ -77,8 +79,8 @@
         <EditText
             android:id="@+id/editTextTextConfirmaSenha"
             android:layout_width="match_parent"
-            android:layout_height="72dp"
-            android:height="50dp"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
             android:ems="10"
             android:hint="Confirme sua senha"
             android:inputType="textPassword" />
@@ -87,13 +89,16 @@
             android:id="@+id/Criar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:text="Criar" />
 
         <Button
             android:id="@+id/EntreAqui"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
             android:text="Já tem uma conta? Entre aqui"
-            android:textColorLink="#7E1E1E" />
+            android:textAllCaps="false"
+            android:textColor="#2196F3" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

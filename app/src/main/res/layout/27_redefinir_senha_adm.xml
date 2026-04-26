@@ -140,7 +140,7 @@
 
     <!-- Botão -->
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/RedefinirSenhaADM"
+        android:id="@+id/btnRedefinirSenha"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="44dp"
@@ -166,7 +166,7 @@
         android:textColor="#2196F3"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/RedefinirSenhaADM"
+        app:layout_constraintTop_toBottomOf="@id/btnRedefinirSenha"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
