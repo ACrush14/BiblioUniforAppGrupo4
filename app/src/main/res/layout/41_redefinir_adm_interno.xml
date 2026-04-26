@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".rf4telagoogle">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,10 +31,9 @@
 
         <Button
             android:id="@+id/buttonX"
-            android:layout_width="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:gravity="right"
+            android:layout_gravity="end"
             android:text="X" />
 
         <TextView
@@ -47,14 +46,15 @@
         <EditText
             android:id="@+id/editTextTextPassword"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
             android:ems="10"
             android:hint="Enter your Password"
             android:inputType="textPassword" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="66dp" />
+            android:layout_height="24dp" />
 
         <TextView
             android:id="@+id/textViewConfirmacao"
@@ -66,14 +66,16 @@
         <EditText
             android:id="@+id/editTextTextPasswordConfirmacao"
             android:layout_width="match_parent"
-            android:layout_height="63dp"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
             android:ems="10"
             android:hint="Enter your Password"
             android:inputType="textPassword" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="158dp" />
+            android:layout_weight="1"
+            android:layout_height="0dp" />
 
         <Button
             android:id="@+id/buttonSalvar"

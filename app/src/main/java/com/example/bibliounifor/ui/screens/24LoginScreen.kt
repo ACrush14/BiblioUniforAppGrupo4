@@ -42,7 +42,6 @@ fun LoginScreen(onNavigateToForgot: () -> Unit, onNavigateToRegister: () -> Unit
             )
         }
 
-        // Botão do Google
         Button(
             onClick = { /* Lógica Google Auth */ },
             colors = ButtonDefaults.buttonColors(containerColor = Color.White),
@@ -74,12 +73,10 @@ fun LoginScreen(onNavigateToForgot: () -> Unit, onNavigateToRegister: () -> Unit
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Botão simples de "Esqueceu a senha?" (Sem usar o PrimaryButton aqui)
         TextButton(onClick = onNavigateToForgot ) {
             Text("Esqueceu a Senha?", color = Color(0xFF4DB6AC))
         }
 
-        // Botão principal de Entrar
         PrimaryButton(text = "Entrar", onClick = { /* Lógica de Login */ })
 
         Row(

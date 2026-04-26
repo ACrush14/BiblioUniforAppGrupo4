@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".rf6telarecuperasenha">
+    android:background="#F5F5F5">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:padding="24dp">
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="180dp" />
+            android:layout_height="100dp" />
 
         <TextView
             android:id="@+id/textViewicone"
@@ -28,15 +24,14 @@
             android:textSize="48sp" />
 
         <TextView
-            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Redefinir Senha"
-            android:textSize="16sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -49,21 +44,24 @@
         <EditText
             android:id="@+id/editTextEmaiREC"
             android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:ems="10"
+            android:layout_height="56dp"
             android:hint="Digite seu e-mail"
             android:inputType="textEmailAddress" />
 
         <Button
             android:id="@+id/buttonEnviarCOD"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
             android:text="Enviar Código" />
 
         <Button
             android:id="@+id/buttonVoltarLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Retornar à tela de login" />
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Retornar à tela de login"
+            android:textAllCaps="false"
+            android:textColor="#2196F3" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
