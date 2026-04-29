@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#F2F2F2">
+    android:background="#F5F7F7">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,8 +13,8 @@
         <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="#6FB7B7"
+            android:layout_height="200dp"
+            android:background="#87DEDE"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -28,7 +28,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="usuario@email.com"
+                android:text="Acesse sua conta"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 android:layout_marginTop="8dp"/>
@@ -37,103 +37,107 @@
         <!-- CONTEÚDO -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="533dp"
             android:orientation="vertical"
             android:padding="24dp">
 
             <!-- TÍTULO -->
+
+            <!-- EMAIL -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bem vindo de novo!"
+                android:layout_marginBottom="16dp"
+                android:text="Bem-vindo de volta!"
+                android:textColor="#1B3434"
                 android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="#000"
-                android:layout_marginBottom="16dp"/>
+                android:textStyle="bold" />
 
-            <!-- EMAIL -->
             <EditText
                 android:id="@+id/editEmail"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_input"
                 android:hint="Digite seu e-mail"
                 android:inputType="textEmailAddress"
-                android:background="@drawable/bg_input"
-                android:padding="16dp"
-                android:layout_marginBottom="12dp"/>
+                android:padding="16dp" />
 
             <!-- SENHA -->
+
+            <!-- ERRO -->
             <EditText
                 android:id="@+id/editSenha"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_input"
                 android:hint="Digite sua senha"
                 android:inputType="textPassword"
-                android:background="@drawable/bg_input"
-                android:padding="16dp"
-                android:layout_marginBottom="8dp"/>
+                android:padding="16dp" />
 
-            <!-- ERRO -->
             <TextView
                 android:id="@+id/textErroLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:layout_marginBottom="12dp"
+                android:textColor="#E53935"
                 android:textSize="14sp"
-                android:visibility="gone"
-                android:layout_marginBottom="12dp"/>
+                android:visibility="gone" />
 
             <!-- ESQUECEU SENHA -->
             <TextView
                 android:id="@+id/textEsqueceuSenha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:text="Esqueceu a senha?"
-                android:textColor="#6FB7B7"
-                android:textSize="14sp"
-                android:layout_marginBottom="20dp"/>
+                android:textColor="#87DEDE"
+                android:textSize="14sp" />
 
             <!-- BOTÃO -->
+
+            <!-- CRIAR CONTA -->
             <Button
                 android:id="@+id/buttonEntrar"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="55dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#87DEDE"
                 android:text="Entrar"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
-                android:background="@drawable/bg_button"
-                android:layout_marginBottom="20dp"/>
+                android:textStyle="bold" />
 
-            <!-- CRIAR CONTA -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Não tem uma conta? "
-                    android:textColor="#000"/>
+                    android:textColor="#415E5E" />
 
                 <TextView
                     android:id="@+id/textCriarConta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Crie aqui"
-                    android:textColor="#6FB7B7"
-                    android:textStyle="bold"/>
+                    android:textColor="#87DEDE"
+                    android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- VOLTAR (CORRIGIDO) -->
+            <!-- VOLTAR -->
             <TextView
                 android:id="@+id/textVoltar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="&lt; Voltar"
-                android:textColor="#6FB7B7"
-                android:layout_marginTop="24dp"/>
+                android:layout_marginTop="24dp"
+                android:text="← Voltar"
+                android:textColor="#87DEDE" />
 
         </LinearLayout>
 

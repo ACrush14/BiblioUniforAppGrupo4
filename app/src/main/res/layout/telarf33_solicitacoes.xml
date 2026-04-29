@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card_usuario"
+    android:padding="16dp">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solicitações"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1B3434"/>
+
+        <TextView
+            android:id="@+id/btnFechar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#415E5E"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <!-- LISTA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ITEM 1 -->
+        <LinearLayout
+            android:id="@+id/itemSolicitacao1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_input_rounded"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="75dp"
+                android:src="@android:drawable/sym_def_app_icon"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_input_rounded"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Livro Exemplo 1"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#1B3434"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="por Autor Exemplo"
+                    android:textSize="12sp"
+                    android:textColor="#415E5E"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01 jan. 2024"
+                    android:textSize="12sp"
+                    android:textColor="#758989"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ITEM 2 -->
+        <LinearLayout
+            android:id="@+id/itemSolicitacao2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_input_rounded"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="75dp"
+                android:src="@android:drawable/sym_def_app_icon"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_input_rounded"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Livro Exemplo 2"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#1B3434"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="por Outro Autor"
+                    android:textSize="12sp"
+                    android:textColor="#415E5E"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02 fev. 2024"
+                    android:textSize="12sp"
+                    android:textColor="#758989"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
