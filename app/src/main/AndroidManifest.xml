@@ -11,23 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BiblioUnifor">
-
         <activity
-            android:name=".ui.screens.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ui.screens.05CadastroNovoUsuario" />
-        <activity android:name=".ui.screens.06RecuperacaoSenha" />
-        <activity android:name=".ui.screens.41RedefinirADMInterno" />
-        <activity android:name=".ui.screens.27RedefinirSenhaADM" />
-        <activity android:name=".ui.screens.28NovaContaADM" />
-        <activity android:name=".ui.screens.29GoogleADM" />
-
     </application>
 
 </manifest>

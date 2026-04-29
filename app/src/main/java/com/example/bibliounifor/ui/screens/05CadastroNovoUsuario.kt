@@ -21,8 +21,6 @@ class `05CadastroNovoUsuario` : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        // Corrigido para o novo nome de layout válido (não pode começar com número)
-        setContentView(R.layout.t05_cadastro_novo_usuario)
 
         etNome = findViewById(R.id.editTextNome)
         etUsuario = findViewById(R.id.editTextUsuario)
