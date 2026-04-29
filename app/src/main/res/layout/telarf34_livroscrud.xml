@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7F7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#6EC1C3"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tela de CRUD"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/imgPerfil"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_circle"
+                android:padding="8dp"
+                android:src="@android:drawable/sym_def_app_icon"/>
+        </RelativeLayout>
+
+        <!-- CONTEÚDO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- BOTÕES PRINCIPAIS -->
+            <Button
+                android:id="@+id/btnCriarMidia"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Criar Mídia"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:background="@drawable/bg_botao_verde"
+                android:layout_marginBottom="14dp"/>
+
+            <Button
+                android:id="@+id/btnVerificarMidia"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Verificar Mídia"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:background="@drawable/bg_botao_verde"
+                android:layout_marginBottom="14dp"/>
+
+            <Button
+                android:id="@+id/btnGerenciarUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Gerenciar usuário"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:background="@drawable/bg_botao_verde"
+                android:layout_marginBottom="14dp"/>
+
+            <Button
+                android:id="@+id/btnPermissaoUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Mudar permissão de usuário"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:background="@drawable/bg_botao_verde"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- AÇÕES PERIGOSAS -->
+            <Button
+                android:id="@+id/btnApagarUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Apagar Usuário"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:background="@drawable/bg_botao_vermelho"
+                android:layout_marginBottom="14dp"/>
+
+            <Button
+                android:id="@+id/btnApagarMidia"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Apagar Mídia"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:background="@drawable/bg_botao_vermelho"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
