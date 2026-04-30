@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">BiblioUnifor</string>
+    <string name="acesse_sua_conta">Acesse sua Conta</string>
 
     <string name="titulo_redefinir">Redefinir Senha</string>
     <string name="descricao_redefinir">
@@ -18,7 +19,7 @@
 
     <string name="btn_redefinir">Redefinir Senha</string>
     <string name="btn_enviar">Enviar</string>
-    <string name="voltar">&lt; Voltar</string>
+    <string name="voltar">Voltar</string>
     <string name="reenviar">Reenviar Código</string>
 
     <string name="erro_campo">Campo Obrigatório</string>
@@ -34,6 +35,8 @@
     <string name="erro_senha_igual">A senha é a mesma da antiga</string>
     <string name="erro_senha_diferente">As senhas estão diferentes, verifique!</string>
 
+    <string name="titulo_renovacao_aluguel">Renovação de Aluguel</string>
+
     <string name="descricao_renovacao_aluguel">
         Por quantos dias a mais você deseja
         \n estender o aluguel desse livro?
@@ -46,5 +49,13 @@
     <string name="btn_reservar">Reservar</string>
     <string name="btn_comprar_amazon">Comprar (Amazon)</string>
     <string name="btn_setor_localizado">Setor Localizado</string>
+
+    <string name="titulo_livro">Título do Livro</string>
+    <string name="autor_livro">Autor do Livro</string>
+    <string name="genero_livro">Genero</string>
+
+    <string name="btn_remover_historico">Remover do Histórico</string>
+    <string name="nome_usuario">João Bobo</string>
+
 
 </resources>

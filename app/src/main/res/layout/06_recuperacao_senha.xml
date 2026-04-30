@@ -28,7 +28,7 @@
             android:textSize="48sp" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textTituloRedefinirSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -37,7 +37,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textDescricaoRedefinirSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
