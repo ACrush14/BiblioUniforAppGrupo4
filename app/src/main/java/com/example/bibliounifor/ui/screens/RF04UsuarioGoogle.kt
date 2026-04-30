@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
 
-class `04UsuarioGoogle` : AppCompatActivity() {
+class `RF04UsuarioGoogle` : AppCompatActivity() {
 
     lateinit var emailGoogle: EditText
     lateinit var bntProximo: Button
