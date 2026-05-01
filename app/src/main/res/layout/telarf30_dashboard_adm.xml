@@ -135,13 +135,14 @@
                 </LinearLayout>
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTelaCRUD"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Tela CRUD"
                     android:textColor="#FFFFFF"
                     app:backgroundTint="#6CB6B3"
-                    app:cornerRadius="20dp"
-                    android:layout_marginTop="10dp"/>
+                    app:cornerRadius="20dp" />
             </LinearLayout>
 
             <!-- ANÁLISE -->

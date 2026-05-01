@@ -1,23 +1,38 @@
 package com.example.bibliounifor.ui.screens
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.ui.Modifier
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import com.example.bibliounifor.R
+import com.example.bibliounifor.TelaRF02Intermediaria
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            Surface(
-                modifier = Modifier.fillMaxSize(),
-                color = MaterialTheme.colorScheme.background
-            ) {
-                AppNavigation()
+
+        setContentView(R.layout.tela_rf01_bemvindo)
+
+        val buttonComecar = findViewById<Button>(R.id.buttonComecar)
+
+        buttonComecar.setOnClickListener {
+
+            val usuarioLogado = false
+            val tipoUsuario = listOf("adm", "user").random()
+
+            if (!usuarioLogado) {
+                startActivity(Intent(this, TelaRF02Intermediaria::class.java))
+
+            } else {
+                if (tipoUsuario == "adm") {
+                    startActivity(Intent(this, TelaRF30DashboardADM::class.java))
+                } else {
+                    startActivity(Intent(this, TelaRF09DashboardUsuario::class.java))
+                }
             }
+
+            finish()
         }
     }
 }

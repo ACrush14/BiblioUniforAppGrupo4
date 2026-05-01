@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BiblioUnifor">
         <activity
+            android:name=".ui.screens.TelaRF09DashboardUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".ui.screens.TelaRF30DashboardADM"
+            android:exported="false" />
+        <activity
+            android:name=".ui.screens.RF30TelaCRUD"
+            android:exported="false" />
+        <activity
             android:name=".TelaRF01BemVindo"
             android:exported="true">
             <intent-filter>
