@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/biblio_bg">
+
+    <!-- CONTEÚDO -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- TOPO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/biblio_cyan">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:text="João Bobo"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_height="30dp"
+                    android:layout_width="100dp"/>
+
+                <TextView
+                    android:text="Bem-vindo"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_height="30dp"
+                    android:layout_width="89dp"/>
+            </LinearLayout>
+
+            <!-- BOTÃO -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Procurar Livros"
+                android:layout_margin="16dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:backgroundTint="@color/biblio_cyan"
+                app:cornerRadius="30dp"/>
+
+            <!-- TÍTULO -->
+
+            <TextView
+                android:text="Descobrir"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:textColor="@color/biblio_dark"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_height="35dp"
+                android:layout_width="150dp"/>
+
+            <!-- SCROLL -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@color/biblio_cinza"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- CARD -->
+                    <LinearLayout
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        android:background="@android:color/white"
+                        android:elevation="6dp"
+                        android:layout_marginEnd="12dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@drawable/osda"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:text="O Senhor dos Anéis"
+                            android:textStyle="bold"
+                            android:textColor="@color/biblio_dark"
+                            android:textSize="16sp"
+                            android:layout_marginTop="6dp"
+                            android:layout_height="24dp"
+                            android:layout_width="150dp"/>
+
+                        <TextView
+                            android:text="J. R. R. Tolkien"
+                            android:textSize="15sp"
+                            android:textColor="@color/biblio_dark"
+                            android:layout_height="24dp"
+                            android:textStyle="bold"
+                            android:layout_width="100dp"/>
+
+                        <!-- BOTÃO ALUGAR -->
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Alugar"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:layout_marginTop="6dp"
+                            app:backgroundTint="@color/biblio_cyan"
+                            app:cornerRadius="20dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 🔻 BARRA INFERIOR -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/biblio_bg"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_view" />
+
+        <ImageView
+            android:id="@+id/navPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_myplaces" />
+
+        <ImageView
+            android:id="@+id/navCalendario"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_my_calendar" />
+
+        <ImageView
+            android:id="@+id/navAjuda"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_help" />
+
+        <ImageView
+            android:id="@+id/navConfig"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_manage" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
