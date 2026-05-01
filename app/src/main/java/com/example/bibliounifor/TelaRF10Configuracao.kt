@@ -13,7 +13,7 @@ class TelaRF10Configuracao : AppCompatActivity() {
         setContentView(R.layout.telarf10_configuracao)
 
         val btnRedefinir = findViewById<Button>(R.id.btnRedefinirSenha)
-        val btnVoltar = findViewById<Button>(R.id.btnVoltar)
+        val btnVoltar = findViewById<Button>(R.id.btnVoltar1)
         val btnApagar = findViewById<Button>(R.id.btnApagarConta)
 
         btnRedefinir.setOnClickListener {
