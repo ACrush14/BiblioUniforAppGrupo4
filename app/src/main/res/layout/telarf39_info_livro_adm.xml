@@ -59,7 +59,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnVoltar"
         android:layout_width="120dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#50C4C9"
