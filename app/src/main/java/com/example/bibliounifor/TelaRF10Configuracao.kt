@@ -12,19 +12,23 @@ class TelaRF10Configuracao : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.telarf10_configuracao)
 
-        val btnRedefinir = findViewById<Button>(R.id.btnRedefinirSenha)
+        val btnRedefinirSenha = findViewById<Button>(R.id.btnRedefinirSenha)
         val btnVoltar = findViewById<Button>(R.id.btnVoltar)
-        val btnApagar = findViewById<Button>(R.id.btnApagarConta)
+        val btnApagarConta = findViewById<Button>(R.id.btnApagarConta)
 
-        btnRedefinir.setOnClickListener {
-            startActivity(Intent(this, TelaRF11RedefinirSenha::class.java))
+        // Ir para RF11
+        btnRedefinirSenha.setOnClickListener {
+            val intent = Intent(this, TelaRF11RedefinirSenha::class.java)
+            startActivity(intent)
         }
 
+        // Voltar tela
         btnVoltar.setOnClickListener {
             finish()
         }
 
-        btnApagar.setOnClickListener {
+        // Apagar conta (simulação)
+        btnApagarConta.setOnClickListener {
             Toast.makeText(this, "Conta apagada (simulação)", Toast.LENGTH_SHORT).show()
         }
     }

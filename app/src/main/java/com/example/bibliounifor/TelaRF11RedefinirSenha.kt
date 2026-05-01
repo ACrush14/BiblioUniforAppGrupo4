@@ -2,7 +2,10 @@ package com.example.bibliounifor
 
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class TelaRF11RedefinirSenha : AppCompatActivity() {
@@ -11,59 +14,43 @@ class TelaRF11RedefinirSenha : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.telarf11_redefinirsenha)
 
-        val novaSenha = findViewById<EditText>(R.id.editNovaSenha)
-        val confirmarSenha = findViewById<EditText>(R.id.editConfirmarSenha)
+        val editNovaSenha = findViewById<EditText>(R.id.editNovaSenha)
+        val editConfirmarSenha = findViewById<EditText>(R.id.editConfirmarSenha)
+        val btnSalvar = findViewById<Button>(R.id.buttonSalvar)
 
         val erroSenha = findViewById<TextView>(R.id.textErroSenha)
         val erroConfirmar = findViewById<TextView>(R.id.textErroConfirmar)
 
-        val botaoSalvar = findViewById<Button>(R.id.buttonSalvar)
-        val btnFechar = findViewById<TextView>(R.id.btnFechar)
+        btnSalvar.setOnClickListener {
 
-        btnFechar.setOnClickListener {
-            finish()
-        }
+            val senha = editNovaSenha.text.toString()
+            val confirmar = editConfirmarSenha.text.toString()
 
-        botaoSalvar.setOnClickListener {
-
-            val senha = novaSenha.text.toString()
-            val confirmar = confirmarSenha.text.toString()
-
+            // Resetar erros
             erroSenha.visibility = View.GONE
             erroConfirmar.visibility = View.GONE
 
-            when {
+            var valido = true
 
-                senha.isEmpty() || confirmar.isEmpty() -> {
-                    Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
-                }
-
-                senha.length < 8 ||
-                        !senha.any { it.isDigit() } ||
-                        !senha.any { it.isUpperCase() } -> {
-
-                    erroSenha.text = "Senha inválida"
-                    erroSenha.visibility = View.VISIBLE
-                }
-
-                senha != confirmar -> {
-                    erroConfirmar.text = "As senhas não coincidem"
-                    erroConfirmar.visibility = View.VISIBLE
-                }
-
-                else -> {
-                    Toast.makeText(this, "Senha redefinida com sucesso!", Toast.LENGTH_SHORT).show()
-                    finish()
-                }
+            // Validação 1: tamanho mínimo
+            if (senha.length < 8) {
+                erroSenha.visibility = View.VISIBLE
+                erroSenha.text = "Senha deve ter pelo menos 8 caracteres"
+                valido = false
             }
-        }
 
-        novaSenha.setOnFocusChangeListener { _, hasFocus ->
-            if (hasFocus) erroSenha.visibility = View.GONE
-        }
+            // Validação 2: confirmação
+            if (senha != confirmar) {
+                erroConfirmar.visibility = View.VISIBLE
+                erroConfirmar.text = "As senhas não coincidem"
+                valido = false
+            }
 
-        confirmarSenha.setOnFocusChangeListener { _, hasFocus ->
-            if (hasFocus) erroConfirmar.visibility = View.GONE
+            // Se tudo ok
+            if (valido) {
+                Toast.makeText(this, "Senha alterada com sucesso!", Toast.LENGTH_SHORT).show()
+                finish()
+            }
         }
     }
 }

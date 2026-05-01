@@ -1,111 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#F5F7F7">
 
-    <LinearLayout
+    <!-- SCROLL -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F5F7F7">
 
-        <!-- HEADER -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="#6EC1C3"
-            android:padding="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tela de CRUD"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:layout_centerInParent="true"/>
-
-            <ImageView
-                android:id="@+id/imgPerfil"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/bg_circle"
-                android:padding="8dp"
-                android:src="@android:drawable/sym_def_app_icon"/>
-        </RelativeLayout>
-
-        <!-- CONTEÚDO -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:orientation="vertical">
 
-            <!-- BOTÕES PRINCIPAIS -->
-            <Button
-                android:id="@+id/btnCriarMidia"
+            <!-- HEADER -->
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:text="Criar Mídia"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/bg_botao_verde"
-                android:layout_marginBottom="14dp"/>
+                android:layout_height="180dp"
+                android:background="#6EC1C3"
+                android:padding="16dp">
 
-            <Button
-                android:id="@+id/btnVerificarMidia"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:text="Verificar Mídia"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/bg_botao_verde"
-                android:layout_marginBottom="14dp"/>
+                <ImageView
+                    android:id="@+id/imgPerfil"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="158dp"
+                    android:background="@drawable/bg_circle"
+                    android:padding="8dp"
+                    android:src="@android:drawable/sym_def_app_icon" />
+            </RelativeLayout>
 
-            <Button
-                android:id="@+id/btnGerenciarUsuario"
+            <!-- CONTEÚDO -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:text="Gerenciar usuário"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/bg_botao_verde"
-                android:layout_marginBottom="14dp"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
 
-            <Button
-                android:id="@+id/btnPermissaoUsuario"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:text="Mudar permissão de usuário"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/bg_botao_verde"
-                android:layout_marginBottom="24dp"/>
+                <!-- BOTÕES VERDES -->
+                <Button
+                    android:id="@+id/btnCriarMidia"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/bg_botao_verde"
+                    android:text="Criar Mídia"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:backgroundTint="#6EC1C3" />
 
-            <!-- AÇÕES PERIGOSAS -->
-            <Button
-                android:id="@+id/btnApagarUsuario"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:text="Apagar Usuário"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/bg_botao_vermelho"
-                android:layout_marginBottom="14dp"/>
+                <Button
+                    android:id="@+id/btnVerificarMidia"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/bg_botao_verde"
+                    android:text="Verificar Mídia"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:backgroundTint="#6EC1C3" />
 
-            <Button
-                android:id="@+id/btnApagarMidia"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:text="Apagar Mídia"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/bg_botao_vermelho"/>
+                <Button
+                    android:id="@+id/btnGerenciarUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/bg_botao_verde"
+                    android:text="Gerenciar usuário"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:backgroundTint="#6EC1C3" />
+
+                <Button
+                    android:id="@+id/btnPermissaoUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/bg_botao_verde"
+                    android:text="Mudar permissão de usuário"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:backgroundTint="#6EC1C3" />
+
+                <!-- BOTÕES VERMELHOS -->
+                <Button
+                    android:id="@+id/btnApagarUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/bg_botao_vermelho"
+                    android:text="Apagar Usuário"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:backgroundTint="#E53935" />
+
+                <Button
+                    android:id="@+id/btnApagarMidia"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_botao_vermelho"
+                    android:text="Apagar Mídia"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:backgroundTint="#E53935" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
+    </ScrollView>
+
+    <!-- 🔥 BARRA ADM -->
+    <LinearLayout
+        android:id="@+id/bottomNavigationADM"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/navDashboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_today"
+            app:tint="#A0A0A0" />
+
+        <ImageView
+            android:id="@+id/navUsuarios"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            app:tint="#A0A0A0" />
+
+        <ImageView
+            android:id="@+id/navSolicitacoes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_my_calendar"
+            app:tint="#A0A0A0" />
+
+        <ImageView
+            android:id="@+id/navAjuda"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_help"
+            app:tint="#A0A0A0" />
+
+        <ImageView
+            android:id="@+id/navLivrosADM"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_agenda"
+            app:tint="#1B3434" />
+
     </LinearLayout>
 
-</ScrollView>
+</LinearLayout>

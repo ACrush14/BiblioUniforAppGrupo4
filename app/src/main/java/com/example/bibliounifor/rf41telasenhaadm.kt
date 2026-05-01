@@ -19,7 +19,7 @@ class rf4telagoogle : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.telarf4)
+        setContentView(R.layout.telarf41)
 
         etSenha = findViewById(R.id.editTextTextPassword);
         etSenhaConfirmacao = findViewById(R.id.editTextTextPasswordConfirmacao);

@@ -9,12 +9,12 @@ class TelaRF01BemVindo : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.tela_rf01_bemvindo)
+        setContentView(R.layout.telarf02_intermediaria)
 
-        val botaoComecar = findViewById<Button>(R.id.buttonComecar)
+        val btnEstudante = findViewById<Button>(R.id.btnEstudante)
 
-        botaoComecar.setOnClickListener {
-            val intent = Intent(this, TelaRF02Intermediaria::class.java)
+        btnEstudante.setOnClickListener {
+            val intent = Intent(this, TelaRF03LoginAluno::class.java)
             startActivity(intent)
         }
     }
