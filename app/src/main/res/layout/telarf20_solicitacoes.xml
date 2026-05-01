@@ -37,7 +37,7 @@
             android:layout_marginEnd="16dp"
             android:text="@string/titulo_livro"
             android:textColor="#FFFFFF"
-            android:textSize="22sp"
+            android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageView"
@@ -51,7 +51,7 @@
             android:layout_marginTop="4dp"
             android:text="@string/autor_livro"
             android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageView"
             app:layout_constraintTop_toBottomOf="@id/tvTituloLivro" />
@@ -63,8 +63,8 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="4dp"
             android:text="@string/genero_livro"
-            android:textColor="#E0FFFF"
-            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageView"
             app:layout_constraintTop_toBottomOf="@id/tvAutor" />
@@ -136,5 +136,59 @@
         app:layout_constraintTop_toBottomOf="@id/btnSolicitarAudiobook"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- BARRA INFERIOR -->
+    <LinearLayout
+        android:id="@+id/bottomNavigationUsuario"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_view"
+            app:tint="#A0A0A0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_search"
+            app:tint="#A0A0A0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_compass"
+            app:tint="#A0A0A0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_agenda"
+            app:tint="#A0A0A0" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            app:tint="#1B3434" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

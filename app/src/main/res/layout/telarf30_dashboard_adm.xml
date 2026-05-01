@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7F7">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:background="#87DEDE"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Engrenagem -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_manage"
+            android:layout_alignParentStart="true"
+            app:tint="#FFFFFF" />
+
+        <!-- Avatar -->
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/ic_launcher"
+            android:background="@drawable/bg_input_rounded"
+            android:padding="4dp"/>
+
+        <!-- Textos -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bem vindo"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DASHBOARD DE ADM"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- CONTEÚDO -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- CARD USUÁRIOS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input_rounded"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Usuários"
+                            android:textColor="#415E5E"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5.785"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#415E5E"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aluguéis"
+                            android:textColor="#415E5E"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="342"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#415E5E"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tela CRUD"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#6CB6B3"
+                    app:cornerRadius="20dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <!-- ANÁLISE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input_rounded"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Análise de Aluguéis"
+                    android:textStyle="bold"
+                    android:textColor="#415E5E"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Março 2026 - 342"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fevereiro 2026 - 294"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Janeiro 2026 - 648"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ver Aluguéis"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#6CB6B3"
+                    app:cornerRadius="20dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <!-- ATRASOS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input_rounded"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:elevation="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Atrasos"
+                    android:textStyle="bold"
+                    android:textColor="#415E5E"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="João bobo - 15 dias"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Roberta - 3 dias"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ver todos os atrasos"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#6CB6B3"
+                    app:cornerRadius="20dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <!-- CADASTROS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input_rounded"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:elevation="3dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cadastros para confirmar"
+                    android:textStyle="bold"
+                    android:textColor="#415E5E"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jéssica Amaral"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jeferson da Rocha"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Roberto de Souza"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ver cadastros"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#6CB6B3"
+                    app:cornerRadius="20dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <!-- SOLICITAÇÕES -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input_rounded"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:elevation="3dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Solicitações"
+                    android:textStyle="bold"
+                    android:textColor="#415E5E"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="O Jardim das Ilusões"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vozes do Deserto"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Um Homem Chamado Ove"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ver solicitações"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#6CB6B3"
+                    app:cornerRadius="20dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <!-- RENOVAÇÕES -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input_rounded"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:elevation="3dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Solicitações/Renovações aluguel"
+                    android:textStyle="bold"
+                    android:textColor="#415E5E"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cícero Correia - Pessoas Ansiosas - 5 maio"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ver renovações"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#6CB6B3"
+                    app:cornerRadius="20dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_view"
+            app:tint="#A0A0A0" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_edit"
+            app:tint="#1B3434" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_manage"
+            app:tint="#A0A0A0" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_help"
+            app:tint="#A0A0A0" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_agenda"
+            app:tint="#A0A0A0" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

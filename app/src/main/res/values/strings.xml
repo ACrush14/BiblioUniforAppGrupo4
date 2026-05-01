@@ -50,9 +50,9 @@
     <string name="btn_comprar_amazon">Comprar (Amazon)</string>
     <string name="btn_setor_localizado">Setor Localizado</string>
 
-    <string name="titulo_livro">Título do Livro</string>
-    <string name="autor_livro">Autor do Livro</string>
-    <string name="genero_livro">Genero</string>
+    <string name="titulo_livro">O Alienista</string>
+    <string name="autor_livro">por Machado de Assis</string>
+    <string name="genero_livro">Novela</string>
 
     <string name="btn_remover_historico">Remover do Histórico</string>
     <string name="nome_usuario">João Bobo</string>
