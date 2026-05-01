@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:padding="24dp">
+
+    <!-- Ícone -->
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="ICONE"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Campo obrigatório 1 -->
+    <TextView
+        android:id="@+id/textViewCampoObrig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Campo Obrigatório"
+        android:textColor="#E53935"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/textView9"
+        app:layout_constraintStart_toStartOf="@id/editTextTextPassword" />
+
+    <!-- Nova senha -->
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/bg_rounded_input"
+        android:hint="Nova Senha"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColorHint="#757575"
+        app:layout_constraintTop_toBottomOf="@id/textViewCampoObrig"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Campo obrigatório 2 -->
+    <TextView
+        android:id="@+id/textViewCampoObrig2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Campo Obrigatório"
+        android:textColor="#E53935"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPassword"
+        app:layout_constraintStart_toStartOf="@id/editTextTextPassword2" />
+
+    <!-- Confirmar senha -->
+    <EditText
+        android:id="@+id/editTextTextPassword2"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/bg_rounded_input"
+        android:hint="Confirmar Nova Senha"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColorHint="#757575"
+        app:layout_constraintTop_toBottomOf="@id/textViewCampoObrig2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Regras -->
+    <TextView
+        android:id="@+id/textViewRegra1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="• A senha deve conter pelo menos 8 caracteres"
+        android:textColor="#E53935"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPassword2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewRegra2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="• Um número"
+        android:textColor="#E53935"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/textViewRegra1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewRegra3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="• Uma letra maiúscula"
+        android:textColor="#E53935"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/textViewRegra2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Erros -->
+    <TextView
+        android:id="@+id/textViewErro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="A senha é a mesma da antiga"
+        android:textColor="#E53935"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/textViewRegra3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewErro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="As senhas estão diferentes, verifique!"
+        android:textColor="#E53935"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/textViewErro1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Botão -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRedefinirSenha"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/bg_button_blue"
+        android:text="Redefinir Senha"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@id/textViewErro2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Voltar -->
+    <TextView
+        android:id="@+id/textVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="8dp"
+        android:text="&lt; Voltar"
+        android:textColor="#2196F3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/btnRedefinirSenha"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

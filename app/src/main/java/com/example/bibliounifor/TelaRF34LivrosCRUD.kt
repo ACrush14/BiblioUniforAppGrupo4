@@ -12,7 +12,7 @@ class TelaRF34LivrosCRUD : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // 🔹 XML CORRETO
-        setContentView(R.layout.telarf34_livroscrud)
+//        setContentView(R.layout.telarf34_livroscrud)
 
         // 🔹 Botões principais
         val btnCriarMidia = findViewById<Button>(R.id.btnCriarMidia)
