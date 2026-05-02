@@ -12,6 +12,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BiblioUnifor">
         <activity
+            android:name=".TelaRF31GerenciamentoDeUsuarios"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF35CadastroDeLivros"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF32UsuariosParaADM"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF11RedefinirSenha"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF33Solicitacoes"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF10Configuracao"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF34LivrosCRUD"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF03LoginAluno"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF02Intermediaria"
+            android:exported="false" />
+        <activity
             android:name=".ui.screens.TelaRF09DashboardUsuario"
             android:exported="false" />
         <activity

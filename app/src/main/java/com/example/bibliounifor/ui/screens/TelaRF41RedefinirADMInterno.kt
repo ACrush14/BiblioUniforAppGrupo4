@@ -7,11 +7,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bibliounifor.R
 
-class `41RedefinirADMInterno` : AppCompatActivity() {
+class TelaRF41RedefinirADMInterno : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.`41_redefinir_adm_interno`)
+        setContentView(R.layout.telarf41_redefinir_adm_interno)
 
         val etSenha = findViewById<EditText>(R.id.editTextTextPassword)
         val etSenhaConfirmacao = findViewById<EditText>(R.id.editTextTextPasswordConfirmacao)

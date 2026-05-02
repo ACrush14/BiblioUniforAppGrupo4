@@ -7,11 +7,11 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bibliounifor.R
 
-class `28NovaContaADM` : AppCompatActivity() {
+class TelaRF28NovaContaADM : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.`28_nova_conta_adm`)
+        setContentView(R.layout.telarf28_nova_conta_adm)
 
         val edtNomeCompleto = findViewById<EditText>(R.id.edtNomeCompleto)
         val edtNomeUsuario = findViewById<EditText>(R.id.edtNomeUsuario)

@@ -12,7 +12,11 @@ interface LivroDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun inserirLivro(livro: EntidadeLivro)
 
-    // Busca um livro específico para a Tela 15 abrir
+    // Busca um livro específico pelo ID
+    @Query("SELECT * FROM books WHERE id = :id")
+    suspend fun buscarLivroPorId(id: Int): EntidadeLivro?
+
+    // Busca todos os livros
     @Query("SELECT * FROM books")
     fun buscarTodosLivros(): kotlinx.coroutines.flow.Flow<List<EntidadeLivro>>
 

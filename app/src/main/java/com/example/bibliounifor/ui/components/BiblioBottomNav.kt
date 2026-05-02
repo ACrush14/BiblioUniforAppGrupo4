@@ -1,10 +1,10 @@
 package com.example.bibliounifor.ui.components
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -27,7 +27,7 @@ fun BiblioBottomNav(
             Triple("livraria", Icons.Default.Home, "Minha Livraria"),
             Triple("pesquisa", Icons.Default.Search, "Pesquisar Livros"),
             Triple("desejos", Icons.Default.Favorite, "Desejos"),
-            Triple("alugados", Icons.Default.List, "Alugados"),
+            Triple("alugados", Icons.AutoMirrored.Filled.List, "Alugados"),
             Triple("amigos", Icons.Default.AccountCircle, "Amigos")
         )
 

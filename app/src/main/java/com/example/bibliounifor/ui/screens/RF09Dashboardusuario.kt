@@ -1,9 +1,10 @@
-package com.example.teste
+package com.example.bibliounifor.ui.screens
 
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.bibliounifor.R
 
 class RF09DashboardUsuario : AppCompatActivity() {
 
@@ -17,7 +18,7 @@ class RF09DashboardUsuario : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.telarf9_dashboardusuario)
+        setContentView(R.layout.telarf09_dashboardusuario)
 
         navHome = findViewById(R.id.navHome)
         navPerfil = findViewById(R.id.navPerfil)

@@ -1,4 +1,4 @@
-package com.example.bibliouniforappgrupo4_v02
+package com.example.bibliounifor
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,7 +12,7 @@ class TelaRF34LivrosCRUD : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // 🔹 XML CORRETO
-//        setContentView(R.layout.telarf34_livroscrud)
+        setContentView(R.layout.telarf34_livroscrud)
 
         // 🔹 Botões principais
         val btnCriarMidia = findViewById<Button>(R.id.btnCriarMidia)

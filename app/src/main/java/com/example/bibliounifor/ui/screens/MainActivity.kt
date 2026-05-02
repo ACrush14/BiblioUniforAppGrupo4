@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.tela_rf01_bemvindo)
+        setContentView(R.layout.telarf01_bemvindo)
 
         val buttonComecar = findViewById<Button>(R.id.buttonComecar)
 

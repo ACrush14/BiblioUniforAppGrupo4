@@ -1,4 +1,4 @@
-package com.example.bibliouniforappgrupo4_v02
+package com.example.bibliounifor
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +10,8 @@ class TelaRF31GerenciamentoDeUsuarios : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // 🔹 ATENÇÃO: nome do XML correto
-        setContentView(TelaRF31GerenciamentoDeUsuarios)
+        // 🔹 Correção: Usando o ID do layout XML (R.layout.telarf31_gerenciamentousuarios)
+        setContentView(R.layout.telarf31_gerenciamentousuarios)
 
         // 🔹 Pegando os usuários (IDs que você colocou no XML)
         val usuario1 = findViewById<LinearLayout>(R.id.itemUsuario1)
