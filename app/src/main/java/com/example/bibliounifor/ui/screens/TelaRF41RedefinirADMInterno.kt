@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bibliounifor.R
 
-class `41RedefinirADMInterno` : AppCompatActivity() {
+class TelaRF41RedefinirADMInterno : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

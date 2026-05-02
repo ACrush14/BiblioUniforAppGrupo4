@@ -7,7 +7,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bibliounifor.R
 
-class `28NovaContaADM` : AppCompatActivity() {
+class TelaRF28NovaContaADM : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

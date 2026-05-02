@@ -100,12 +100,13 @@
                             android:layout_height="wrap_content" />
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnRemoverHIstorico"
                             android:layout_width="wrap_content"
                             android:layout_height="48dp"
+                            android:layout_marginTop="6dp"
                             android:text="Remover do Histórico"
                             android:textColor="#FFFFFF"
                             android:textSize="12sp"
-                            android:layout_marginTop="6dp"
                             app:backgroundTint="#D9534F"
                             app:cornerRadius="20dp" />
 

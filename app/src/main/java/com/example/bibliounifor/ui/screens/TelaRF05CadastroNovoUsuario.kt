@@ -8,7 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bibliounifor.R
 
-class `05CadastroNovoUsuario` : AppCompatActivity() {
+class TelaRF05CadastroNovoUsuario : AppCompatActivity() {
 
     lateinit var etNome: EditText
     lateinit var etUsuario: EditText

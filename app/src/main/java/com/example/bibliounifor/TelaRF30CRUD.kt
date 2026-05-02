@@ -1,10 +1,9 @@
-package com.example.bibliounifor.ui.screens
+package com.example.bibliounifor
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.bibliounifor.R
 
-class RF30TelaCRUD : AppCompatActivity() {
+class TelaRF30CRUD : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
