@@ -1,10 +1,11 @@
-package com.example.teste
+package com.example.bibliounifor.ui.screens
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.bibliounifor.R
 
-class TelaRF13Livro : AppCompatActivity() {
+class RF13TelaDoLivro : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

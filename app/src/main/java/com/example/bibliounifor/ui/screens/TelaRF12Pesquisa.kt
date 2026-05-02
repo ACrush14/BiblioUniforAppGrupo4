@@ -1,11 +1,12 @@
-package com.example.teste
+package com.example.bibliounifor.ui.screens
 
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.bibliounifor.R
 
-class TelaRF12Pesquisa : AppCompatActivity() {
+class RF12TelaDePesquisa : AppCompatActivity() {
 
     lateinit var bntPorTitulo: Button
     lateinit var bntPorISBN: Button
@@ -15,9 +16,5 @@ class TelaRF12Pesquisa : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.telarf12_teladepesquisa)
-
-
-
-
     }
 }

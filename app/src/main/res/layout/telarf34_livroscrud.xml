@@ -78,11 +78,12 @@
                 android:id="@+id/btnPermissaoUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_botao_verde"
+                android:backgroundTint="#00BCD4"
                 android:text="Mudar permissão de usuário"
                 android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/bg_botao_verde"
-                android:layout_marginBottom="24dp"/>
+                android:textSize="16sp" />
 
             <!-- AÇÕES PERIGOSAS -->
             <Button

@@ -1,4 +1,4 @@
-package com.example.bibliouniforappgrupo4_v02
+package com.example.bibliounifor
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -11,43 +12,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BiblioUnifor">
         <activity
-            android:name=".TelaRF20SolicitacoesVoltarBiblioteca"
+            android:name=".TelaRF31GerenciamentoDeUsuarios"
             android:exported="false" />
         <activity
-            android:name=".TelaRF20SolicitacoesTermosCondicoes"
+            android:name=".TelaRF35CadastroDeLivros"
             android:exported="false" />
         <activity
-            android:name=".TelaRF20Solicitacoes"
+            android:name=".TelaRF32UsuariosParaADM"
             android:exported="false" />
         <activity
-            android:name=".TelaRF21Notificacoes"
+            android:name=".TelaRF11RedefinirSenha"
             android:exported="false" />
         <activity
-            android:name=".TelaRF22Historico"
+            android:name=".TelaRF33Solicitacoes"
             android:exported="false" />
         <activity
-            android:name=".TelaRF23RenovacaoOnline"
+            android:name=".TelaRF10Configuracao"
             android:exported="false" />
         <activity
-            android:name=".TelaRF08ConfirmarRedefinirSenha"
+            android:name=".TelaRF34LivrosCRUD"
             android:exported="false" />
         <activity
-            android:name=".TelaRF08RedefinirSenha"
+            android:name=".TelaRF03LoginAluno"
             android:exported="false" />
         <activity
-            android:name=".TelaRF07ValidacaoDeCodigo"
+            android:name=".TelaRF02Intermediaria"
             android:exported="false" />
         <activity
             android:name=".ui.screens.TelaRF09DashboardUsuario"
             android:exported="false" />
         <activity
-            android:name=".TelaRF30DashboardADM"
+            android:name=".ui.screens.TelaRF30DashboardADM"
             android:exported="false" />
         <activity
-            android:name=".TelaRF30CRUD"
+            android:name=".ui.screens.RF30TelaCRUD"
             android:exported="false" />
         <activity
-            android:name=".ui.screens.MainActivity"
+            android:name=".TelaRF01BemVindo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
