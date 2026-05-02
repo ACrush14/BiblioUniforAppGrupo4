@@ -67,7 +67,7 @@
 
     <!-- VOLTAR -->
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/textVoltar"
+        android:id="@+id/textVoltarDaRenovacao"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:text="@string/voltar"

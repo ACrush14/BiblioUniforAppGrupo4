@@ -140,7 +140,7 @@
 
             <!-- VOLTAR -->
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnVoltar2"
+                android:id="@+id/btnVoltarTelaRedefinirSenha"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:text="@string/voltar"

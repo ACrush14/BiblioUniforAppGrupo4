@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bibliounifor.R
 
-class RF04UsuarioGoogle : AppCompatActivity() {
+class TelaRF04UsuarioGoogle : AppCompatActivity() {
 
     lateinit var emailGoogle: EditText
     lateinit var bntProximo: Button

@@ -1,11 +1,13 @@
 package com.example.bibliounifor.ui.screens
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bibliounifor.R
 import com.example.bibliounifor.TelaRF02Intermediaria
+import com.example.bibliounifor.TelaRF30DashboardADM
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.telarf01_bemvindo)
 
         val buttonComecar = findViewById<Button>(R.id.buttonComecar)
-
         buttonComecar.setOnClickListener {
 
             val usuarioLogado = false
