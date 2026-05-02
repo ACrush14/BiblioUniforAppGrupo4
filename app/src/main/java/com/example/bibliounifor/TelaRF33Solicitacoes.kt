@@ -1,4 +1,4 @@
-package com.example.bibliouniforappgrupo4_v02
+package com.example.bibliounifor
 
 import android.os.Bundle
 import android.widget.LinearLayout

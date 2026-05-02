@@ -8,6 +8,6 @@ class TelaRF09DashboardUsuario : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.telarf9_dashboardusuario)
+        setContentView(R.layout.telarf09_dashboardusuario)
     }
 }

@@ -2,12 +2,16 @@ plugins {
     alias(libs.plugins.android.application)
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
-    kotlin("kapt") // O processador de anotações do Room
+    kotlin("kapt")
 }
 
 android {
     namespace = "com.example.bibliounifor"
-    compileSdk = 35
+    compileSdk = 36
+
+    kapt {
+        correctErrorTypes = true
+    }
 
     defaultConfig {
         applicationId = "com.example.bibliounifor"
@@ -27,6 +31,16 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+    // Modern way to set JVM target for Kotlin in Android
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+
+// JVM Toolchain ensures all tasks (Java, Kotlin, KAPT) use the same JDK version
+kotlin {
+    jvmToolchain(11)
 }
 
 dependencies {
@@ -35,6 +49,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.play.services.maps3d)
 
     val composeBom = platform("androidx.compose:compose-bom:2024.02.00")
     implementation(composeBom)
@@ -47,8 +62,10 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.7.7")
 
     // --- DEPENDÊNCIAS DO ROOM (BANCO DE DADOS) ---
-    val room_version = "2.6.1"
+    val room_version = "2.7.0"
     implementation("androidx.room:room-runtime:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.9.0")
 }
