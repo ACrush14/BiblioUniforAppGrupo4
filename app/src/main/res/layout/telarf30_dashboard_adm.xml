@@ -167,13 +167,14 @@
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Janeiro 2026 - 648"/>
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVerAlugueis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Ver Aluguéis"
                     android:textColor="#FFFFFF"
                     app:backgroundTint="#6CB6B3"
-                    app:cornerRadius="20dp"
-                    android:layout_marginTop="10dp"/>
+                    app:cornerRadius="20dp" />
             </LinearLayout>
 
             <!-- ATRASOS -->
@@ -196,13 +197,14 @@
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Roberta - 3 dias"/>
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVerAtrasos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Ver todos os atrasos"
                     android:textColor="#FFFFFF"
                     app:backgroundTint="#6CB6B3"
-                    app:cornerRadius="20dp"
-                    android:layout_marginTop="10dp"/>
+                    app:cornerRadius="20dp" />
             </LinearLayout>
 
             <!-- CADASTROS -->
@@ -227,13 +229,14 @@
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Roberto de Souza"/>
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVerCadastros"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Ver cadastros"
                     android:textColor="#FFFFFF"
                     app:backgroundTint="#6CB6B3"
-                    app:cornerRadius="20dp"
-                    android:layout_marginTop="10dp"/>
+                    app:cornerRadius="20dp" />
             </LinearLayout>
 
             <!-- SOLICITAÇÕES -->
@@ -258,13 +261,14 @@
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Um Homem Chamado Ove"/>
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVerSolicitacoes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Ver solicitações"
                     android:textColor="#FFFFFF"
                     app:backgroundTint="#6CB6B3"
-                    app:cornerRadius="20dp"
-                    android:layout_marginTop="10dp"/>
+                    app:cornerRadius="20dp" />
             </LinearLayout>
 
             <!-- RENOVAÇÕES -->
@@ -288,13 +292,14 @@
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cícero Correia - Pessoas Ansiosas - 5 maio"/>
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVerRenovacoes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Ver renovações"
                     android:textColor="#FFFFFF"
                     app:backgroundTint="#6CB6B3"
-                    app:cornerRadius="20dp"
-                    android:layout_marginTop="10dp"/>
+                    app:cornerRadius="20dp" />
             </LinearLayout>
 
         </LinearLayout>
