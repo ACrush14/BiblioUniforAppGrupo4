@@ -80,7 +80,7 @@
             <!-- 🔘 BOTÕES -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="222dp"
+                android:layout_height="157dp"
                 android:orientation="vertical"
                 android:padding="16dp">
 
@@ -120,11 +120,14 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.button.MaterialButton
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Comprar"
-                        app:backgroundTint="@color/biblio_cyan" />
+                        android:id="@+id/btnLerLivro"
+                        android:layout_width="126dp"
+                        android:layout_height="58dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:text="Ler"
+                        app:backgroundTint="@color/biblio_cyan"
+                        app:cornerRadius="40dp" />
 
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="0dp"
@@ -143,15 +146,6 @@
                 </LinearLayout>
 
                 <!-- botão ler -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLerLivro"
-                    android:layout_width="126dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="10dp"
-                    android:text="Ler"
-                    app:backgroundTint="@color/biblio_cyan"
-                    app:cornerRadius="40dp" />
             </LinearLayout>
 
             <!-- ⭐ NOTA + DISPONIBILIDADE -->
@@ -163,7 +157,7 @@
 
                 <!-- esquerda -->
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
