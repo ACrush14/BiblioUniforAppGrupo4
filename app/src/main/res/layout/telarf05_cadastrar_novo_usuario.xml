@@ -4,101 +4,166 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#EDF1F2">
 
-    <LinearLayout
+    <!-- Decorações de Fundo (Balões/Círculos) -->
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="-100dp"
+        android:layout_marginTop="-100dp"
+        android:alpha="0.3"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="#87DEDE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="-50dp"
+        android:layout_marginTop="100dp"
+        android:alpha="0.2"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="#415E5E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="-60dp"
+        android:layout_marginBottom="-40dp"
+        android:alpha="0.4"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="#87DEDE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:fillViewport="true">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="52dp" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="73dp"
-            android:gravity="center"
-            android:text="Seja bem vindo ao BiblioUnifor!"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView2"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Vamos fazer sua conta" />
+            android:orientation="vertical"
+            android:padding="32dp">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="49dp" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Seja bem vindo ao\nBiblioUnifor!"
+                android:textColor="#1B3434"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editTextNome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="50dp"
-            android:ems="10"
-            android:hint="Digite seu nome completo"
-            android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Vamos fazer sua conta"
+                android:textColor="#415E5E"
+                android:textSize="16sp" />
 
-        <EditText
-            android:id="@+id/editTextUsuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="50dp"
-            android:ems="10"
-            android:hint="Digite seu nome de usuário"
-            android:inputType="text" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
 
-        <EditText
-            android:id="@+id/editTextTextEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="50dp"
-            android:ems="10"
-            android:hint="Digite seu e-mail"
-            android:inputType="textEmailAddress" />
+            <EditText
+                android:id="@+id/editTextNome"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_input"
+                android:hint="Digite seu nome completo"
+                android:inputType="textPersonName"
+                android:padding="16dp"
+                android:textColorHint="#9E9E9E" />
 
-        <EditText
-            android:id="@+id/editTextTextSenha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="50dp"
-            android:ems="10"
-            android:hint="Digite sua senha"
-            android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/editTextUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_input"
+                android:hint="Digite seu nome de usuário"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textColorHint="#9E9E9E" />
 
-        <EditText
-            android:id="@+id/editTextTextConfirmaSenha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="50dp"
-            android:ems="10"
-            android:hint="Confirme sua senha"
-            android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/editTextTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_input"
+                android:hint="Digite seu e-mail"
+                android:inputType="textEmailAddress"
+                android:padding="16dp"
+                android:textColorHint="#9E9E9E" />
 
-        <Button
-            android:id="@+id/Criar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Criar" />
+            <EditText
+                android:id="@+id/editTextTextSenha"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_input"
+                android:hint="Digite sua senha"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                android:textColorHint="#9E9E9E" />
 
-        <Button
-            android:id="@+id/EntreAqui"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?android:attr/selectableItemBackground"
-            android:text="Já tem uma conta? Entre aqui"
-            android:textAllCaps="false"
-            android:textColor="#2196F3" />
-    </LinearLayout>
+            <EditText
+                android:id="@+id/editTextTextConfirmaSenha"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_input"
+                android:hint="Confirme sua senha"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                android:textColorHint="#9E9E9E" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Criar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#87DEDE"
+                android:text="Criar"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Já tem uma conta? "
+                    android:textColor="#415E5E" />
+
+                <TextView
+                    android:id="@+id/EntreAqui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entre aqui"
+                    android:textColor="#87DEDE"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

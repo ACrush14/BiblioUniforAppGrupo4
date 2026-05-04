@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F7F7">
@@ -16,94 +17,176 @@
             android:background="#6EC1C3"
             android:padding="16dp">
 
+            <View
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="-30dp"
+                android:layout_marginTop="-30dp"
+                android:background="@drawable/bg_circle"
+                android:alpha="0.2"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tela de CRUD"
-                android:textSize="22sp"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
                 android:layout_centerInParent="true"/>
 
             <ImageView
                 android:id="@+id/imgPerfil"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/bg_circle"
-                android:padding="8dp"
-                android:src="@android:drawable/sym_def_app_icon"/>
+                android:padding="4dp"
+                android:src="@mipmap/ic_launcher"/>
         </RelativeLayout>
 
-        <!-- CONTEÚDO -->
+        <!-- CONTEÚDO PRINCIPAL -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20dp">
 
-            <!-- BOTÕES PRINCIPAIS -->
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnCriarMidia"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:text="Criar Mídia"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/bg_botao_verde"
-                android:layout_marginBottom="14dp"/>
+                app:backgroundTint="#6EC1C3"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="12dp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnVerificarMidia"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:text="Verificar Mídia"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/bg_botao_verde"
-                android:layout_marginBottom="14dp"/>
+                app:backgroundTint="#6EC1C3"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="12dp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnGerenciarUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:text="Gerenciar usuário"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/bg_botao_verde"
-                android:layout_marginBottom="14dp"/>
+                app:backgroundTint="#6EC1C3"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="12dp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnPermissaoUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:layout_marginBottom="24dp"
-                android:background="@drawable/bg_botao_verde"
-                android:backgroundTint="#00BCD4"
                 android:text="Mudar permissão de usuário"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
+                app:backgroundTint="#6EC1C3"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="12dp"/>
 
-            <!-- AÇÕES PERIGOSAS -->
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnApagarUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:text="Apagar Usuário"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/bg_botao_vermelho"
-                android:layout_marginBottom="14dp"/>
+                app:backgroundTint="#D9534F"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="12dp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnApagarMidia"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:text="Apagar Mídia"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/bg_botao_vermelho"/>
+                app:backgroundTint="#D9534F"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="30dp"/>
+
+            <!-- SEÇÃO PROCURAR MÍDIA (SOLICITADO) -->
+            <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#DDDDDD" android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_rounded"
+                android:hint="Procurar mídia..."
+                android:paddingHorizontal="16dp"
+                android:drawableEnd="@android:drawable/ic_menu_sort_by_size"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/o_alienista_capa"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_input_rounded"
+                    android:elevation="4dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Título: O Senhor dos Aneis - A sociedade do Anel" android:textColor="#000000" android:textStyle="bold" android:textSize="16sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Autor: J. R. R. Tolkien" android:textColor="#333333" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ISBN: 8595084750" android:textColor="#333333" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data: 25 nov 2019" android:textColor="#333333" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disponível: audiobook, pdf, braille"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="12dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exemplares: 10/30"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/arrow_down_float"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 30 " android:textSize="20sp" android:textStyle="bold"/>
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/arrow_up_float"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditarInformacoes"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Editar informações"
+                app:backgroundTint="#6EC1C3"
+                app:cornerRadius="8dp"
+                android:layout_marginBottom="20dp"/>
 
         </LinearLayout>
 

@@ -1,25 +1,27 @@
 package com.example.bibliounifor.ui.screens
 
+import android.content.Intent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.bibliounifor.TelaRF23RenovacaoOnline
 import com.example.bibliounifor.ui.components.BookCard
 import com.example.bibliounifor.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TelaLivrosAlugadosScreen(
-    onRenovarClick: (Int) -> Unit = {}
-) {
-    val livrosAlugados = listOf(1)
+fun TelaLivrosAlugadosScreen() {
+    val context = LocalContext.current
+    val livrosAlugados = listOf(1) // Mock para exibição
 
     Scaffold(
         topBar = {
@@ -42,12 +44,16 @@ fun TelaLivrosAlugadosScreen(
                         statusColor = BiblioRed,
                         actionButtons = {
                             Button(
-                                onClick = { onRenovarClick(index) },
+                                onClick = { 
+                                    // Agora navega para a Activity de Renovação Online (XML)
+                                    val intent = Intent(context, TelaRF23RenovacaoOnline::class.java)
+                                    context.startActivity(intent)
+                                },
                                 colors = ButtonDefaults.buttonColors(containerColor = BiblioCyan),
-                                shape = RoundedCornerShape(8.dp),
-                                modifier = Modifier.height(36.dp).fillMaxWidth(0.5f)
+                                shape = RoundedCornerShape(12.dp),
+                                modifier = Modifier.height(44.dp).fillMaxWidth(0.6f)
                             ) {
-                                Text("Renovar Aluguel", fontSize = 12.sp, color = BiblioDark)
+                                Text("Renovar", fontSize = 16.sp, color = BiblioDark)
                             }
                         }
                     )

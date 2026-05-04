@@ -63,6 +63,12 @@
             android:name=".TelaRF30DashboardADM"
             android:exported="false" />
         <activity
+            android:name=".TelaRF24"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF25"
+            android:exported="false" />
+        <activity
             android:name=".TelaRF30CRUD"
             android:exported="false" />
         <activity

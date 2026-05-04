@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7F7">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#6EC1C3">
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="-50dp"
+            android:layout_marginTop="-40dp"
+            android:background="@drawable/bg_circle"
+            android:alpha="0.3" />
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@mipmap/ic_launcher"
+            android:background="@drawable/bg_circle"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="110dp"
+            android:text="Verificar Mídia"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAdicionarMidia"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Adicionar Mídia"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:backgroundTint="#6EC1C3"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:id="@+id/etProcurarMidia"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_rounded"
+                android:hint="Procurar mídia..."
+                android:paddingHorizontal="16dp"
+                android:drawableEnd="@android:drawable/ic_menu_sort_by_size"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- CARD DO LIVRO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/o_alienista_capa"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_input_rounded"
+                    android:elevation="4dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Título: O Senhor dos Aneis - A sociedade do Anel" android:textColor="#000000" android:textStyle="bold" android:textSize="16sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Autor: J. R. R. Tolkien" android:textColor="#333333" android:layout_marginTop="6dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ISBN: 8595084750" android:textColor="#333333" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data: 25 nov 2019" android:textColor="#333333" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Disponível: audiobook, pdf, braille"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exemplares: 10/30"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/arrow_down_float"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 30 " android:textSize="20sp" android:textStyle="bold"/>
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/arrow_up_float"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditarInformacoes"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Editar informações"
+                android:textAllCaps="false"
+                app:backgroundTint="#6EC1C3"
+                app:cornerRadius="8dp"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BARRA INFERIOR -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:src="@android:drawable/ic_menu_today" android:padding="12dp" app:tint="#A0A0A0"/>
+        <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:src="@android:drawable/ic_menu_manage" android:padding="12dp" app:tint="#A0A0A0"/>
+        <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:src="@android:drawable/ic_menu_myplaces" android:padding="12dp" app:tint="#A0A0A0"/>
+        <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:src="@android:drawable/ic_menu_help" android:padding="12dp" app:tint="#A0A0A0"/>
+        <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:src="@android:drawable/ic_menu_agenda" android:padding="12dp" app:tint="#1B3434"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

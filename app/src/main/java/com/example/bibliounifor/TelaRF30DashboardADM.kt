@@ -14,7 +14,8 @@ class TelaRF30DashboardADM : AppCompatActivity() {
         val btnTelaCRUD = findViewById<Button>(R.id.btnTelaCRUD)
 
         btnTelaCRUD.setOnClickListener {
-            val intent = Intent(this, TelaRF30CRUD::class.java)
+            // Alterado para ir para a TelaRF34LivrosCRUD conforme solicitado
+            val intent = Intent(this, TelaRF34LivrosCRUD::class.java)
             startActivity(intent)
         }
     }

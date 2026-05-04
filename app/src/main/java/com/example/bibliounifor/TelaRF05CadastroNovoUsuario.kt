@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +17,7 @@ class TelaRF05CadastroNovoUsuario : AppCompatActivity() {
     private lateinit var etSenha: EditText
     private lateinit var etConfirmaSenha: EditText
     private lateinit var btnCriar: Button
-    private lateinit var btnEntreAqui: Button
+    private lateinit var btnEntreAqui: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
