@@ -118,7 +118,7 @@
                 android:textStyle="bold" />
 
             <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
+                android:id="@+id/btnVoltarDashboard" android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginTop="12dp"
                 app:backgroundTint="#50C4C9"
@@ -166,7 +166,13 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="15dp" android:src="@android:drawable/ic_menu_compass" app:tint="#A0A0A0" />
+        <ImageView
+            android:id="@+id/iconDashboard" android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:src="@android:drawable/ic_menu_compass"
+            app:tint="#A0A0A0" />
         <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="15dp" android:src="@android:drawable/ic_menu_gallery" app:tint="#A0A0A0" />
         <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="15dp" android:src="@android:drawable/ic_menu_manage" app:tint="#000000" />
         <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="15dp" android:src="@android:drawable/ic_menu_help" app:tint="#A0A0A0" />

@@ -12,6 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BiblioUnifor">
         <activity
+            android:name=".TelaRF27RedefinirSenhaADM"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF28NovaContaADM"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF29GoogleADM"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF40ConfigADM"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF37ConfirmarCadastroADM"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF39InfoLivroADM"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF38ListaAlugueisADM"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF36FinanceiroADM"
+            android:exported="false" />
+        <activity
             android:name=".TelaRF31GerenciamentoDeUsuarios"
             android:exported="false" />
         <activity
