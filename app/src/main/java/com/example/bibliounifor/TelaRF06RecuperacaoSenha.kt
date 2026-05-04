@@ -32,5 +32,10 @@ class TelaRF06RecuperacaoSenha : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        bntEnviar.setOnClickListener {
+            val intent = Intent(this, TelaRF07ValidacaoDeCodigo::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
     }
 }
