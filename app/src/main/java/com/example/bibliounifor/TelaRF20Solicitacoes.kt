@@ -7,34 +7,24 @@ import androidx.appcompat.app.AppCompatActivity
 
 class TelaRF20Solicitacoes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.telarf20_solicitacoes)
 
-        val buttonSolicitarPDF = findViewById<Button>(R.id.btnSolicitarPdf)
-        val buttonSolicitarBraile = findViewById<Button>(R.id.btnSolicitarBraile)
-        val buttonSolicitarAudiobook = findViewById<Button>(R.id.btnSolicitarAudiobook)
-        val buttonReservar = findViewById<Button>(R.id.btnReservar)
+        // 1. Localizar os botões pelos IDs do XML
+        val btnPdf = findViewById<Button>(R.id.btnSolicitarPdf)
+        val btnBraile = findViewById<Button>(R.id.btnSolicitarBraile)
+        val btnAudio = findViewById<Button>(R.id.btnSolicitarAudiobook)
+        val btnReservar = findViewById<Button>(R.id.btnReservar)
 
-        buttonSolicitarPDF.setOnClickListener {
+        // 2. Configurar apenas o botão PDF para levar aos Termos e Condições
+        btnPdf.setOnClickListener {
             val intent = Intent(this, TelaRF20SolicitacoesTermosCondicoes::class.java)
             startActivity(intent)
         }
 
-        buttonSolicitarBraile.setOnClickListener {
-            val intent = Intent(this, TelaRF20SolicitacoesTermosCondicoes::class.java)
-            startActivity(intent)
-        }
-
-        buttonSolicitarAudiobook.setOnClickListener {
-            val intent = Intent(this, TelaRF20SolicitacoesTermosCondicoes::class.java)
-            startActivity(intent)
-        }
-
-        buttonReservar.setOnClickListener {
-            val intent = Intent(this, TelaRF20SolicitacoesTermosCondicoes::class.java)
-            startActivity(intent)
-        }
-
+        // 3. Os outros botões ficam sem ação definida por enquanto
+        btnBraile.setOnClickListener { /* Sem ação */ }
+        btnAudio.setOnClickListener { /* Sem ação */ }
+        btnReservar.setOnClickListener { /* Sem ação */ }
     }
 }

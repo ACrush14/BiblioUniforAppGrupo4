@@ -5,22 +5,25 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface LivroDao {
-    // Insere um livro novo ou substitui se já existir
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun inserirLivro(livro: EntidadeLivro)
 
-    // Busca um livro específico pelo ID
     @Query("SELECT * FROM books WHERE id = :id")
     suspend fun buscarLivroPorId(id: Int): EntidadeLivro?
 
-    // Busca todos os livros
     @Query("SELECT * FROM books")
-    fun buscarTodosLivros(): kotlinx.coroutines.flow.Flow<List<EntidadeLivro>>
+    fun buscarTodosLivros(): Flow<List<EntidadeLivro>>
 
-    // Atualiza onde o usuário parou de ler (o scroll)
+    @Query("SELECT * FROM books WHERE title LIKE :query OR author LIKE :query OR isbn LIKE :query")
+    fun pesquisarLivros(query: String): Flow<List<EntidadeLivro>>
+
     @Update
     suspend fun atualizarProgresso(livro: EntidadeLivro)
+
+    @Query("SELECT COUNT(*) FROM books")
+    suspend fun getCount(): Int
 }

@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.bibliounifor.ui.components.CustomTextField
@@ -69,4 +70,10 @@ fun ForgotPasswordScreen(onNavigateBack: () -> Unit, onNavigateToValidation: () 
             Text("Retornar à tela de login", color = Color(0xFF4DB6AC))
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewForgotPasswordScreen() {
+    ForgotPasswordScreen(onNavigateBack = {}, onNavigateToValidation = {})
 }

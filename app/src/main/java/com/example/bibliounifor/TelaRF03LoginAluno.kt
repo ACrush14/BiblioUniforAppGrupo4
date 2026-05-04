@@ -1,5 +1,6 @@
 package com.example.bibliounifor
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -32,34 +33,42 @@ class TelaRF03LoginAluno : AppCompatActivity() {
 
             erro.visibility = View.GONE
 
+            // Base de dados mockada
+            val usuariosValidos = mapOf(
+                "teste@email.com" to "12345678",
+                "anderson.link.crush@hotmail.com" to "123456"
+            )
+
             when {
                 textoEmail.isEmpty() || textoSenha.isEmpty() -> {
                     erro.text = "Preencha todos os campos"
                     erro.visibility = View.VISIBLE
                 }
 
-                textoEmail != "teste@email.com" || textoSenha != "12345678" -> {
+                usuariosValidos[textoEmail] != textoSenha -> {
                     erro.text = "E-mail ou senha incorretos"
                     erro.visibility = View.VISIBLE
                 }
 
                 else -> {
                     Toast.makeText(this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
-
-                    // FUTURO:
-                    // startActivity(Intent(this, ProximaTela::class.java))
+                    val intent = Intent(this, TelaRF09DashboardUsuario::class.java)
+                    startActivity(intent)
+                    finish() // Opcional: encerra a tela de login para não voltar a ela ao apertar 'back'
                 }
             }
         }
 
-        // CRIAR CONTA
+        // CRIAR CONTA -> TelaRF05
         criarConta.setOnClickListener {
-            Toast.makeText(this, "Ir para tela de cadastro", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, TelaRF05CadastroNovoUsuario::class.java)
+            startActivity(intent)
         }
 
-        // ESQUECEU SENHA
+        // ESQUECEU SENHA -> TelaRF06
         esqueceuSenha.setOnClickListener {
-            Toast.makeText(this, "Recuperação de senha em breve", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, TelaRF06RecuperacaoSenha::class.java)
+            startActivity(intent)
         }
 
         // VOLTAR

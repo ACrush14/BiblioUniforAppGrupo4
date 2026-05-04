@@ -1,124 +1,211 @@
 package com.example.bibliounifor.ui.screens
 
-import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.List
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.bibliounifor.R
+import com.example.bibliounifor.data.EntidadeLivro
 import com.example.bibliounifor.ui.theme.*
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TelaLeituraScreen(
     livroId: Int = 1,
-    onVoltarClick: () -> Unit = {},
+    onBack: () -> Unit = {},
+    onNavigate: (String) -> Unit = {},
     viewModel: XXLeituraViewModel = viewModel()
 ) {
     val livro by viewModel.livroAtual.collectAsState()
-    val scrollState = rememberScrollState()
-    var isModoFoco by remember { mutableStateOf(false) }
 
     LaunchedEffect(livroId) {
         viewModel.carregarLivro(livroId)
     }
 
-    LaunchedEffect(livro) {
-        livro?.let {
-            if (scrollState.value != it.lastPosition && it.lastPosition > 0) {
-                scrollState.scrollTo(it.lastPosition)
-            }
-        }
-    }
+    TelaLeituraContent(
+        livro = livro,
+        onBack = onBack,
+        onNavigate = onNavigate
+    )
+}
 
-    LaunchedEffect(scrollState.isScrollInProgress) {
-        if (!scrollState.isScrollInProgress && scrollState.value > 0) {
-            viewModel.salvarProgresso(scrollState.value)
-        }
-    }
-
-    if (livro == null) {
-        Box(modifier = Modifier.fillMaxSize(), contentAlignment = androidx.compose.ui.Alignment.Center) {
-            CircularProgressIndicator(color = BiblioCyan)
-        }
-        return
-    }
-
-    val progress = if (scrollState.maxValue > 0) {
-        (scrollState.value.toFloat() / scrollState.maxValue.toFloat() * 100).toInt()
-    } else 0
-
+@Composable
+fun TelaLeituraContent(
+    livro: EntidadeLivro?,
+    onBack: () -> Unit = {},
+    onNavigate: (String) -> Unit = {}
+) {
     Scaffold(
-        topBar = {
-            AnimatedVisibility(visible = !isModoFoco) {
-                TopAppBar(
-                    title = {
-                        Column {
-                            Text(livro!!.title, fontSize = 18.sp, fontWeight = FontWeight.Bold, color = BiblioDark)
-                            Text("${livro!!.author} • $progress% lido", fontSize = 12.sp, color = BiblioDark.copy(alpha = 0.7f))
-                        }
-                    },
-                    navigationIcon = {
-                        IconButton(onClick = onVoltarClick) {
-                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Voltar", tint = BiblioDark)
-                        }
-                    },
-                    colors = TopAppBarDefaults.topAppBarColors(containerColor = BiblioCyan)
-                )
-            }
-        },
         bottomBar = {
-            AnimatedVisibility(visible = !isModoFoco) {
-                LinearProgressIndicator(
-                    progress = { if (scrollState.maxValue > 0) scrollState.value.toFloat() / scrollState.maxValue else 0f },
-                    modifier = Modifier.fillMaxWidth().height(6.dp),
-                    color = BiblioDark,
-                    trackColor = androidx.compose.ui.graphics.Color.LightGray,
-                )
+            BottomAppBar(
+                containerColor = Color.White,
+                modifier = Modifier.height(70.dp),
+                contentPadding = PaddingValues(0.dp)
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceAround,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    IconButton(onClick = { }) { Icon(Icons.Default.Home, contentDescription = null, modifier = Modifier.size(28.dp)) }
+                    IconButton(onClick = { }) { Icon(Icons.Default.ShoppingCart, contentDescription = null, modifier = Modifier.size(28.dp)) }
+                    IconButton(onClick = { }) { Icon(Icons.Default.Search, contentDescription = null, modifier = Modifier.size(28.dp)) }
+                    IconButton(onClick = { }) { Icon(Icons.Default.FavoriteBorder, contentDescription = null, modifier = Modifier.size(28.dp)) }
+                    IconButton(onClick = { }) { Icon(Icons.AutoMirrored.Filled.List, contentDescription = null, modifier = Modifier.size(28.dp)) }
+                    IconButton(onClick = { }) { Icon(Icons.Default.Person, contentDescription = null, modifier = Modifier.size(28.dp)) }
+                    IconButton(onClick = { }) { Icon(Icons.Default.Settings, contentDescription = null, modifier = Modifier.size(28.dp)) }
+                }
             }
         }
     ) { padding ->
         Column(
             modifier = Modifier
-                .padding(padding)
                 .fillMaxSize()
-                .background(BiblioBg)
-                .verticalScroll(scrollState)
-                .clickable(
-                    interactionSource = remember { MutableInteractionSource() },
-                    indication = null
-                ) {
-                    isModoFoco = !isModoFoco
-                }
-                .padding(24.dp)
+                .background(Color.White)
+                .padding(padding)
+                .verticalScroll(rememberScrollState())
         ) {
-            Text(
-                text = livro!!.content,
-                fontSize = 18.sp,
-                lineHeight = 28.sp,
-                color = BiblioDark,
-                fontWeight = FontWeight.Medium
-            )
-            Spacer(modifier = Modifier.height(150.dp))
-            if (progress >= 99) {
-                Text(
-                    text = "Fim do Livro",
-                    modifier = Modifier.fillMaxWidth(),
-                    textAlign = androidx.compose.ui.text.style.TextAlign.Center,
-                    fontWeight = FontWeight.Bold,
-                    color = BiblioCyan
-                )
+            // Header Section
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(BiblioCyan)
+                    .padding(16.dp)
+            ) {
+                Column {
+                    // Botão Voltar
+                    IconButton(
+                        onClick = onBack,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = "Voltar",
+                            tint = Color.White,
+                            modifier = Modifier.size(32.dp)
+                        )
+                    }
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        // Book Cover
+                        Card(
+                            shape = RoundedCornerShape(4.dp),
+                            elevation = CardDefaults.cardElevation(4.dp),
+                            modifier = Modifier.size(width = 110.dp, height = 160.dp)
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.o_alienista_capa),
+                                contentDescription = "Capa",
+                                contentScale = ContentScale.Crop,
+                                modifier = Modifier.fillMaxSize()
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.width(16.dp))
+
+                        Column {
+                            Text(
+                                text = livro?.title ?: "O Alienista",
+                                fontSize = 26.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color.White
+                            )
+                            Text(
+                                text = livro?.author ?: "Machado de Assis",
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Medium,
+                                color = Color.White
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                            Text(
+                                text = "Ficção Psicológica",
+                                fontSize = 16.sp,
+                                color = Color.White.copy(alpha = 0.9f)
+                            )
+                        }
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            // Options Section
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                Row(modifier = Modifier.fillMaxWidth()) {
+                    BookActionButton(text = "Alugar", modifier = Modifier.weight(1f))
+                    Spacer(modifier = Modifier.width(16.dp))
+                    BookActionButton(text = "Comprar", modifier = Modifier.weight(1f))
+                }
+
+                BookActionButton(text = "Procurar", modifier = Modifier.fillMaxWidth())
+                BookActionButton(text = "Abrir PDF", modifier = Modifier.fillMaxWidth())
+                BookActionButton(text = "Abrir Audiobook", modifier = Modifier.fillMaxWidth())
+                BookActionButton(text = "Reservar", modifier = Modifier.fillMaxWidth())
+                BookActionButton(text = "Setor Localizado", modifier = Modifier.fillMaxWidth())
+                
+                Spacer(modifier = Modifier.height(20.dp))
             }
         }
     }
+}
+
+@Composable
+fun BookActionButton(
+    text: String,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit = {}
+) {
+    Button(
+        onClick = onClick,
+        modifier = modifier.height(52.dp),
+        shape = RoundedCornerShape(4.dp),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = BiblioCyan,
+            contentColor = Color.White
+        )
+    ) {
+        Text(
+            text = text,
+            fontSize = 18.sp,
+            fontWeight = FontWeight.Bold
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewTelaLeituraScreen() {
+    val sampleLivro = EntidadeLivro(
+        id = 1,
+        title = "O Alienista",
+        author = "Machado de Assis",
+        content = "",
+        lastPosition = 0
+    )
+    TelaLeituraContent(livro = sampleLivro)
 }

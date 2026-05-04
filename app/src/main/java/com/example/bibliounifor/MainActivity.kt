@@ -1,13 +1,9 @@
-package com.example.bibliounifor.ui.screens
-
+package com.example.bibliounifor
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.bibliounifor.R
-import com.example.bibliounifor.TelaRF02Intermediaria
-import com.example.bibliounifor.TelaRF30DashboardADM
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +25,7 @@ class MainActivity : AppCompatActivity() {
                 if (tipoUsuario == "adm") {
                     startActivity(Intent(this, TelaRF30DashboardADM::class.java))
                 } else {
+                    // Aqui deve-se garantir que TelaRF09DashboardUsuario também esteja no pacote correto
                     startActivity(Intent(this, TelaRF09DashboardUsuario::class.java))
                 }
             }

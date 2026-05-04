@@ -1,20 +1,34 @@
 package com.example.bibliounifor
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
-class TelaRF29GoogleADM : AppCompatActivity() {
+class GoogleLoginActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_tela_rf29_google_adm)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        setContentView(R.layout.activity_google_login)
+
+        val edtEmailGoogle = findViewById<EditText>(R.id.edtEmailGoogle)
+        val btnProxima = findViewById<Button>(R.id.btnProxima)
+        val txtVoltar = findViewById<TextView>(R.id.txtCriarContaGoogle)
+
+        btnProxima.setOnClickListener {
+            val email = edtEmailGoogle.text.toString()
+
+            if (email.isEmpty()) {
+                Toast.makeText(this, "Digite seu e-mail do Google", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Conectado com a conta: $email", Toast.LENGTH_LONG).show()
+            }
+        }
+
+        txtVoltar.setOnClickListener {
+            finish()
         }
     }
 }
