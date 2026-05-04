@@ -14,14 +14,16 @@ abstract class AppDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
+        // In com.example.bibliounifor.data.AppDatabase
         fun getDatabase(context: Context): AppDatabase {
-            // Se a instância já existe, retorna ela. Se não, cria o banco.
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
                     "bibliounifor_database"
-                ).build()
+                )
+                    .fallbackToDestructiveMigration() // Add this line
+                    .build()
                 INSTANCE = instance
                 instance
             }

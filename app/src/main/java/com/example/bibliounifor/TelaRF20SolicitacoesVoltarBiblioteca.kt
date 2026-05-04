@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.teste.TelaRF13Livro
 
 class TelaRF20SolicitacoesVoltarBiblioteca : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +14,7 @@ class TelaRF20SolicitacoesVoltarBiblioteca : AppCompatActivity() {
         val buttonVoltarBiblioteca = findViewById<Button>(R.id.btnVoltarBiblioteca)
 
         buttonVoltarBiblioteca.setOnClickListener {
-            val intent = Intent(this, TelaRF13Livro::class.java)
+            val intent = Intent(this@TelaRF20SolicitacoesVoltarBiblioteca, TelaRF13TelaDoLivro::class.java)
             startActivity(intent)
         }
 

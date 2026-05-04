@@ -1,10 +1,9 @@
-package com.example.bibliounifor.ui.screens
+package com.example.bibliounifor
 
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.bibliounifor.R
 
 class RF09DashboardUsuario : AppCompatActivity() {
 

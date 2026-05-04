@@ -7,6 +7,7 @@ class TelaRF30CRUD : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.telarf30_3_crud)
+        // The extra "telarf30_3_crud)" was removed to fix the syntax error
+        setContentView(R.layout.telarf30_dashboard_adm)
     }
 }
