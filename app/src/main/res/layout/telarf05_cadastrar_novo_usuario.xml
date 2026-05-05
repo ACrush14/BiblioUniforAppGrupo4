@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#EDF1F2">
 
-    <!-- Decorações de Fundo (Balões/Círculos) -->
+    <!-- Decorações de Fundo -->
     <View
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -18,28 +18,6 @@
         android:backgroundTint="#87DEDE"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="-50dp"
-        android:layout_marginTop="100dp"
-        android:alpha="0.2"
-        android:background="@drawable/bg_circle"
-        android:backgroundTint="#415E5E"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginEnd="-60dp"
-        android:layout_marginBottom="-40dp"
-        android:alpha="0.4"
-        android:background="@drawable/bg_circle"
-        android:backgroundTint="#87DEDE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -53,7 +31,6 @@
             android:padding="32dp">
 
             <TextView
-                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -64,7 +41,6 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -85,8 +61,7 @@
                 android:background="@drawable/bg_input"
                 android:hint="Digite seu nome completo"
                 android:inputType="textPersonName"
-                android:padding="16dp"
-                android:textColorHint="#9E9E9E" />
+                android:padding="16dp" />
 
             <EditText
                 android:id="@+id/editTextUsuario"
@@ -95,9 +70,19 @@
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/bg_input"
                 android:hint="Digite seu nome de usuário"
-                android:inputType="text"
-                android:padding="16dp"
-                android:textColorHint="#9E9E9E" />
+                android:padding="16dp" />
+
+            <!-- ERRO EMAIL (Invisível por padrão) -->
+            <TextView
+                android:id="@+id/tvErroEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="E-mail já cadastrado ou inválido"
+                android:textColor="#FF0000"
+                android:textSize="14sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <EditText
                 android:id="@+id/editTextTextEmail"
@@ -107,8 +92,7 @@
                 android:background="@drawable/bg_input"
                 android:hint="Digite seu e-mail"
                 android:inputType="textEmailAddress"
-                android:padding="16dp"
-                android:textColorHint="#9E9E9E" />
+                android:padding="16dp" />
 
             <EditText
                 android:id="@+id/editTextTextSenha"
@@ -118,25 +102,34 @@
                 android:background="@drawable/bg_input"
                 android:hint="Digite sua senha"
                 android:inputType="textPassword"
-                android:padding="16dp"
-                android:textColorHint="#9E9E9E" />
+                android:padding="16dp" />
 
             <EditText
                 android:id="@+id/editTextTextConfirmaSenha"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/bg_input"
                 android:hint="Confirme sua senha"
                 android:inputType="textPassword"
-                android:padding="16dp"
-                android:textColorHint="#9E9E9E" />
+                android:padding="16dp" />
+
+            <!-- ERRO SENHA (Invisível por padrão) -->
+            <TextView
+                android:id="@+id/tvErroSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="• A senha deve conter pelo menos 8 caracteres\n• Um número\n• Uma letra maiuscula"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/Criar"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="16dp"
                 android:backgroundTint="#87DEDE"
                 android:text="Criar"
                 android:textColor="#FFFFFF"
@@ -148,13 +141,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Já tem uma conta? "
-                    android:textColor="#415E5E" />
-
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Já tem uma conta? " />
                 <TextView
                     android:id="@+id/EntreAqui"
                     android:layout_width="wrap_content"
@@ -163,7 +150,6 @@
                     android:textColor="#87DEDE"
                     android:textStyle="bold" />
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -92,14 +92,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <include
+                android:id="@+id/itemUsuario1"
+                layout="@layout/item_usuario_gestao" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
+
+            <include
+                android:id="@+id/itemUsuario2"
+                layout="@layout/item_usuario_gestao" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
+
             <include layout="@layout/item_usuario_gestao" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
+
             <include layout="@layout/item_usuario_gestao" />
             <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
-            <include layout="@layout/item_usuario_gestao" />
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
-            <include layout="@layout/item_usuario_gestao" />
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
+
             <include layout="@layout/item_usuario_gestao" />
 
         </LinearLayout>
