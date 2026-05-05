@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.content.Intent
 
+import android.widget.ImageView
+
 class TelaRF30DashboardADM : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +20,8 @@ class TelaRF30DashboardADM : AppCompatActivity() {
             val intent = Intent(this, TelaRF34LivrosCRUD::class.java)
             startActivity(intent)
         }
-    }
 
+        // 👇 BARRA ADM
+        NavigationUtils.setupAdminNavigation(this)
+    }
 }

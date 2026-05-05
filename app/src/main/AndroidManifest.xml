@@ -63,6 +63,15 @@
             android:name=".TelaRF32UsuariosParaADM"
             android:exported="false" />
         <activity
+            android:name=".TelaRF35_1Data"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF35_3InfosAdicionais"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF35_4Versoes"
+            android:exported="false" />
+        <activity
             android:name=".TelaRF11RedefinirSenha"
             android:exported="false" />
         <activity

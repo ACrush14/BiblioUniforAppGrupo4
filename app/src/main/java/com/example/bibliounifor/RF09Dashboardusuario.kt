@@ -8,11 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 class RF09DashboardUsuario : AppCompatActivity() {
 
     lateinit var navHome: ImageView
-    lateinit var navPerfil: ImageView
-    lateinit var navCalendario: ImageView
-    lateinit var navAjuda: ImageView
-    lateinit var navConfig: ImageView
-
+    lateinit var navUsuario: ImageView
+    lateinit var navBusca: ImageView
+    lateinit var navCarrinho: ImageView
+    lateinit var navFavoritos: ImageView
+    lateinit var navLista: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,10 +20,10 @@ class RF09DashboardUsuario : AppCompatActivity() {
         setContentView(R.layout.telarf09_dashboardusuario)
 
         navHome = findViewById(R.id.navHome)
-        navPerfil = findViewById(R.id.navPerfil)
-        navCalendario = findViewById(R.id.navCalendario)
-        navAjuda = findViewById(R.id.navAjuda)
-        navConfig = findViewById(R.id.navConfig)
-
+        navUsuario = findViewById(R.id.navUsuario)
+        navBusca = findViewById(R.id.navBusca)
+        navCarrinho = findViewById(R.id.navCarrinho)
+        navFavoritos = findViewById(R.id.navFavoritos)
+        navLista = findViewById(R.id.navLista)
     }
 }

@@ -6,6 +6,9 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
+import android.content.Intent
+import android.widget.ImageView
+
 class TelaRF41RedefinirADMInterno : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +19,9 @@ class TelaRF41RedefinirADMInterno : AppCompatActivity() {
         val etSenhaConfirmacao = findViewById<EditText>(R.id.editTextTextPasswordConfirmacao)
         val bntX = findViewById<Button>(R.id.buttonX)
         val bntSalvar = findViewById<Button>(R.id.buttonSalvar)
+
+        // 👇 BARRA ADM
+        NavigationUtils.setupAdminNavigation(this)
 
         bntSalvar.setOnClickListener {
             val s1 = etSenha.text.toString()

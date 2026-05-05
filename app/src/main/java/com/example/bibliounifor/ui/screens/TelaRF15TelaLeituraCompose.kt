@@ -24,6 +24,18 @@ import com.example.bibliounifor.data.EntidadeLivro
 import com.example.bibliounifor.ui.theme.*
 
 @Composable
+fun BookActionButton(text: String, modifier: Modifier = Modifier, onClick: () -> Unit = {}) {
+    Button(
+        onClick = onClick,
+        modifier = modifier.height(55.dp),
+        colors = ButtonDefaults.buttonColors(containerColor = BiblioCyan),
+        shape = RoundedCornerShape(12.dp)
+    ) {
+        Text(text, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+    }
+}
+
+@Composable
 fun TelaLeituraScreen(
     livroId: Int = 1,
     onBack: () -> Unit = {},
