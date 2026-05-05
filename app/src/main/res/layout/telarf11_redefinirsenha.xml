@@ -1,151 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F7F7"
-    android:fillViewport="true">
+    android:background="#F5F7F7">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavContainer">
 
-        <!-- HEADER DESIGN (Consistente com a RF10) -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:background="#87DEDE">
-
-            <TextView
-                android:id="@+id/btnFechar"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:gravity="center"
-                android:text="✕"
-                android:textColor="#1B3434"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/o_alienista_capa"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
-                app:strokeColor="#FFFFFF"
-                app:strokeWidth="2dp" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!-- FORMULÁRIO -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="24dp">
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:text="Redefinir senha"
-                android:textColor="#1B3434"
-                android:textSize="26sp"
-                android:textStyle="bold" />
-
-            <!-- CAMPO NOVA SENHA -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nova senha"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editNovaSenha"
+            <!-- HEADER DESIGN -->
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_input_pill"
-                android:hint="Digite sua nova senha"
-                android:inputType="textPassword"
-                android:paddingHorizontal="20dp"
-                android:textColor="#444444" />
+                android:layout_height="220dp"
+                android:background="#6EC1C3">
 
-            <TextView
-                android:id="@+id/textErroSenha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="#E53935"
-                android:textSize="12sp"
-                android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/btnNotificacao"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@android:drawable/ic_popup_reminder"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#1B3434" />
 
-            <!-- CAMPO CONFIRMAR SENHA -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Confirmar senha"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/btnConfig"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@android:drawable/ic_menu_manage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#1B3434" />
 
-            <EditText
-                android:id="@+id/editConfirmarSenha"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_input_pill"
-                android:hint="Repita a senha"
-                android:inputType="textPassword"
-                android:paddingHorizontal="20dp"
-                android:textColor="#444444" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                    app:strokeColor="#FFFFFF"
+                    app:strokeWidth="2dp" />
 
-            <TextView
-                android:id="@+id/textErroConfirmar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="#E53935"
-                android:textSize="12sp"
-                android:visibility="gone" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- DICAS DE SEGURANÇA -->
-            <TextView
+            <!-- FORMULÁRIO -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:lineSpacingExtra="4dp"
-                android:text="A senha deve conter:\n• mínimo 8 caracteres\n• pelo menos 1 número\n• pelo menos 1 letra maiúscula"
-                android:textColor="#758989"
-                android:textSize="14sp" />
+                android:orientation="vertical"
+                android:padding="24dp">
 
-            <!-- BOTÃO SALVAR -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/buttonSalvar"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="16dp"
-                android:text="Salvar alterações"
-                android:textAllCaps="false"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:backgroundTint="#6CB6B3"
-                app:cornerRadius="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="Redefinir senha"
+                    android:textColor="#1B3434"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nova senha"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editNovaSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_input_pill"
+                    android:hint="Digite sua nova senha"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="20dp"
+                    android:textColor="#444444" />
+
+                <TextView
+                    android:id="@+id/textErroSenha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#E53935"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Confirmar senha"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editConfirmarSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_input_pill"
+                    android:hint="Repita a senha"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="20dp"
+                    android:textColor="#444444" />
+
+                <TextView
+                    android:id="@+id/textErroConfirmar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#E53935"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="A senha deve conter:\n• mínimo 8 caracteres\n• pelo menos 1 número\n• pelo menos 1 letra maiúscula"
+                    android:textColor="#758989"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonSalvar"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Salvar alterações"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#6CB6B3"
+                    app:cornerRadius="15dp" />
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+
+    <!-- BOTTOM NAV -->
+    <FrameLayout
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <include layout="@layout/bottom_navigation_placeholder" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

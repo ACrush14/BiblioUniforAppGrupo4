@@ -10,6 +10,10 @@ class TelaRF20Solicitacoes : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.telarf20_solicitacoes)
 
+        // Padronização da Navegação e Cabeçalho
+        NavigationUtils.setupTopBar(this)
+        NavigationUtils.setupBottomNavigation(this)
+
         // 1. Localizar os botões pelos IDs do XML
         val btnPdf = findViewById<Button>(R.id.btnSolicitarPdf)
         val btnBraile = findViewById<Button>(R.id.btnSolicitarBraile)

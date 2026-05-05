@@ -11,8 +11,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.bibliounifor.ui.components.BiblioHeader
-import com.example.bibliounifor.ui.components.BookCard
 import com.example.bibliounifor.ui.theme.*
 
 @Composable
@@ -22,39 +20,49 @@ fun TelaListaDesejosScreen(
 ) {
     val livrosDesejados = listOf(1, 2)
 
-    Column(modifier = Modifier.fillMaxSize().background(BiblioBg)) {
-        BiblioHeader(title = "Lista de Desejos")
-
-        LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(horizontal = 16.dp),
-            contentPadding = PaddingValues(vertical = 16.dp)
+    Scaffold(
+        topBar = { BiblioTopAppBar(title = "Lista de Desejos") },
+        bottomBar = { BiblioBottomNavigation() }
+    ) { padding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(BiblioBg)
+                .padding(padding)
         ) {
-            items(livrosDesejados) { id ->
-                val isFirst = id == 1
-                BookCard(
-                    title = if (isFirst) "Vidas Secas" else "O Ceifador",
-                    author = if (isFirst) "Graciliano Ramos" else "Neal Shusterman",
-                    extraInfo = if (isFirst) "18 dez. 2019" else "23 mar. 2018",
-                    onOptionsClick = { },
-                    actionButtons = {
-                        Button(
-                            onClick = { onSuaLivrariaClick(id) },
-                            colors = ButtonDefaults.buttonColors(containerColor = BiblioCyan),
-                            shape = RoundedCornerShape(8.dp),
-                            modifier = Modifier.height(36.dp)
-                        ) {
-                            Text("Sua Livraria", fontSize = 12.sp, color = BiblioDark)
+            LazyColumn(
+                modifier = Modifier.fillMaxSize().padding(horizontal = 16.dp),
+                contentPadding = PaddingValues(vertical = 16.dp)
+            ) {
+                items(livrosDesejados) { id ->
+                    val isFirst = id == 1
+                    // Nota: Assumindo que o componente BookCard ainda existe e é compatível
+                    // Se houver erro de compilação, o ideal seria padronizar o BookCard também.
+                    com.example.bibliounifor.ui.components.BookCard(
+                        title = if (isFirst) "Vidas Secas" else "O Ceifador",
+                        author = if (isFirst) "Graciliano Ramos" else "Neal Shusterman",
+                        extraInfo = if (isFirst) "18 dez. 2019" else "23 mar. 2018",
+                        onOptionsClick = { },
+                        actionButtons = {
+                            Button(
+                                onClick = { onSuaLivrariaClick(id) },
+                                colors = ButtonDefaults.buttonColors(containerColor = BiblioCyan),
+                                shape = RoundedCornerShape(8.dp),
+                                modifier = Modifier.height(36.dp)
+                            ) {
+                                Text("Sua Livraria", fontSize = 12.sp, color = BiblioDark)
+                            }
+                            Button(
+                                onClick = { onAlugarClick(id) },
+                                colors = ButtonDefaults.buttonColors(containerColor = BiblioCyan),
+                                shape = RoundedCornerShape(8.dp),
+                                modifier = Modifier.height(36.dp)
+                            ) {
+                                Text("Alugar", fontSize = 12.sp, color = BiblioDark)
+                            }
                         }
-                        Button(
-                            onClick = { onAlugarClick(id) },
-                            colors = ButtonDefaults.buttonColors(containerColor = BiblioCyan),
-                            shape = RoundedCornerShape(8.dp),
-                            modifier = Modifier.height(36.dp)
-                        ) {
-                            Text("Alugar", fontSize = 12.sp, color = BiblioDark)
-                        }
-                    }
-                )
+                    )
+                }
             }
         }
     }
