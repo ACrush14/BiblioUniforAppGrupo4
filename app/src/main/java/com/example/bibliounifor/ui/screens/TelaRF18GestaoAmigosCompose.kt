@@ -10,8 +10,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -54,10 +52,10 @@ fun TelaGestaoAmigosScreen() {
         // Exibe a lista de amigos
         Scaffold(
             topBar = {
-                TopAppBar(
-                    title = { Text("Amigos", fontWeight = FontWeight.Bold, color = BiblioDark) },
-                    colors = TopAppBarDefaults.topAppBarColors(containerColor = BiblioCyan)
-                )
+                BiblioTopAppBar(title = "Amigos")
+            },
+            bottomBar = {
+                BiblioBottomNavigation()
             }
         ) { padding ->
             Column(
@@ -126,95 +124,93 @@ fun TelaGestaoAmigosScreen() {
 
 @Composable
 fun UserDetailScreen(user: User, onBack: () -> Unit) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.White)
-    ) {
-        // Header de Perfil (Cor Cyan, foto, email)
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(220.dp)
-                .background(BiblioCyan)
-                .padding(16.dp)
-        ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                IconButton(onClick = { }) {
-                    Icon(Icons.Default.Notifications, contentDescription = null, tint = Color.Black)
-                }
-                IconButton(onClick = { }) {
-                    Icon(Icons.Default.Settings, contentDescription = null, tint = Color.Black)
-                }
-            }
-            
-            Column(
-                modifier = Modifier.fillMaxSize(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ) {
-                Box(
-                    modifier = Modifier
-                        .size(90.dp)
-                        .clip(CircleShape)
-                        .background(Color.Gray)
-                )
-                Spacer(modifier = Modifier.height(12.dp))
-                Text(
-                    text = user.email,
-                    color = Color.White,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 20.sp
-                )
-            }
+    Scaffold(
+        topBar = {
+            BiblioTopAppBar(title = "Perfil do Amigo")
+        },
+        bottomBar = {
+            BiblioBottomNavigation()
         }
-
-        // Formulário de Detalhes
+    ) { padding ->
         Column(
             modifier = Modifier
-                .padding(24.dp)
-                .fillMaxWidth()
+                .fillMaxSize()
+                .background(Color.White)
+                .padding(padding)
         ) {
-            DetailField(label = "Nome", value = user.nome)
-            DetailField(label = "Usuário", value = user.usuario)
-            DetailField(label = "Bio", value = user.bio, isLong = true)
-
-            Spacer(modifier = Modifier.height(32.dp))
-
-            // Botão Adicionar Amigo
-            Button(
-                onClick = { },
+            // Header de Perfil (Cor Cyan, foto, email)
+            Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(56.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = BiblioCyan),
-                shape = RoundedCornerShape(12.dp)
+                    .height(160.dp)
+                    .background(BiblioCyan)
+                    .padding(16.dp)
             ) {
-                Text("Adicionar Amigo", color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(80.dp)
+                            .clip(CircleShape)
+                            .background(Color.Gray)
+                    )
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Text(
+                        text = user.email,
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 18.sp
+                    )
+                }
             }
 
-            Spacer(modifier = Modifier.height(12.dp))
-
-            // Botão Excluir Amigo (Vermelho)
-            Button(
-                onClick = { },
+            // Formulário de Detalhes
+            Column(
                 modifier = Modifier
+                    .padding(24.dp)
                     .fillMaxWidth()
-                    .height(56.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFD32F2F)),
-                shape = RoundedCornerShape(12.dp)
             ) {
-                Text("Excluir amigo", color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold)
-            }
+                DetailField(label = "Nome", value = user.nome)
+                DetailField(label = "Usuário", value = user.usuario)
+                DetailField(label = "Bio", value = user.bio, isLong = true)
 
-            TextButton(
-                onClick = onBack,
-                modifier = Modifier.align(Alignment.CenterHorizontally).padding(top = 8.dp)
-            ) {
-                Text("Voltar", color = BiblioCyan, fontSize = 16.sp)
+                Spacer(modifier = Modifier.height(24.dp))
+
+                // Botão Adicionar Amigo
+                Button(
+                    onClick = { },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(56.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = BiblioCyan),
+                    shape = RoundedCornerShape(12.dp)
+                ) {
+                    Text("Adicionar Amigo", color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                }
+
+                Spacer(modifier = Modifier.height(12.dp))
+
+                // Botão Excluir Amigo (Vermelho)
+                Button(
+                    onClick = { },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(56.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFD32F2F)),
+                    shape = RoundedCornerShape(12.dp)
+                ) {
+                    Text("Excluir amigo", color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                }
+
+                TextButton(
+                    onClick = onBack,
+                    modifier = Modifier.align(Alignment.CenterHorizontally).padding(top = 8.dp)
+                ) {
+                    Text("Voltar", color = BiblioCyan, fontSize = 16.sp)
+                }
             }
         }
     }
@@ -234,7 +230,7 @@ fun DetailField(label: String, value: String, isLong: Boolean = false) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(if (isLong) 120.dp else 52.dp)
+                .height(if (isLong) 100.dp else 52.dp)
                 .background(Color(0xFFF5F7F7), RoundedCornerShape(26.dp))
                 .padding(horizontal = 20.dp, vertical = if (isLong) 16.dp else 0.dp),
             contentAlignment = if (isLong) Alignment.TopStart else Alignment.CenterStart

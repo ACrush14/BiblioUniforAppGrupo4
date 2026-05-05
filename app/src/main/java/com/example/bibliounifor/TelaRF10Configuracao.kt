@@ -11,6 +11,10 @@ class TelaRF10Configuracao : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.telarf10_configuracao)
 
+        // Padronização da Navegação e Cabeçalho
+        NavigationUtils.setupTopBar(this)
+        NavigationUtils.setupBottomNavigation(this)
+
         // Localizando os botões do layout
         val btnRedefinir = findViewById<MaterialButton>(R.id.btnRedefinirSenha)
         val btnVoltar = findViewById<MaterialButton>(R.id.btnVoltarTelaInicial)
@@ -27,9 +31,9 @@ class TelaRF10Configuracao : AppCompatActivity() {
             finish()
         }
 
-        // Botão para apagar conta (lógica pode ser adicionada depois)
+        // Botão para apagar conta
         btnApagar.setOnClickListener {
-            // Lógica de exclusão
+            // Lógica de exclusão pode ser implementada aqui
         }
     }
 }

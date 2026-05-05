@@ -2,9 +2,10 @@ package com.example.bibliounifor
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class TelaRF06RecuperacaoSenha : AppCompatActivity() {
@@ -16,13 +17,21 @@ class TelaRF06RecuperacaoSenha : AppCompatActivity() {
         val etEmail = findViewById<EditText>(R.id.editTextEmaiREC)
         val btnEnviar = findViewById<Button>(R.id.buttonEnviarCOD)
         val btnVoltar = findViewById<Button>(R.id.buttonVoltarLog)
+        val textErroEmail = findViewById<TextView>(R.id.textErroEmail)
 
         btnEnviar.setOnClickListener {
             val email = etEmail.text.toString()
-            if (email.isNotEmpty()) {
-                Toast.makeText(this, "Código enviado para $email", Toast.LENGTH_SHORT).show()
+            
+            // Simulação de validação de e-mail (ex: verificar se não está vazio e se existe no "banco")
+            if (email.isNotEmpty() && email.contains("@")) {
+                textErroEmail.visibility = View.INVISIBLE
+                
+                // Navegar para a tela de validação de código
+                val intent = Intent(this, TelaRF07ValidacaoDeCodigo::class.java)
+                startActivity(intent)
             } else {
-                Toast.makeText(this, "Por favor, insira seu e-mail", Toast.LENGTH_SHORT).show()
+                // E-mail inválido ou não cadastrado
+                textErroEmail.visibility = View.VISIBLE
             }
         }
 

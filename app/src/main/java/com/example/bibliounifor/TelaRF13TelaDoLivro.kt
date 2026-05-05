@@ -21,13 +21,17 @@ class TelaRF13TelaDoLivro : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.telarf13_teladolivro)
 
+        // Padronização da Navegação e Cabeçalho
+        NavigationUtils.setupTopBar(this)
+        NavigationUtils.setupBottomNavigation(this)
+
         val livroId = intent.getIntExtra("LIVRO_ID", -1)
         if (livroId != -1) {
             carregarDadosDoLivro(livroId)
         }
 
         findViewById<Button>(R.id.btnVerMaisLivro).setOnClickListener {
-            val intent = Intent(this, RF14TelaVerMaisLivro::class.java)
+            val intent = Intent(this, TelaRF14VerMaisLivro::class.java)
             intent.putExtra("LIVRO_ID", livroId)
             startActivity(intent)
         }

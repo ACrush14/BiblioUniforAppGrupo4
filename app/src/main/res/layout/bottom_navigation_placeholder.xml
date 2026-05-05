@@ -1,65 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/bottomNavigation"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:background="@android:color/white"
+    android:layout_height="65dp"
+    android:background="#FFFFFF"
     android:elevation="8dp"
     android:orientation="horizontal">
 
+    <!-- 1. Home (Casa) -->
     <ImageView
         android:id="@+id/navHome"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="12dp"
-        android:src="@android:drawable/ic_menu_view" />
+        android:src="@android:drawable/ic_menu_today"
+        android:contentDescription="Home"
+        android:tint="#A0A0A0" />
 
+    <!-- 2. Livraria (Tenda) -->
     <ImageView
-        android:id="@+id/navStore"
+        android:id="@+id/navLivraria"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="12dp"
-        android:src="@android:drawable/ic_menu_today" />
+        android:src="@android:drawable/ic_menu_myplaces"
+        android:contentDescription="Livraria"
+        android:tint="#A0A0A0" />
 
+    <!-- 3. Pesquisa (Lupa) -->
     <ImageView
         android:id="@+id/navSearch"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="12dp"
-        android:src="@android:drawable/ic_menu_search" />
+        android:src="@android:drawable/ic_menu_search"
+        android:contentDescription="Pesquisa"
+        android:tint="#A0A0A0" />
 
+    <!-- 4. Desejos (Coração) -->
     <ImageView
-        android:id="@+id/navFav"
+        android:id="@+id/navFavorites"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="12dp"
-        android:src="@android:drawable/btn_star" />
+        android:src="@android:drawable/btn_star_big_on"
+        android:contentDescription="Desejos"
+        android:tint="#A0A0A0" />
 
+    <!-- 5. Aluguel (Livro) -->
     <ImageView
-        android:id="@+id/navBooks"
+        android:id="@+id/navRentals"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="12dp"
-        android:src="@android:drawable/ic_menu_agenda" />
+        android:src="@android:drawable/ic_menu_agenda"
+        android:contentDescription="Aluguel"
+        android:tint="#A0A0A0" />
 
+    <!-- 6. Amigos (Pessoa) -->
     <ImageView
-        android:id="@+id/navProfile"
+        android:id="@+id/navFriends"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="12dp"
-        android:src="@android:drawable/ic_menu_myplaces" />
+        android:src="@android:drawable/ic_menu_my_calendar"
+        android:contentDescription="Amigos"
+        android:tint="#A0A0A0" />
 
-    <ImageView
-        android:id="@+id/navStats"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:padding="12dp"
-        android:src="@android:drawable/ic_menu_sort_by_size" />
 </LinearLayout>

@@ -11,6 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BiblioUnifor">
+
+        <!-- TELAS DE RECUPERAÇÃO DE SENHA -->
+        <activity
+            android:name=".TelaRF07ValidacaoDeCodigo"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF08RedefinirSenha"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF08ConfirmarRedefinirSenha"
+            android:exported="false" />
+
         <activity
             android:name=".TelaRF27RedefinirSenhaADM"
             android:exported="false" />
@@ -127,12 +139,6 @@
             android:exported="false" />
         <activity
             android:name=".TelaRF15LeituraActivity"
-            android:exported="false" />
-        <activity
-            android:name=".TelaRF27RedefinirSenhaADM"
-            android:exported="false" />
-        <activity
-            android:name=".TelaRF28NovaContaADM"
             android:exported="false" />
         <activity
             android:name=".GoogleLoginActivity"
