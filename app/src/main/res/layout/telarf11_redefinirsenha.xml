@@ -1,74 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F7F7"
-    android:fillViewport="true">
+    android:background="#F5F7F7">
 
-    <LinearLayout
+    <!-- HEADER FIXO NO TOPO -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="220dp"
+        android:background="#87DEDE"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!-- HEADER DESIGN (Consistente com a RF10) -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:background="#87DEDE">
+        <TextView
+            android:id="@+id/btnFechar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="@string/fechar_x"
+            android:textColor="#1B3434"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/btnFechar"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:gravity="center"
-                android:text="✕"
-                android:textColor="#1B3434"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/o_alienista_capa"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
-                app:strokeColor="#FFFFFF"
-                app:strokeWidth="2dp" />
+    <!-- CONTEÚDO SCROLLABLE (MEIO) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!-- FORMULÁRIO -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:padding="28dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:text="Redefinir senha"
+                android:layout_marginBottom="32dp"
+                android:text="@string/titulo_redefinir"
                 android:textColor="#1B3434"
-                android:textSize="26sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
-            <!-- CAMPO NOVA SENHA -->
+            <!-- NOVA SENHA -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nova senha"
-                android:textColor="#000000"
+                android:text="@string/nova_senha"
+                android:textColor="#1B3434"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -78,27 +69,28 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_input_pill"
-                android:hint="Digite sua nova senha"
+                android:hint="@string/hint_nova_senha"
                 android:inputType="textPassword"
                 android:paddingHorizontal="20dp"
-                android:textColor="#444444" />
+                android:importantForAutofill="no" />
 
             <TextView
                 android:id="@+id/textErroSenha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:text="@string/erro_senha_invalida"
                 android:textColor="#E53935"
                 android:textSize="12sp"
                 android:visibility="gone" />
 
-            <!-- CAMPO CONFIRMAR SENHA -->
+            <!-- CONFIRMAR SENHA -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Confirmar senha"
-                android:textColor="#000000"
+                android:text="@string/confirmar_senha"
+                android:textColor="#1B3434"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -108,44 +100,101 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_input_pill"
-                android:hint="Repita a senha"
+                android:hint="@string/hint_confirmar_senha"
                 android:inputType="textPassword"
                 android:paddingHorizontal="20dp"
-                android:textColor="#444444" />
+                android:importantForAutofill="no" />
 
             <TextView
                 android:id="@+id/textErroConfirmar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:text="@string/erro_senhas_nao_coincidem"
                 android:textColor="#E53935"
                 android:textSize="12sp"
                 android:visibility="gone" />
-
-            <!-- DICAS DE SEGURANÇA -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:lineSpacingExtra="4dp"
-                android:text="A senha deve conter:\n• mínimo 8 caracteres\n• pelo menos 1 número\n• pelo menos 1 letra maiúscula"
-                android:textColor="#758989"
-                android:textSize="14sp" />
 
             <!-- BOTÃO SALVAR -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonSalvar"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="16dp"
-                android:text="Salvar alterações"
+                android:layout_height="60dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/btn_salvar_alteracoes"
                 android:textAllCaps="false"
                 android:textSize="18sp"
-                android:textStyle="bold"
+                android:textColor="@android:color/white"
                 app:backgroundTint="#6CB6B3"
-                app:cornerRadius="15dp" />
+                app:cornerRadius="30dp" />
 
         </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM NAVIGATION FIXA NO RODAPÉ -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#FFFFFF"
+        android:elevation="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_view"
+            android:contentDescription="@string/nav_home" />
+
+        <ImageView
+            android:id="@+id/navCarrinho"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_add"
+            android:contentDescription="@string/nav_carrinho" />
+
+        <ImageView
+            android:id="@+id/navBusca"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:contentDescription="@string/nav_busca" />
+
+        <ImageView
+            android:id="@+id/navFavoritos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_agenda"
+            android:contentDescription="@string/nav_favoritos" />
+
+        <ImageView
+            android:id="@+id/navLista"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            android:contentDescription="@string/nav_lista" />
+
+        <ImageView
+            android:id="@+id/navUsuario"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:contentDescription="@string/nav_usuario" />
+
     </LinearLayout>
-</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

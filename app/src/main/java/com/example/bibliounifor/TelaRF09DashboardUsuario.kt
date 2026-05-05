@@ -3,6 +3,7 @@ package com.example.bibliounifor
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 
@@ -11,75 +12,90 @@ class TelaRF09DashboardUsuario : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.telarf09_dashboardusuario)
 
-        // Botões originais
+        // Botões do Header
         val btnConfig = findViewById<ImageView>(R.id.btnConfig)
-        val btnProcurarLivros = findViewById<MaterialButton>(R.id.btnProcurarLivros)
+        val btnNotificacao = findViewById<ImageView>(R.id.btnNotificacao)
         val profileImage = findViewById<ImageView>(R.id.profile_image)
+        val textNomeUsuario = findViewById<TextView>(R.id.textNomeUsuario)
 
-        // Novos botões integrados do Perfil
+        // Botões de Ações Rápidas (Cards/Buttons no ScrollView)
+        val btnProcurarLivros = findViewById<MaterialButton>(R.id.btnProcurarLivros)
         val btnMinhaLivraria = findViewById<MaterialButton>(R.id.btnMinhaLivrariaDash)
         val btnListaDesejo = findViewById<MaterialButton>(R.id.btnListaDesejoDash)
         val btnAmigos = findViewById<MaterialButton>(R.id.btnAmigosDash)
         val btnHistorico = findViewById<MaterialButton>(R.id.btnHistoricoDash)
         val btnStatusAluguel = findViewById<MaterialButton>(R.id.btnStatusAluguelDash)
-        val btnSalvar = findViewById<MaterialButton>(R.id.btnSalvarDash)
         val btnSair = findViewById<MaterialButton>(R.id.btnSairDash)
 
-        // Engrenagem -> Configuração (RF10)
+        // Navegação via Engrenagem -> Configuração (RF10)
         btnConfig.setOnClickListener {
             startActivity(Intent(this, TelaRF10Configuracao::class.java))
         }
 
-        // Botão Procurar Livros -> Tela de Pesquisa (RF12)
+        btnNotificacao.setOnClickListener {
+            startActivity(Intent(this, TelaRF21Notificacoes::class.java))
+        }
+
+        // Ações Rápidas
         btnProcurarLivros.setOnClickListener {
             startActivity(Intent(this, TelaRF12TelaDePesquisa::class.java))
         }
 
-        // --- CONEXÕES ---
-
-        // Minha Livraria -> RF16 (Compose)
         btnMinhaLivraria.setOnClickListener {
             startActivity(Intent(this, TelaRF16MinhaLivrariaActivity::class.java))
         }
 
-        // Lista de Desejo -> RF17 (Compose)
         btnListaDesejo.setOnClickListener {
             startActivity(Intent(this, TelaRF17ListaDesejosActivity::class.java))
         }
 
-        // Amigos -> RF18 (Compose)
         btnAmigos.setOnClickListener {
             startActivity(Intent(this, TelaRF18::class.java))
         }
 
-        // Histórico -> RF22 (XML)
         btnHistorico.setOnClickListener {
             startActivity(Intent(this, TelaRF22Historico::class.java))
         }
 
-        // Status Aluguel -> RF19 (Compose)
         btnStatusAluguel.setOnClickListener {
             startActivity(Intent(this, TelaRF19::class.java))
         }
         
-        // Sair da Conta
         btnSair.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
-        
-        // Configuração dos itens da barra inferior
-        findViewById<ImageView>(R.id.navSearch)?.setOnClickListener {
+
+        // 🔥 BARRA DE TAREFAS (BOTTOM NAV - 6 ITENS)
+        val navHome = findViewById<ImageView>(R.id.navHome)
+        val navCarrinho = findViewById<ImageView>(R.id.navCarrinho)
+        val navBusca = findViewById<ImageView>(R.id.navBusca)
+        val navFavoritos = findViewById<ImageView>(R.id.navFavoritos)
+        val navLista = findViewById<ImageView>(R.id.navLista)
+        val navUsuario = findViewById<ImageView>(R.id.navUsuario)
+
+        navHome.setOnClickListener {
+            // Já estamos na Home
+        }
+
+        navCarrinho.setOnClickListener {
+            startActivity(Intent(this, TelaRF19::class.java))
+        }
+
+        navBusca.setOnClickListener {
             startActivity(Intent(this, TelaRF12TelaDePesquisa::class.java))
         }
 
-        findViewById<ImageView>(R.id.navHome)?.setOnClickListener {
-            // Já estamos na Home/Dash
+        navFavoritos.setOnClickListener {
+            startActivity(Intent(this, TelaRF17ListaDesejosActivity::class.java))
         }
-        
-        findViewById<ImageView>(R.id.navPerfil)?.setOnClickListener {
-            // Conforme solicitado, o ícone de pessoinha leva para Gestão de Amigos (RF18)
+
+        navLista.setOnClickListener {
+            startActivity(Intent(this, TelaRF16MinhaLivrariaActivity::class.java))
+        }
+
+        navUsuario.setOnClickListener {
             startActivity(Intent(this, TelaRF18::class.java))
         }
     }

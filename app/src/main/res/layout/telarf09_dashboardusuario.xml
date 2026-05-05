@@ -252,19 +252,66 @@
     <LinearLayout
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@android:color/white"
-        android:elevation="8dp"
+        android:layout_height="65dp"
+        android:background="#FFFFFF"
+        android:elevation="12dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <ImageView android:id="@+id/navHome" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="12dp" android:src="@android:drawable/ic_menu_view"/>
-        <ImageView android:id="@+id/navCalendario" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="12dp" android:src="@android:drawable/ic_menu_today"/>
-        <ImageView android:id="@+id/navSearch" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="12dp" android:src="@android:drawable/ic_menu_search"/>
-        <ImageView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="12dp" android:src="@android:drawable/btn_star"/>
-        <ImageView android:id="@+id/navAjuda" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="12dp" android:src="@android:drawable/ic_menu_agenda"/>
-        <ImageView android:id="@+id/navPerfil" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="12dp" android:src="@android:drawable/ic_menu_myplaces"/>
-        <ImageView android:id="@+id/navConfig" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="12dp" android:src="@android:drawable/ic_menu_sort_by_size"/>
+        <ImageView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_view"
+            android:contentDescription="@string/nav_home_desc" />
+
+        <ImageView
+            android:id="@+id/navCarrinho"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_add"
+            android:contentDescription="@string/nav_carrinho_desc" />
+
+        <ImageView
+            android:id="@+id/navBusca"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:contentDescription="@string/nav_busca_desc" />
+
+        <ImageView
+            android:id="@+id/navFavoritos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_agenda"
+            android:contentDescription="@string/nav_favoritos_desc" />
+
+        <ImageView
+            android:id="@+id/navLista"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            android:contentDescription="@string/nav_lista_desc" />
+
+        <ImageView
+            android:id="@+id/navUsuario"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:contentDescription="@string/nav_perfil_desc" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

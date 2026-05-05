@@ -52,6 +52,15 @@
             android:name=".TelaRF32UsuariosParaADM"
             android:exported="false" />
         <activity
+            android:name=".TelaRF35_1Data"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF35_3InfosAdicionais"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF35_4Versoes"
+            android:exported="false" />
+        <activity
             android:name=".TelaRF11RedefinirSenha"
             android:exported="false" />
         <activity
@@ -130,12 +139,6 @@
             android:name=".TelaRF15LeituraActivity"
             android:exported="false" />
         <activity
-            android:name=".TelaRF27RedefinirSenhaADM"
-            android:exported="false" />
-        <activity
-            android:name=".TelaRF28NovaContaADM"
-            android:exported="false" />
-        <activity
             android:name=".GoogleLoginActivity"
             android:exported="false" />
         <activity
@@ -149,21 +152,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- RF02 e RF03 -->
-        <activity android:name=".TelaRF02Intermediaria"/>
-        <activity android:name=".TelaRF03LoginAluno"/>
-
-        <!-- RF10 e RF11 -->
-        <activity android:name=".TelaRF10Configuracao"/>
-        <activity android:name=".TelaRF11RedefinirSenha"/>
-
-        <!-- ADM -->
-        <activity android:name=".TelaRF31GerenciamentoDeUsuarios"/>
-        <activity android:name=".TelaRF32UsuariosParaADM"/>
-        <activity android:name=".TelaRF33Solicitacoes"/>
-        <activity android:name=".TelaRF34LivrosCRUD"/>
-        <activity android:name=".TelaRF35CadastroDeLivros"/>
 
     </application>
 

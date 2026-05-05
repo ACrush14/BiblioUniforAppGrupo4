@@ -57,5 +57,47 @@
     <string name="btn_remover_historico">Remover do Histórico</string>
     <string name="nome_usuario">João Bobo</string>
 
-
+    <!-- Apagar Conta Popup -->
+    <string name="apagar_conta_titulo">Apagar conta?</string>
+    <string name="apagar_conta_subtitulo">Digite sua senha atual</string>
+    <string name="apagar_conta_erro">Digite sua senha atual!</string>
+    <string name="hint_sua_senha">Sua senha</string>
+    <string name="desc_mostrar_ocultar_senha">Mostrar ou ocultar senha</string>
+    <string name="btn_salvar_alteracoes">Salvar alterações</string>
+    <string name="fechar_x">✕</string>
+    <string name="hint_nova_senha">Digite a nova senha</string>
+    <string name="hint_confirmar_senha">Confirme a senha</string>
+    <string name="erro_senha_invalida">Senha inválida</string>
+    <string name="erro_senhas_nao_coincidem">As senhas não coincidem</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_carrinho">Carrinho</string>
+    <string name="nav_busca">Busca</string>
+    <string name="nav_favoritos">Favoritos</string>
+    <string name="nav_lista">Lista</string>
+    <string name="email_usuario_exemplo">Joãobobo@gmail.com</string>
+    <string name="label_pesquisa">Pesquisa</string>
+    <string name="label_nome">Nome</string>
+    <string name="label_usuario">Usuário</string>
+    <string name="usuario_exemplo">Joãobobo69420</string>
+    <string name="label_bio">Bio</string>
+    <string name="bio_exemplo">Eu sou um cara que lê muitas coisas legais e adoro jogar Elden Ring. Sou mecânico de carro e moro em Parnamirim - RN.\nSou casado com Raquel, que é gótica. Vamos ser amigos</string>
+    <string name="label_senha_atual">Senha atual</string>
+    <string name="btn_redefinir_senha_config">Redefinir Senha</string>
+    <string name="btn_voltar_inicial">Voltar Tela inicial</string>
+    <string name="btn_apagar_conta_config">Apagar Conta</string>
+    <string name="desc_editar_usuario">Editar usuário</string>
+    <string name="desc_pesquisa">Ícone de pesquisa</string>
+    <string name="desc_editar_campo">Editar este campo</string>
+    <string name="placeholder_senha">************</string>
+    <string name="hint_nome">Seu nome completo</string>
+    <string name="hint_usuario">Seu nome de usuário</string>
+    <string name="hint_bio">Conte um pouco sobre você</string>
+    <string name="nav_home_desc">Ir para o início</string>
+    <string name="nav_carrinho_desc">Ver carrinho de compras</string>
+    <string name="nav_busca_desc">Pesquisar livros</string>
+    <string name="nav_favoritos_desc">Meus livros favoritos</string>
+    <string name="nav_lista_desc">Minha estante de livros</string>
+    <string name="nav_perfil_desc">Meu perfil de usuário</string>
+    <string name="desc_perfil">Foto de perfil</string>
+    <string name="nav_usuario">Perfil</string>
 </resources>

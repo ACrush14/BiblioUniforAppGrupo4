@@ -1,12 +1,14 @@
 package com.example.bibliounifor
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.button.MaterialButton
 
 class TelaRF11RedefinirSenha : AppCompatActivity() {
 
@@ -14,43 +16,84 @@ class TelaRF11RedefinirSenha : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.telarf11_redefinirsenha)
 
+        // CAMPOS
         val editNovaSenha = findViewById<EditText>(R.id.editNovaSenha)
         val editConfirmarSenha = findViewById<EditText>(R.id.editConfirmarSenha)
-        val btnSalvar = findViewById<Button>(R.id.buttonSalvar)
+        val btnSalvar = findViewById<MaterialButton>(R.id.buttonSalvar)
 
         val erroSenha = findViewById<TextView>(R.id.textErroSenha)
         val erroConfirmar = findViewById<TextView>(R.id.textErroConfirmar)
 
+        // BOTÃO FECHAR (X)
+        val btnFechar = findViewById<TextView>(R.id.btnFechar)
+        btnFechar.setOnClickListener {
+            finish()
+        }
+
+        // 🔥 VALIDAÇÃO + SALVAR
         btnSalvar.setOnClickListener {
 
             val senha = editNovaSenha.text.toString()
             val confirmar = editConfirmarSenha.text.toString()
 
-            // Resetar erros
             erroSenha.visibility = View.GONE
             erroConfirmar.visibility = View.GONE
 
             var valido = true
 
-            // Validação 1: tamanho mínimo
             if (senha.length < 8) {
                 erroSenha.visibility = View.VISIBLE
-                erroSenha.text = "Senha deve ter pelo menos 8 caracteres"
+                erroSenha.text = "Mínimo 8 caracteres"
                 valido = false
             }
 
-            // Validação 2: confirmação
             if (senha != confirmar) {
                 erroConfirmar.visibility = View.VISIBLE
-                erroConfirmar.text = "As senhas não coincidem"
+                erroConfirmar.text = "Senhas diferentes"
                 valido = false
             }
 
-            // Se tudo ok
             if (valido) {
-                Toast.makeText(this, "Senha alterada com sucesso!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Senha alterada!", Toast.LENGTH_SHORT).show()
+
+                // VOLTA PRA RF10
+                val intent = Intent(this, TelaRF10Configuracao::class.java)
+                startActivity(intent)
                 finish()
             }
+        }
+
+        // 🔥 BARRA DE TAREFAS
+
+        val navHome = findViewById<ImageView>(R.id.navHome)
+        val navCarrinho = findViewById<ImageView>(R.id.navCarrinho)
+        val navBusca = findViewById<ImageView>(R.id.navBusca)
+        val navFavoritos = findViewById<ImageView>(R.id.navFavoritos)
+        val navLista = findViewById<ImageView>(R.id.navLista)
+        val navUsuario = findViewById<ImageView>(R.id.navUsuario)
+
+        navHome.setOnClickListener {
+            startActivity(Intent(this, TelaRF09DashboardUsuario::class.java))
+        }
+
+        navCarrinho.setOnClickListener {
+            startActivity(Intent(this, TelaRF19::class.java))
+        }
+
+        navBusca.setOnClickListener {
+            startActivity(Intent(this, TelaRF12TelaDePesquisa::class.java))
+        }
+
+        navFavoritos.setOnClickListener {
+            startActivity(Intent(this, TelaRF17ListaDesejosActivity::class.java))
+        }
+
+        navLista.setOnClickListener {
+            startActivity(Intent(this, TelaRF16MinhaLivrariaActivity::class.java))
+        }
+
+        navUsuario.setOnClickListener {
+            startActivity(Intent(this, TelaRF18::class.java))
         }
     }
 }
