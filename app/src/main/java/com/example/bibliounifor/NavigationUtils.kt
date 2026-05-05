@@ -36,6 +36,65 @@ object NavigationUtils {
         }
     }
 
+    fun setupAdminNavigation(activity: Activity) {
+        val navDashboard = activity.findViewById<ImageView>(R.id.navDashboard)
+        val navFinanceiro = activity.findViewById<ImageView>(R.id.navFinanceiro)
+        val navSolicitacoes = activity.findViewById<ImageView>(R.id.navSolicitacoes)
+        val navLivrosADM = activity.findViewById<ImageView>(R.id.navLivrosADM)
+        val navUsuarios = activity.findViewById<ImageView>(R.id.navUsuarios)
+
+        navDashboard?.setOnClickListener {
+            if (activity !is TelaRF30DashboardADM) {
+                activity.startActivity(Intent(activity, TelaRF30DashboardADM::class.java))
+            }
+        }
+
+        navFinanceiro?.setOnClickListener {
+            if (activity !is TelaRF36FinanceiroADM) {
+                activity.startActivity(Intent(activity, TelaRF36FinanceiroADM::class.java))
+            }
+        }
+
+        navSolicitacoes?.setOnClickListener {
+            if (activity !is TelaRF33Solicitacoes) {
+                activity.startActivity(Intent(activity, TelaRF33Solicitacoes::class.java))
+            }
+        }
+
+        navLivrosADM?.setOnClickListener {
+            if (activity !is TelaRF34LivrosCRUD) {
+                activity.startActivity(Intent(activity, TelaRF34LivrosCRUD::class.java))
+            }
+        }
+
+        navUsuarios?.setOnClickListener {
+            if (activity !is TelaRF31GerenciamentoDeUsuarios) {
+                activity.startActivity(Intent(activity, TelaRF31GerenciamentoDeUsuarios::class.java))
+            }
+        }
+
+        // Tint active icon
+        val activeColor = 0xFF6EC1C3.toInt() // Cyan/Turquoise from many screens
+        when (activity) {
+            is TelaRF30DashboardADM -> navDashboard?.setColorFilter(activeColor)
+            is TelaRF36FinanceiroADM -> navFinanceiro?.setColorFilter(activeColor)
+            is TelaRF33Solicitacoes -> navSolicitacoes?.setColorFilter(activeColor)
+            is TelaRF34LivrosCRUD,
+            is TelaRF35CadastroDeLivros,
+            is TelaRF35_3InfosAdicionais,
+            is TelaRF35_4Versoes,
+            is TelaRF38ListaAlugueisADM,
+            is TelaRF39InfoLivroADM -> navLivrosADM?.setColorFilter(activeColor)
+            is TelaRF31GerenciamentoDeUsuarios,
+            is TelaRF32UsuariosParaADM,
+            is TelaRF37ConfirmarCadastroADM -> navUsuarios?.setColorFilter(activeColor)
+            is TelaRF40ConfigADM,
+            is TelaRF41RedefinirADMInterno -> {
+                // No specific icon for settings in bottom nav, but maybe we want to untint others
+            }
+        }
+    }
+
     fun setupTopBar(activity: Activity) {
         // Sino -> Notificações (RF21)
         activity.findViewById<ImageView>(R.id.btnNotificacao)?.setOnClickListener {

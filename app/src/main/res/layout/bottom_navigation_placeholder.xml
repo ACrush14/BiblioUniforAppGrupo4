@@ -41,7 +41,7 @@
 
     <!-- 4. Desejos (Coração) -->
     <ImageView
-        android:id="@+id/navFavorites"
+        android:id="@+id/navDesejos"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -52,7 +52,7 @@
 
     <!-- 5. Aluguel (Livro) -->
     <ImageView
-        android:id="@+id/navRentals"
+        android:id="@+id/navAluguel"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -63,7 +63,7 @@
 
     <!-- 6. Amigos (Pessoa) -->
     <ImageView
-        android:id="@+id/navFriends"
+        android:id="@+id/navAmigos"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

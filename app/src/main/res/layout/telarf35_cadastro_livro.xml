@@ -1,166 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
     android:background="#F5F7F7">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavADM"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!-- HEADER COM FOTO CENTRAL -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="#6EC1C3"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imgPerfilLivro"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/bg_circle"
-                android:contentDescription="Imagem de perfil"
-                android:padding="10dp"
-                android:src="@android:drawable/sym_def_app_icon" />
-
-        </LinearLayout>
-
-        <!-- FORMULÁRIO -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Título:"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="6dp" />
-
-            <EditText
-                android:id="@+id/etTitulo"
+            <!-- HEADER -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@drawable/bg_input"
-                android:hint="Título..."
-                android:padding="14dp"
-                android:textColor="#1B3434"
-                android:textColorHint="#999999"
-                android:layout_marginBottom="14dp" />
+                android:layout_height="120dp"
+                android:background="#6EC1C3"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Autor:"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="6dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adicionar Mídia"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/etAutor"
+            <!-- FORMULÁRIO -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@drawable/bg_input"
-                android:hint="Autor..."
-                android:padding="14dp"
-                android:textColor="#1B3434"
-                android:textColorHint="#999999"
-                android:layout_marginBottom="14dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Código ISBN:"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="6dp" />
+                android:orientation="vertical"
+                android:padding="20dp">
 
-            <EditText
-                android:id="@+id/etISBN"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@drawable/bg_input"
-                android:hint="Código ISBN..."
-                android:inputType="number"
-                android:padding="14dp"
-                android:textColor="#1B3434"
-                android:textColorHint="#999999"
-                android:layout_marginBottom="14dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Título do Livro"
+                    android:textColor="#1B3434"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Data de publicação do Livro:"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="6dp" />
+                <EditText
+                    android:id="@+id/etTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:hint="Ex: O Alienista"
+                    android:paddingLeft="15dp" />
 
-            <EditText
-                android:id="@+id/etData"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@drawable/bg_input"
-                android:hint="Data..."
-                android:padding="14dp"
-                android:textColor="#1B3434"
-                android:textColorHint="#999999"
-                android:layout_marginBottom="14dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Autor"
+                    android:textColor="#1B3434"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Quantidade de Exemplares"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="6dp" />
+                <EditText
+                    android:id="@+id/etAutor"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:hint="Ex: Machado de Assis"
+                    android:paddingLeft="15dp" />
 
-            <EditText
-                android:id="@+id/etQuantidade"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@drawable/bg_input"
-                android:hint="Quantidade de Exemplares..."
-                android:inputType="number"
-                android:padding="14dp"
-                android:textColor="#1B3434"
-                android:textColorHint="#999999"
-                android:layout_marginBottom="20dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Código ISBN"
+                    android:textColor="#1B3434"
+                    android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btnContinuar"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@drawable/bg_botao_verde"
-                android:text="Editar mais informações"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="10dp" />
+                <EditText
+                    android:id="@+id/etISBN"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:hint="000-00-000-0000-0"
+                    android:paddingLeft="15dp" />
 
-            <TextView
-                android:id="@+id/tvErro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="• Preencha todos os campos para continuar"
-                android:textColor="#D65252"
-                android:textSize="13sp"
-                android:visibility="gone"
-                android:layout_marginBottom="30dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data de publicação do Livro"
+                    android:textColor="#1B3434"
+                    android:textStyle="bold" />
 
+                <EditText
+                    android:id="@+id/etData"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:hint="DD/MM/AAAA"
+                    android:paddingLeft="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantidade de exemplares"
+                    android:textColor="#1B3434"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etQuantidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:hint="Ex: 10"
+                    android:inputType="number"
+                    android:paddingLeft="15dp" />
+
+                <TextView
+                    android:id="@+id/tvErro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Preencha todos os campos!"
+                    android:textColor="#FF0000"
+                    android:visibility="gone" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnContinuar"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Editar mais informações"
+                    app:backgroundTint="#6EC1C3"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
         </LinearLayout>
+    </ScrollView>
+
+    <!-- BARRA ADM -->
+    <LinearLayout
+        android:id="@+id/bottomNavADM"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#FFFFFF"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/navDashboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="14dp"
+            android:src="@android:drawable/ic_menu_view"/>
+
+        <ImageView
+            android:id="@+id/navFinanceiro"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="14dp"
+            android:src="@android:drawable/ic_menu_manage"/>
+
+        <ImageView
+            android:id="@+id/navSolicitacoes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="14dp"
+            android:src="@android:drawable/ic_menu_help"/>
+
+        <ImageView
+            android:id="@+id/navLivrosADM"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="14dp"
+            android:src="@android:drawable/ic_menu_agenda"/>
+
+        <ImageView
+            android:id="@+id/navUsuarios"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="14dp"
+            android:src="@android:drawable/ic_menu_myplaces"/>
 
     </LinearLayout>
 
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
