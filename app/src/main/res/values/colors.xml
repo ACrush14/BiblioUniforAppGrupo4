@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="biblio_bg">#F5F7F7</color>
+    <color name="biblio_cyan">#87DEDE</color>
+    <color name="biblio_dark">#1B3434</color>
+    <color name="biblio_cinza">#D3D3D3</color>
 </resources>

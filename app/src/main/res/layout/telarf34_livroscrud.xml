@@ -1,178 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#F5F7F7">
 
-    <!-- SCROLL -->
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#F5F7F7">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <!-- HEADER -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#6EC1C3"
+            android:padding="16dp">
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="-30dp"
+                android:layout_marginTop="-30dp"
+                android:background="@drawable/bg_circle"
+                android:alpha="0.2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tela de CRUD"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/imgPerfil"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_circle"
+                android:padding="4dp"
+                android:src="@mipmap/ic_launcher"/>
+        </RelativeLayout>
+
+        <!-- CONTEÚDO PRINCIPAL -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="20dp">
 
-            <!-- HEADER -->
-            <RelativeLayout
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCriarMidia"
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:background="#6EC1C3"
-                android:padding="16dp">
+                android:layout_height="55dp"
+                android:text="Criar Mídia"
+                app:backgroundTint="#6EC1C3"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="12dp"/>
 
-                <ImageView
-                    android:id="@+id/imgPerfil"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="158dp"
-                    android:background="@drawable/bg_circle"
-                    android:padding="8dp"
-                    android:src="@android:drawable/sym_def_app_icon" />
-            </RelativeLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVerificarMidia"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Verificar Mídia"
+                app:backgroundTint="#6EC1C3"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="12dp"/>
 
-            <!-- CONTEÚDO -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGerenciarUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Gerenciar usuário"
+                app:backgroundTint="#6EC1C3"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPermissaoUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Mudar permissão de usuário"
+                app:backgroundTint="#6EC1C3"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnApagarUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Apagar Usuário"
+                app:backgroundTint="#D9534F"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnApagarMidia"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Apagar Mídia"
+                app:backgroundTint="#D9534F"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="30dp"/>
+
+            <!-- SEÇÃO PROCURAR MÍDIA (SOLICITADO) -->
+            <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#DDDDDD" android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_rounded"
+                android:hint="Procurar mídia..."
+                android:paddingHorizontal="16dp"
+                android:drawableEnd="@android:drawable/ic_menu_sort_by_size"
+                android:layout_marginBottom="20dp"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
 
-                <!-- BOTÕES VERDES -->
-                <Button
-                    android:id="@+id/btnCriarMidia"
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/o_alienista_capa"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_input_rounded"
+                    android:elevation="4dp"/>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginBottom="14dp"
-                    android:background="@drawable/bg_botao_verde"
-                    android:text="Criar Mídia"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:backgroundTint="#6EC1C3" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
 
-                <Button
-                    android:id="@+id/btnVerificarMidia"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginBottom="14dp"
-                    android:background="@drawable/bg_botao_verde"
-                    android:text="Verificar Mídia"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:backgroundTint="#6EC1C3" />
-
-                <Button
-                    android:id="@+id/btnGerenciarUsuario"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginBottom="14dp"
-                    android:background="@drawable/bg_botao_verde"
-                    android:text="Gerenciar usuário"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:backgroundTint="#6EC1C3" />
-
-                <Button
-                    android:id="@+id/btnPermissaoUsuario"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginBottom="24dp"
-                    android:background="@drawable/bg_botao_verde"
-                    android:text="Mudar permissão de usuário"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:backgroundTint="#6EC1C3" />
-
-                <!-- BOTÕES VERMELHOS -->
-                <Button
-                    android:id="@+id/btnApagarUsuario"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginBottom="14dp"
-                    android:background="@drawable/bg_botao_vermelho"
-                    android:text="Apagar Usuário"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:backgroundTint="#E53935" />
-
-                <Button
-                    android:id="@+id/btnApagarMidia"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:background="@drawable/bg_botao_vermelho"
-                    android:text="Apagar Mídia"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:backgroundTint="#E53935" />
-
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Título: O Senhor dos Aneis - A sociedade do Anel" android:textColor="#000000" android:textStyle="bold" android:textSize="16sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Autor: J. R. R. Tolkien" android:textColor="#333333" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ISBN: 8595084750" android:textColor="#333333" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data: 25 nov 2019" android:textColor="#333333" android:layout_marginTop="4dp"/>
+                </LinearLayout>
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disponível: audiobook, pdf, braille"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="12dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exemplares: 10/30"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/arrow_down_float"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 30 " android:textSize="20sp" android:textStyle="bold"/>
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/arrow_up_float"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditarInformacoes"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Editar informações"
+                app:backgroundTint="#6EC1C3"
+                app:cornerRadius="8dp"
+                android:layout_marginBottom="20dp"/>
 
         </LinearLayout>
 
-    </ScrollView>
-
-    <!-- 🔥 BARRA ADM -->
-    <LinearLayout
-        android:id="@+id/bottomNavigationADM"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#FFFFFF"
-        android:elevation="8dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/navDashboard"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="12dp"
-            android:src="@android:drawable/ic_menu_today"
-            app:tint="#A0A0A0" />
-
-        <ImageView
-            android:id="@+id/navUsuarios"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="12dp"
-            android:src="@android:drawable/ic_menu_myplaces"
-            app:tint="#A0A0A0" />
-
-        <ImageView
-            android:id="@+id/navSolicitacoes"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="12dp"
-            android:src="@android:drawable/ic_menu_my_calendar"
-            app:tint="#A0A0A0" />
-
-        <ImageView
-            android:id="@+id/navAjuda"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="12dp"
-            android:src="@android:drawable/ic_menu_help"
-            app:tint="#A0A0A0" />
-
-        <ImageView
-            android:id="@+id/navLivrosADM"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="12dp"
-            android:src="@android:drawable/ic_menu_agenda"
-            app:tint="#1B3434" />
-
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

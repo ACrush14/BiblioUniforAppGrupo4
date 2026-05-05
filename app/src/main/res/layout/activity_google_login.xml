@@ -71,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="32dp"
-            android:background="@drawable/bg_rounded_input"
+            android:background="@drawable/bg_input_rounded"
             android:hint="E-mail ou telefone"
             android:inputType="textEmailAddress"
             android:paddingStart="16dp"
