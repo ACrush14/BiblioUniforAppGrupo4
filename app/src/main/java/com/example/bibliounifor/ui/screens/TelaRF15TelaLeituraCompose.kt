@@ -98,3 +98,22 @@ fun TelaLeituraScreen(
         }
     }
 }
+
+@Composable
+fun BookActionButton(
+    text: String,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit = {}
+) {
+    Button(
+        onClick = onClick,
+        modifier = modifier.height(48.dp),
+        shape = RoundedCornerShape(8.dp),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = BiblioCyan,
+            contentColor = BiblioDark
+        )
+    ) {
+        Text(text = text, fontSize = 16.sp, fontWeight = FontWeight.Bold)
+    }
+}
