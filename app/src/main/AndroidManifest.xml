@@ -155,6 +155,28 @@
         <activity
             android:name=".TelaRF41RedefinirADMInterno"
             android:exported="false" />
+
+        <!-- NOVAS TELAS RF33 VERIFICAR MÍDIA -->
+        <activity
+            android:name=".TelaRF33VerificarMidia"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF332Filtro"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".TelaRF335UsuarioNotificado"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".TelaRF336BrailleConcluido"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".TelaRF337ExcluirSolicitacao"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+
         <activity
             android:name=".TelaRF01BemVindo"
             android:exported="true">

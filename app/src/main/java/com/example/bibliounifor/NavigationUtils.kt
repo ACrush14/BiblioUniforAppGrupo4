@@ -56,8 +56,8 @@ object NavigationUtils {
         }
 
         navSolicitacoes?.setOnClickListener {
-            if (activity !is TelaRF33Solicitacoes) {
-                activity.startActivity(Intent(activity, TelaRF33Solicitacoes::class.java))
+            if (activity !is TelaRF33VerificarMidia) {
+                activity.startActivity(Intent(activity, TelaRF33VerificarMidia::class.java))
             }
         }
 
@@ -78,7 +78,8 @@ object NavigationUtils {
         when (activity) {
             is TelaRF30DashboardADM -> navDashboard?.setColorFilter(activeColor)
             is TelaRF36FinanceiroADM -> navFinanceiro?.setColorFilter(activeColor)
-            is TelaRF33Solicitacoes -> navSolicitacoes?.setColorFilter(activeColor)
+            is TelaRF33Solicitacoes,
+            is TelaRF33VerificarMidia -> navSolicitacoes?.setColorFilter(activeColor)
             is TelaRF34LivrosCRUD,
             is TelaRF35CadastroDeLivros,
             is TelaRF35_3InfosAdicionais,
