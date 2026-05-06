@@ -114,7 +114,7 @@
             android:name=".TelaRF25"
             android:exported="false" />
         <activity
-            android:name=".TelaRF30CRUD"
+            android:name=".TelaRF30CrudADM"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -155,8 +155,11 @@
         <activity
             android:name=".TelaRF41RedefinirADMInterno"
             android:exported="false" />
+        <activity
+            android:name=".TelaRF42VerificarMidia"
+            android:exported="false" />
 
-        <!-- NOVAS TELAS RF33 VERIFICAR MÍDIA -->
+        <!-- TELAS RF33 -->
         <activity
             android:name=".TelaRF33VerificarMidia"
             android:exported="false" />

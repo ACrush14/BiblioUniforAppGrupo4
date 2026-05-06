@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#F5F7F7">
 
-    <!-- TOPO -->
-
-    <LinearLayout
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:background="#6EC1C3"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Engrenagem (Topo Esquerdo) -->
+        <ImageView
+            android:id="@+id/btnConfigAdm"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_manage"
+            app:tint="#FFFFFF"
+            android:contentDescription="Configurações ADM" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:text="Verificar Mídia"
             android:textColor="#FFFFFF"
             android:textSize="28sp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"/>
-    </LinearLayout>
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <!-- CONTEÚDO -->
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavContainer">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,193 +48,155 @@
             android:padding="16dp">
 
             <!-- PESQUISA -->
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:orientation="horizontal"
-                android:background="#FFFFFF"
-                android:padding="10dp">
-
+                android:background="@drawable/bg_input_rounded"
+                android:paddingHorizontal="16dp"
+                android:gravity="center_vertical"
+                android:elevation="2dp">
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:hint="Marcos"
-                    android:background="@android:color/transparent"/>
-
+                    android:hint="Pesquisar solicitação..."
+                    android:background="@android:color/transparent"
+                    android:singleLine="true"/>
                 <ImageView
                     android:id="@+id/btnFiltro"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@android:drawable/ic_menu_sort_by_size"/>
+                    android:src="@android:drawable/ic_menu_sort_by_size"
+                    app:tint="#6EC1C3"/>
             </LinearLayout>
 
-            <!-- CARD -->
-
-            <LinearLayout
+            <!-- CARD EXEMPLO -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="#FFFFFF"
-                android:padding="16dp"
-                android:layout_marginTop="20dp">
-
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="140dp"
-                        android:src="@drawable/vidas_secas_capa"/>
-
+                    android:orientation="vertical"
+                    android:padding="16dp">
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="16dp">
-
-                        <TextView
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="110dp"
+                            android:src="@drawable/vidas_secas_capa"
+                            android:scaleType="centerCrop"/>
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Título: O Senhor dos Anéis"
-                            android:textStyle="bold"
-                            android:textSize="18sp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Autor: J. R. R Tolkien"
-                            android:textSize="16sp"
-                            android:layout_marginTop="10dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ronaldo Alves"
-                            android:textStyle="bold"
-                            android:textSize="22sp"
-                            android:layout_marginTop="25dp"/>
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="O Senhor dos Anéis"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="#1B3434"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="J. R. R Tolkien"
+                                android:textSize="14sp"
+                                android:textColor="#415E5E"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ronaldo Alves"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_marginTop="12dp"
+                                android:textColor="#6EC1C3"/>
+                        </LinearLayout>
                     </LinearLayout>
 
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Solicitação: audiobook, pdf, braille"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"/>
-
-                <!-- BOTÕES -->
-
-                <Button
-                    android:id="@+id/btnSolicitacoesUsuario"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ver solicitações do usuário"
-                    android:backgroundTint="#6EC1C3"
-                    android:textColor="#FFFFFF"
-                    android:layout_marginTop="20dp"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
-
-                    <Button
-                        android:id="@+id/btnEnviarAudio"
-                        android:layout_width="0dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Enviar audiobook e notificar usuário"
-                        android:textColor="#FFFFFF"
-                        android:backgroundTint="#6EC1C3"/>
+                        android:text="Solicitação: audiobook, pdf, braille"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:textColor="#1B3434"/>
 
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSolicitacoesUsuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Ver solicitações do usuário"
+                        android:textAllCaps="false"
+                        app:backgroundTint="#6EC1C3"
+                        app:cornerRadius="10dp"/>
 
-                    <Button
-                        android:id="@+id/btnEnviarPdf"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Enviar PDF e notificar usuário"
-                        android:textColor="#FFFFFF"
-                        android:backgroundTint="#6EC1C3"/>
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEnviarAudio"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Audiobook"
+                            android:textAllCaps="false"
+                            android:textSize="12sp"
+                            app:backgroundTint="#6EC1C3"
+                            app:cornerRadius="10dp"/>
+                        <Space android:layout_width="8dp" android:layout_height="wrap_content"/>
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEnviarPdf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="PDF"
+                            android:textAllCaps="false"
+                            android:textSize="12sp"
+                            app:backgroundTint="#6EC1C3"
+                            app:cornerRadius="10dp"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnBraille"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="Notificar Braille Concluído"
+                        android:textAllCaps="false"
+                        app:backgroundTint="#6EC1C3"
+                        app:cornerRadius="10dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnExcluirSolicitacao"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="Excluir Solicitação"
+                        android:textAllCaps="false"
+                        app:backgroundTint="#D65252"
+                        app:cornerRadius="10dp"/>
                 </LinearLayout>
-
-                <Button
-                    android:id="@+id/btnBraille"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Enviar notificação de Braille concluído"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#6EC1C3"
-                    android:layout_marginTop="10dp"/>
-
-                <Button
-                    android:id="@+id/btnExcluirSolicitacao"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Excluir Solicitação"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#D65252"
-                    android:layout_marginTop="10dp"/>
-
-            </LinearLayout>
-
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
-
     </ScrollView>
 
-    <!-- BARRA ADM -->
-
-    <LinearLayout
+    <!-- BARRA ADM PADRONIZADA -->
+    <FrameLayout
+        android:id="@+id/bottomNavContainer"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        android:background="#FFFFFF"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <include layout="@layout/bottom_navigation_adm" />
+    </FrameLayout>
 
-        <ImageView
-            android:id="@+id/navDashboard"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@android:drawable/ic_menu_view"/>
-
-        <ImageView
-            android:id="@+id/navFinanceiro"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:src="@android:drawable/ic_menu_manage"/>
-
-        <ImageView
-            android:id="@+id/navSolicitacoes"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:src="@android:drawable/ic_menu_help"/>
-
-        <ImageView
-            android:id="@+id/navLivrosADM"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:src="@android:drawable/ic_menu_agenda"/>
-
-        <ImageView
-            android:id="@+id/navUsuarios"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:src="@android:drawable/ic_menu_myplaces"/>
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

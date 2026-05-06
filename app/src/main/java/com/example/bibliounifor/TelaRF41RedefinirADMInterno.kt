@@ -3,6 +3,7 @@ package com.example.bibliounifor
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -17,7 +18,7 @@ class TelaRF41RedefinirADMInterno : AppCompatActivity() {
 
         val etSenha = findViewById<EditText>(R.id.editTextTextPassword)
         val etSenhaConfirmacao = findViewById<EditText>(R.id.editTextTextPasswordConfirmacao)
-        val bntX = findViewById<Button>(R.id.buttonX)
+        val bntX = findViewById<TextView>(R.id.buttonX) // Alterado para TextView para evitar crash
         val bntSalvar = findViewById<Button>(R.id.buttonSalvar)
 
         // 👇 BARRA ADM

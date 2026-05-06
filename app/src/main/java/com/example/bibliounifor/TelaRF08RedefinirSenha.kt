@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 
 class TelaRF08RedefinirSenha : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,9 +52,9 @@ class TelaRF08RedefinirSenha : AppCompatActivity() {
 
                 if (!senhaValida) {
                     Toast.makeText(this, "A senha não atende aos requisitos", Toast.LENGTH_SHORT).show()
-                    textErroRequisitos.setTextColor(resources.getColor(android.R.color.holo_red_dark))
+                    textErroRequisitos.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_dark))
                 } else {
-                    textErroRequisitos.setTextColor(resources.getColor(android.R.color.darker_gray))
+                    textErroRequisitos.setTextColor(ContextCompat.getColor(this, android.R.color.darker_gray))
                 }
             }
         }
