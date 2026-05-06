@@ -3,67 +3,63 @@ package com.example.bibliounifor
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.button.MaterialButton
 
 class TelaRF35CadastroDeLivros : AppCompatActivity() {
 
+    private lateinit var etData: EditText
+    private val REQUEST_CODE_DATA = 100
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // 🔹 XML CORRETO (ATENÇÃO AQUI)
         setContentView(R.layout.telarf35_cadastro_livro)
 
-        // 🔹 Campos (IDs exatamente iguais ao XML)
         val etTitulo = findViewById<EditText>(R.id.etTitulo)
         val etAutor = findViewById<EditText>(R.id.etAutor)
         val etISBN = findViewById<EditText>(R.id.etISBN)
-        val etData = findViewById<EditText>(R.id.etData)
+        etData = findViewById<EditText>(R.id.etData)
         val etQuantidade = findViewById<EditText>(R.id.etQuantidade)
-
-        // 🔹 Botão
-        val btnContinuar = findViewById<Button>(R.id.btnContinuar)
-
-        // 🔹 TextView de erro
+        val btnContinuar = findViewById<MaterialButton>(R.id.btnContinuar)
         val tvErro = findViewById<TextView>(R.id.tvErro)
 
+        // Abrir calendário
+        etData.setOnClickListener {
+            val intent = Intent(this, TelaRF35_1Data::class.java)
+            startActivityForResult(intent, REQUEST_CODE_DATA)
+        }
+
         btnContinuar.setOnClickListener {
-
-            // Esconde erro antes de validar
-            tvErro.visibility = View.GONE
-
-            // Pegando os valores
             val titulo = etTitulo.text.toString().trim()
             val autor = etAutor.text.toString().trim()
             val isbn = etISBN.text.toString().trim()
             val data = etData.text.toString().trim()
             val quantidade = etQuantidade.text.toString().trim()
 
-            // 🔴 VALIDAÇÃO
-            if (titulo.isEmpty() ||
-                autor.isEmpty() ||
-                isbn.isEmpty() ||
-                data.isEmpty() ||
-                quantidade.isEmpty()
-            ) {
-
+            if (titulo.isEmpty() || autor.isEmpty() || isbn.isEmpty() || data.isEmpty() || quantidade.isEmpty()) {
                 tvErro.visibility = View.VISIBLE
-
+                // Feedback visual para o usuário
+                android.widget.Toast.makeText(this, "Preencha todos os campos obrigatórios!", android.widget.Toast.LENGTH_SHORT).show()
             } else {
-
-                // ✅ SUCESSO
-                Toast.makeText(
-                    this,
-                    "Livro cadastrado com sucesso!",
-                    Toast.LENGTH_SHORT
-                ).show()
-
-                // 🔹 Volta para o CRUD (RF34)
-                val intent = Intent(this, TelaRF34LivrosCRUD::class.java)
+                tvErro.visibility = View.GONE
+                val intent = Intent(this, TelaRF35_3InfosAdicionais::class.java)
                 startActivity(intent)
-
-                finish()
             }
         }
+
+        // 👇 BARRA ADM
+        NavigationUtils.setupAdminNavigation(this)
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_CODE_DATA && resultCode == RESULT_OK) {
+            val dataSelecionada = data?.getStringExtra("dataSelecionada")
+            etData.setText(dataSelecionada)
+        }
+    }
+
 }

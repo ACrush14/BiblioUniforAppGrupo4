@@ -27,7 +27,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Adicionar Mídia"
+                    android:text="Adicionar Mídia – Extras"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -43,98 +43,87 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Título do Livro"
+                    android:text="Quantidade de Páginas"
                     android:textColor="#1B3434"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/etTitulo"
+                    android:id="@+id/etPaginas"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginBottom="15dp"
                     android:background="@drawable/bg_input_rounded"
-                    android:hint="Ex: O Alienista"
-                    android:paddingLeft="15dp" />
+                    android:hint="Ex: 300"
+                    android:inputType="number"
+                    android:paddingStart="15dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Autor"
+                    android:text="Categoria"
                     android:textColor="#1B3434"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/etAutor"
+                    android:id="@+id/etCategoria"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginBottom="15dp"
                     android:background="@drawable/bg_input_rounded"
-                    android:hint="Ex: Machado de Assis"
-                    android:paddingLeft="15dp" />
+                    android:hint="Ex: Ficção"
+                    android:paddingStart="15dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Código ISBN"
+                    android:text="Editora"
                     android:textColor="#1B3434"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/etISBN"
+                    android:id="@+id/etEditora"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginBottom="15dp"
                     android:background="@drawable/bg_input_rounded"
-                    android:hint="000-00-000-0000-0"
-                    android:paddingLeft="15dp" />
+                    android:hint="Ex: Editora Unifor"
+                    android:paddingStart="15dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Data de publicação do Livro"
+                    android:text="Link da Imagem de Capa"
                     android:textColor="#1B3434"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/etData"
+                    android:id="@+id/etImagem"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginBottom="15dp"
                     android:background="@drawable/bg_input_rounded"
-                    android:focusable="false"
-                    android:clickable="true"
-                    android:cursorVisible="false"
-                    android:hint="DD/MM/AAAA"
-                    android:paddingLeft="15dp" />
+                    android:hint="https://linkdaimagem.com"
+                    android:paddingStart="15dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Quantidade de exemplares"
+                    android:text="Sinopse"
                     android:textColor="#1B3434"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/etQuantidade"
+                    android:id="@+id/etSinopse"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="120dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_input_rounded"
-                    android:hint="Ex: 10"
-                    android:inputType="number"
-                    android:paddingLeft="15dp" />
-
-                <TextView
-                    android:id="@+id/tvErro"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Preencha todos os campos!"
-                    android:textColor="#FF0000"
-                    android:visibility="gone" />
+                    android:gravity="top"
+                    android:hint="Escreva a sinopse do livro aqui..."
+                    android:padding="15dp" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnContinuar"
+                    android:id="@+id/btnIrVersoes"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginTop="20dp"

@@ -13,16 +13,7 @@ class TelaRF36FinanceiroADM : AppCompatActivity() {
         // Mantive o nome do layout exatamente como você enviou
         setContentView(R.layout.telarf36_finaceiro_adm)
 
-        // 1. Encontrar o ícone da esquerda pelo ID que acabamos de criar no XML
-        val iconeDashboard = findViewById<ImageView>(R.id.iconDashboard)
-
-        // 2. Criar a ação de clique no ícone
-        iconeDashboard.setOnClickListener {
-
-            // 3. Fazer a ponte (Intent) para a Tela 30
-            val intent = Intent(this, TelaRF30DashboardADM::class.java)
-            startActivity(intent)
-
-        }
+        // 👇 BARRA ADM
+        NavigationUtils.setupAdminNavigation(this)
     }
 }

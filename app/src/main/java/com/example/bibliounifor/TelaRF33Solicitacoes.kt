@@ -1,6 +1,8 @@
 package com.example.bibliounifor
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -10,30 +12,28 @@ class TelaRF33Solicitacoes : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // 🔹 Nome do XML CORRETO
         setContentView(R.layout.telarf33_solicitacoes)
 
-        // 🔹 Botão fechar (X)
+        // 👇 BOTÃO FECHAR (X)
         val btnFechar = findViewById<TextView>(R.id.btnFechar)
 
-        // 🔹 Itens da lista
-        val item1 = findViewById<LinearLayout>(R.id.itemSolicitacao1)
-        val item2 = findViewById<LinearLayout>(R.id.itemSolicitacao2)
-
-        // 🔹 Fechar tela (volta pra RF32)
         btnFechar.setOnClickListener {
             finish()
         }
 
-        // 🔹 Clique item 1
+        // 👇 ITENS DE SOLICITAÇÃO
+        val item1 = findViewById<LinearLayout>(R.id.itemSolicitacao1)
+        val item2 = findViewById<LinearLayout>(R.id.itemSolicitacao2)
+
         item1.setOnClickListener {
             Toast.makeText(this, "Solicitação 1 selecionada", Toast.LENGTH_SHORT).show()
         }
 
-        // 🔹 Clique item 2
         item2.setOnClickListener {
             Toast.makeText(this, "Solicitação 2 selecionada", Toast.LENGTH_SHORT).show()
         }
+
+        // 👇 BARRA ADM
+        NavigationUtils.setupAdminNavigation(this)
     }
 }
