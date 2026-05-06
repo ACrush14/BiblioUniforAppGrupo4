@@ -94,21 +94,6 @@ fun LoginScreen(
                 )
             }
 
-            // Botão Google
-            Button(
-                onClick = { /* Lógica Google Auth */ },
-                colors = ButtonDefaults.buttonColors(containerColor = Color.White),
-                shape = RoundedCornerShape(12.dp),
-                elevation = ButtonDefaults.buttonElevation(defaultElevation = 2.dp),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(55.dp)
-            ) {
-                Text("Google", color = Color.Black)
-            }
-
-            Spacer(modifier = Modifier.height(24.dp))
-
             // Inputs com fundo branco e arredondados
             AdminTextField(
                 value = email,

@@ -1,6 +1,8 @@
 package com.example.bibliounifor.ui.screens
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -26,11 +28,11 @@ fun ValidationScreen(onNavigateBack: () -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(
-            text = "ICONE",
-            fontSize = 32.sp,
-            fontWeight = FontWeight.Black,
-            modifier = Modifier.padding(bottom = 24.dp)
+        Icon(
+            imageVector = Icons.Default.AccountCircle,
+            contentDescription = null,
+            modifier = Modifier.size(60.dp),
+            tint = Color.Black
         )
 
         Text(

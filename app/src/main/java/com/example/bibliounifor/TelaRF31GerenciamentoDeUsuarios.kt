@@ -10,6 +10,8 @@ class TelaRF31GerenciamentoDeUsuarios : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // 🔹 Correção: Usando o ID do layout XML (R.layout.telarf31_gerenciamentousuarios)
         setContentView(R.layout.telarf31_gerenciamentousuarios)
 
         // 🔹 Referenciando os itens incluídos via ID (definidos na tag <include> do XML)

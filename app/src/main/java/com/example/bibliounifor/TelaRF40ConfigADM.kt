@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.button.MaterialButton // Importação do botão
+import com.google.android.material.button.MaterialButton
 
 class TelaRF40ConfigADM : AppCompatActivity() {
 
@@ -12,39 +12,33 @@ class TelaRF40ConfigADM : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.telarf40_config_adm)
 
-        // 👇 BARRA ADM
-        val navDashboard = findViewById<ImageView>(R.id.navDashboard)
-        val navFinanceiro = findViewById<ImageView>(R.id.navFinanceiro)
-        val navSolicitacoes = findViewById<ImageView>(R.id.navSolicitacoes)
-        val navLivrosADM = findViewById<ImageView>(R.id.navLivrosADM)
-        val navUsuarios = findViewById<ImageView>(R.id.navUsuarios)
+        // 👇 Padronização da Navegação ADM
+        NavigationUtils.setupAdminNavigation(this)
 
-        navDashboard.setOnClickListener {
-            startActivity(Intent(this, TelaRF30DashboardADM::class.java))
-        }
-
-        navFinanceiro.setOnClickListener {
-            startActivity(Intent(this, TelaRF36FinanceiroADM::class.java))
-        }
-
-        navSolicitacoes.setOnClickListener {
-            startActivity(Intent(this, TelaRF33Solicitacoes::class.java))
-        }
-
-        navLivrosADM.setOnClickListener {
-            startActivity(Intent(this, TelaRF34LivrosCRUD::class.java))
-        }
-
-        navUsuarios.setOnClickListener {
-            startActivity(Intent(this, TelaRF31GerenciamentoDeUsuarios::class.java))
-        }
-
-        // 1. Encontrar o botão pelos IDs que criamos no XML
+        // Botões específicos da tela de configuração
         val btnVoltarDashboard = findViewById<MaterialButton>(R.id.btnVoltarDashboard)
+        val btnVoltar = findViewById<MaterialButton>(R.id.btnVoltar)
+        val btnRedefinirSenha = findViewById<MaterialButton>(R.id.btnRedefinirSenha)
+        val btnApagarConta = findViewById<MaterialButton>(R.id.btnApagarConta)
 
-        // 3. Criar a ação de clique para o BOTÃO
-        btnVoltarDashboard.setOnClickListener {
+        btnVoltarDashboard?.setOnClickListener {
             val intent = Intent(this, TelaRF30DashboardADM::class.java)
+            startActivity(intent)
+        }
+
+        btnVoltar?.setOnClickListener {
+            finish() // Fecha a tela atual e volta para a anterior
+        }
+
+        btnRedefinirSenha?.setOnClickListener {
+            val intent = Intent(this, TelaRF41RedefinirADMInterno::class.java)
+            startActivity(intent)
+        }
+        
+        btnApagarConta?.setOnClickListener {
+            // Lógica para apagar conta ou logout
+            val intent = Intent(this, TelaRF02Intermediaria::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
     }
