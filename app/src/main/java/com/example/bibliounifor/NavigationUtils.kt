@@ -28,6 +28,16 @@ object NavigationUtils {
             }
         }
         // 4. Coração -> RF17
+        activity.findViewById<ImageView>(R.id.navFavorites)?.setOnClickListener {
+            activity.startActivity(Intent(activity, TelaRF17ListaDesejosActivity::class.java))
+        }
+        // 5. Livro -> RF19
+        activity.findViewById<ImageView>(R.id.navRentals)?.setOnClickListener {
+            activity.startActivity(Intent(activity, TelaRF19::class.java))
+        }
+        // 6. Pessoa -> RF18
+        activity.findViewById<ImageView>(R.id.navFriends)?.setOnClickListener {
+            activity.startActivity(Intent(activity, TelaRF18::class.java))
         activity.findViewById<ImageView>(R.id.navDesejos)?.setOnClickListener {
             if (activity !is TelaRF17ListaDesejosActivity) {
                 activity.startActivity(Intent(activity, TelaRF17ListaDesejosActivity::class.java))
