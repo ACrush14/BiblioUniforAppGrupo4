@@ -26,6 +26,6 @@ class TelaRF34LivrosCRUD : AppCompatActivity() {
         }
 
         // 👇 BARRA ADM PADRONIZADA
-        NavigationUtils.setupAdminNavigation(this)
+
     }
 }

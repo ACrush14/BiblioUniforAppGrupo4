@@ -154,57 +154,6 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- BARRA INFERIOR -->
-    <LinearLayout
-        android:id="@+id/bottomNavigationUsuario"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:background="#FFFFFF"
-        android:elevation="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="12dp"
-            android:src="@android:drawable/ic_menu_view"
-            app:tint="#A0A0A0" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="12dp"
-            android:src="@android:drawable/ic_menu_search"
-            app:tint="#A0A0A0" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="12dp"
-            android:src="@android:drawable/ic_menu_compass"
-            app:tint="#A0A0A0" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="12dp"
-            android:src="@android:drawable/ic_menu_agenda"
-            app:tint="#A0A0A0" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="12dp"
-            android:src="@android:drawable/ic_menu_myplaces"
-            app:tint="#1B3434" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

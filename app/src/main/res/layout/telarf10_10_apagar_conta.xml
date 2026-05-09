@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/apagar_conta_titulo"
+        android:text="NomeDaConta"
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="#6EC1C3"
@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/apagar_conta_subtitulo"
+        android:text="EmailDaConta"
         android:textSize="16sp"
         android:textColor="#6EC1C3"
         android:layout_gravity="center"
@@ -31,7 +31,7 @@
         android:id="@+id/textErroPopup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/apagar_conta_erro"
+        android:text="Error"
         android:textColor="#E53935"
         android:visibility="gone"
         android:layout_marginTop="8dp"
@@ -50,7 +50,7 @@
             android:background="@drawable/bg_input_pill"
             android:paddingStart="16dp"
             android:paddingEnd="48dp"
-            android:hint="@string/hint_sua_senha"
+            android:hint="Senha"
             android:inputType="textPassword"
             android:importantForAutofill="no"/>
 
@@ -62,7 +62,7 @@
             android:layout_centerVertical="true"
             android:layout_marginEnd="4dp"
             android:clickable="true"
-            android:contentDescription="@string/desc_mostrar_ocultar_senha"
+            android:contentDescription="OcultarSenha"
             android:focusable="true"
             android:padding="10dp"
             android:src="@android:drawable/ic_menu_view" />

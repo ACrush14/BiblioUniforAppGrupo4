@@ -32,6 +32,6 @@ class TelaRF31GerenciamentoDeUsuarios : AppCompatActivity() {
         }
 
         // 👇 BARRA ADM
-        NavigationUtils.setupAdminNavigation(this)
+
     }
 }

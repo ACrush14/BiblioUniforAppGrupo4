@@ -14,7 +14,7 @@ class TelaRF30CrudADM : AppCompatActivity() {
         setContentView(R.layout.telarf30_crud_adm)
 
         // Configuração da Navegação ADM (Barra inferior e topo)
-        NavigationUtils.setupAdminNavigation(this)
+
 
         val btnCriarMidia = findViewById<MaterialButton>(R.id.btnCriarMidia)
         val btnVerificarMidia = findViewById<MaterialButton>(R.id.btnVerificarMidia)

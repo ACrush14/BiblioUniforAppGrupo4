@@ -22,8 +22,6 @@ class TelaRF13TelaDoLivro : AppCompatActivity() {
         setContentView(R.layout.telarf13_teladolivro)
 
         // Padronização da Navegação e Cabeçalho
-        NavigationUtils.setupTopBar(this)
-        NavigationUtils.setupBottomNavigation(this)
 
         val livroId = intent.getIntExtra("LIVRO_ID", -1)
         if (livroId != -1) {
@@ -43,10 +41,9 @@ class TelaRF13TelaDoLivro : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnLerLivro).setOnClickListener {
-            val intent = Intent(this, TelaRF15LeituraActivity::class.java)
-            intent.putExtra("LIVRO_ID", livroId)
-            startActivity(intent)
+            startActivity(Intent(this, TelaRF15TelaLer::class.java))
         }
+
     }
 
     private fun carregarDadosDoLivro(id: Int) {

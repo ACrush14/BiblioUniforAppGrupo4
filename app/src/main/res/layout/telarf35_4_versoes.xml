@@ -93,56 +93,5 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- BARRA ADM -->
-    <LinearLayout
-        android:id="@+id/bottomNavADM"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="#FFFFFF"
-        android:elevation="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <ImageView
-            android:id="@+id/navDashboard"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="14dp"
-            android:src="@android:drawable/ic_menu_view"/>
-
-        <ImageView
-            android:id="@+id/navFinanceiro"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="14dp"
-            android:src="@android:drawable/ic_menu_manage"/>
-
-        <ImageView
-            android:id="@+id/navSolicitacoes"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="14dp"
-            android:src="@android:drawable/ic_menu_help"/>
-
-        <ImageView
-            android:id="@+id/navLivrosADM"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="14dp"
-            android:src="@android:drawable/ic_menu_agenda"/>
-
-        <ImageView
-            android:id="@+id/navUsuarios"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="14dp"
-            android:src="@android:drawable/ic_menu_myplaces"/>
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

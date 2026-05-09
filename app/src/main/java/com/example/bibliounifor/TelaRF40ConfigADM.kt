@@ -13,7 +13,7 @@ class TelaRF40ConfigADM : AppCompatActivity() {
         setContentView(R.layout.telarf40_config_adm)
 
         // 👇 Padronização da Navegação ADM
-        NavigationUtils.setupAdminNavigation(this)
+
 
         // Botões específicos da tela de configuração
         val btnVoltarDashboard = findViewById<MaterialButton>(R.id.btnVoltarDashboard)

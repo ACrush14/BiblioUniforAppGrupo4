@@ -44,87 +44,80 @@
 
     <!-- CONTENT -->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="409dp"
+        android:layout_height="482dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="20dp"
-        android:gravity="center_horizontal"
-        app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigation">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCriarMidia"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#6EC1C3"
             android:text="Criar Mídia"
             android:textAllCaps="false"
             android:textSize="18sp"
-            android:backgroundTint="#6EC1C3"
-            app:cornerRadius="12dp"
-            android:layout_marginBottom="12dp"/>
+            app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnVerificarMidia"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#6EC1C3"
             android:text="Verificar Mídia"
             android:textAllCaps="false"
             android:textSize="18sp"
-            android:backgroundTint="#6EC1C3"
-            app:cornerRadius="12dp"
-            android:layout_marginBottom="12dp"/>
+            app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnGerenciarUsuario"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#6EC1C3"
             android:text="Gerenciar usuário"
             android:textAllCaps="false"
             android:textSize="18sp"
-            android:backgroundTint="#6EC1C3"
-            app:cornerRadius="12dp"
-            android:layout_marginBottom="12dp"/>
+            app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnMudarPermissao"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#6EC1C3"
             android:text="Mudar permissão de usuário"
             android:textAllCaps="false"
             android:textSize="18sp"
-            android:backgroundTint="#6EC1C3"
-            app:cornerRadius="12dp"
-            android:layout_marginBottom="12dp"/>
+            app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnApagarUsuario"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#D65252"
             android:text="Apagar Usuário"
             android:textAllCaps="false"
             android:textSize="18sp"
-            android:backgroundTint="#D65252"
-            app:cornerRadius="12dp"
-            android:layout_marginBottom="12dp"/>
+            app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnApagarMidia"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:backgroundTint="#D65252"
             android:text="Apagar Mídia"
             android:textAllCaps="false"
             android:textSize="18sp"
-            android:backgroundTint="#D65252"
-            app:cornerRadius="12dp"/>
+            app:cornerRadius="12dp" />
 
     </LinearLayout>
 
-    <!-- BOTTOM NAV -->
-    <include
-        android:id="@+id/bottomNavigation"
-        layout="@layout/bottom_navigation_adm"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

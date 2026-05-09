@@ -14,6 +14,6 @@ class TelaRF36FinanceiroADM : AppCompatActivity() {
         setContentView(R.layout.telarf36_finaceiro_adm)
 
         // 👇 BARRA ADM
-        NavigationUtils.setupAdminNavigation(this)
+
     }
 }

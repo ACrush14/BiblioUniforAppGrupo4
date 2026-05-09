@@ -21,7 +21,7 @@ class TelaRF35_4Versoes : AppCompatActivity() {
         }
 
         // 👇 BARRA ADM
-        NavigationUtils.setupAdminNavigation(this)
+
     }
 
     private fun exibirPopupSucesso() {

@@ -22,7 +22,7 @@ class TelaRF41RedefinirADMInterno : AppCompatActivity() {
         val bntSalvar = findViewById<Button>(R.id.buttonSalvar)
 
         // 👇 BARRA ADM
-        NavigationUtils.setupAdminNavigation(this)
+
 
         bntSalvar.setOnClickListener {
             val s1 = etSenha.text.toString()

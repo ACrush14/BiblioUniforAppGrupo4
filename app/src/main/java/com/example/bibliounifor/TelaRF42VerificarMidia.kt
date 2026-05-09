@@ -9,7 +9,6 @@ class TelaRF42VerificarMidia : AppCompatActivity() {
         setContentView(R.layout.telarf42_verificar_midia)
 
         // Navegação ADM
-        NavigationUtils.setupAdminTopBar(this)
-        NavigationUtils.setupAdminBottomNavigation(this)
+
     }
 }

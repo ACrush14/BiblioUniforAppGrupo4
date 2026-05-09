@@ -31,12 +31,6 @@ fun AppNavigation() {
                 }
             )
         }
-        composable("register") {
-            RegisterScreen(
-                onNavigateBack = { navController.popBackStack() },
-                onNavigateToLogin = { navController.navigate("login") }
-            )
-        }
         composable("forgot_password") {
             ForgotPasswordScreen(
                 onNavigateBack = { navController.popBackStack() },

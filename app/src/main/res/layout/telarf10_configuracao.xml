@@ -23,7 +23,7 @@
             android:padding="2dp"
             android:scaleType="centerCrop"
             android:src="@drawable/o_alienista_capa"
-            android:contentDescription="@string/desc_perfil"
+            android:contentDescription="FotoDePerfil"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -46,7 +46,7 @@
                 android:id="@+id/textUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/email_usuario_exemplo"
+                android:text="EmailUsuario"
                 android:textColor="@android:color/white"
                 android:textSize="22sp"
                 android:textStyle="bold" />
@@ -61,7 +61,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/desc_editar_usuario"
+                android:contentDescription="Editar"
                 app:tint="#1B3434" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -71,8 +71,8 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/bottomNav"
-        app:layout_constraintTop_toBottomOf="@id/headerConfig">
+        app:layout_constraintTop_toBottomOf="@id/headerConfig"
+        tools:ignore="NotSibling">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -94,12 +94,12 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@android:drawable/ic_menu_search"
-                    android:contentDescription="@string/desc_pesquisa" />
+                    android:contentDescription="Pesquisa" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="@string/label_pesquisa"
+                    android:text="LabelPesquisa"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -108,7 +108,7 @@
                 android:id="@+id/labelNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/label_nome"
+                android:text="Nome Usuario"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -127,7 +127,7 @@
                     android:textColor="#444444"
                     android:importantForAutofill="no"
                     android:inputType="textPersonName"
-                    android:hint="@string/hint_nome"
+                    android:hint="Hint_Nome"
                     android:labelFor="@id/labelNome" />
                 <ImageView
                     android:layout_width="48dp"
@@ -137,7 +137,7 @@
                     android:layout_marginEnd="4dp"
                     android:padding="10dp"
                     android:src="@android:drawable/ic_menu_edit"
-                    android:contentDescription="@string/desc_editar_campo" />
+                    android:contentDescription="editar_campo" />
             </RelativeLayout>
 
             <!-- USUÁRIO -->
@@ -145,7 +145,7 @@
                 android:id="@+id/labelUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/label_usuario"
+                android:text="Email Usuario"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -160,11 +160,11 @@
                     android:layout_height="55dp"
                     android:background="@drawable/bg_input_pill"
                     android:paddingHorizontal="16dp"
-                    android:text="@string/usuario_exemplo"
+                    android:text="EmailExemploUsuario"
                     android:textColor="#444444"
                     android:importantForAutofill="no"
                     android:inputType="text"
-                    android:hint="@string/hint_usuario"
+                    android:hint="HintUsuario"
                     android:labelFor="@id/labelUsuario" />
                 <ImageView
                     android:layout_width="48dp"
@@ -174,7 +174,7 @@
                     android:layout_marginEnd="4dp"
                     android:padding="10dp"
                     android:src="@android:drawable/ic_menu_edit"
-                    android:contentDescription="@string/desc_editar_campo" />
+                    android:contentDescription="editar_campo" />
             </RelativeLayout>
 
             <!-- BIO -->
@@ -182,7 +182,7 @@
                 android:id="@+id/labelBio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/label_bio"
+                android:text="Biografia"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -199,11 +199,11 @@
                     android:gravity="top"
                     android:minHeight="140dp"
                     android:padding="16dp"
-                    android:text="@string/bio_exemplo"
+                    android:text="Bio exemplo"
                     android:textColor="#444444"
                     android:importantForAutofill="no"
                     android:inputType="textMultiLine"
-                    android:hint="@string/hint_bio"
+                    android:hint="HintBio"
                     android:labelFor="@id/labelBio" />
                 <ImageView
                     android:layout_width="48dp"
@@ -213,7 +213,7 @@
                     android:layout_marginEnd="4dp"
                     android:padding="10dp"
                     android:src="@android:drawable/ic_menu_edit"
-                    android:contentDescription="@string/desc_editar_campo" />
+                    android:contentDescription="editar_campo" />
             </RelativeLayout>
 
             <!-- SENHA ATUAL -->
@@ -221,7 +221,7 @@
                 android:id="@+id/labelSenhaAtual"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/label_senha_atual"
+                android:text="Senha atual"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -234,7 +234,7 @@
                 android:background="@drawable/bg_input_pill"
                 android:inputType="textPassword"
                 android:paddingHorizontal="16dp"
-                android:text="@string/placeholder_senha"
+                android:text="SenhaTeste"
                 android:textColor="#444444"
                 android:importantForAutofill="no"
                 android:labelFor="@id/labelSenhaAtual" />
@@ -245,7 +245,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:layout_marginBottom="12dp"
-                android:text="@string/btn_redefinir_senha_config"
+                android:text="Redefinir Senha"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -256,7 +256,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:layout_marginBottom="12dp"
-                android:text="@string/btn_voltar_inicial"
+                android:text="Voltar a Tela Inicial"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -267,7 +267,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:layout_marginBottom="24dp"
-                android:text="@string/btn_apagar_conta_config"
+                android:text="Apagar Conta"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -275,71 +275,5 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <!-- BOTTOM NAVIGATION FIXA NO RODAPÉ -->
-    <LinearLayout
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="#FFFFFF"
-        android:elevation="12dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <ImageView
-            android:id="@+id/navHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="18dp"
-            android:src="@android:drawable/ic_menu_view"
-            android:contentDescription="@string/nav_home_desc" />
-
-        <ImageView
-            android:id="@+id/navCarrinho"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="18dp"
-            android:src="@android:drawable/ic_menu_add"
-            android:contentDescription="@string/nav_carrinho_desc" />
-
-        <ImageView
-            android:id="@+id/navBusca"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="18dp"
-            android:src="@android:drawable/ic_menu_search"
-            android:contentDescription="@string/nav_busca_desc" />
-
-        <ImageView
-            android:id="@+id/navFavoritos"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="18dp"
-            android:src="@android:drawable/ic_menu_agenda"
-            android:contentDescription="@string/nav_favoritos_desc" />
-
-        <ImageView
-            android:id="@+id/navLista"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="18dp"
-            android:src="@android:drawable/ic_menu_sort_by_size"
-            android:contentDescription="@string/nav_lista_desc" />
-
-        <ImageView
-            android:id="@+id/navUsuario"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="18dp"
-            android:src="@android:drawable/ic_menu_myplaces"
-            android:contentDescription="@string/nav_perfil_desc" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -56,6 +56,6 @@ class TelaRF33VerificarMidia : AppCompatActivity() {
         // =========================
         // BARRA ADM (Utilizando o padrão do projeto)
         // =========================
-        NavigationUtils.setupAdminNavigation(this)
+
     }
 }

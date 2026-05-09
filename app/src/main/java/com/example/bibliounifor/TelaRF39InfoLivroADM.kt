@@ -14,7 +14,7 @@ class TelaRF39InfoLivroADM : AppCompatActivity() {
         setContentView(R.layout.telarf39_info_livro_adm)
 
         // 👇 BARRA ADM
-        NavigationUtils.setupAdminNavigation(this)
+
 
         // 1. Encontrar o botão de voltar pelo ID do XML
         val botaoVoltar = findViewById<Button>(R.id.btnVoltar)

@@ -15,8 +15,7 @@ class TelaRF32UsuariosParaADM : AppCompatActivity() {
         setContentView(R.layout.telarf32_usuariosparaadm)
 
         // Padronização da Navegação ADM
-        NavigationUtils.setupAdminTopBar(this)
-        NavigationUtils.setupAdminBottomNavigation(this)
+
 
         // Botões (IDs do seu XML)
         val btnSolicitacoes = findViewById<Button>(R.id.btnSolicitacoes)
@@ -40,6 +39,6 @@ class TelaRF32UsuariosParaADM : AppCompatActivity() {
         }
 
         // 👇 BARRA ADM
-        NavigationUtils.setupAdminNavigation(this)
+
     }
 }
