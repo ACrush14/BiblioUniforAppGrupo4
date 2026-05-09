@@ -13,7 +13,7 @@ class TelaRF30DashboardADM : AppCompatActivity() {
         setContentView(R.layout.telarf30_dashboard_adm)
 
         // Padronização da Navegação ADM (Barra inferior e topo)
-        NavigationUtils.setupAdminNavigation(this)
+
 
         // 1. Botões de Navegação Principal
         val btnTelaCrud = findViewById<MaterialButton>(R.id.btnTelaCrud)

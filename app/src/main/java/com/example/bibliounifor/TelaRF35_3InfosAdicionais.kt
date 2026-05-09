@@ -20,6 +20,6 @@ class TelaRF35_3InfosAdicionais : AppCompatActivity() {
         }
 
         // 👇 BARRA ADM
-        NavigationUtils.setupAdminNavigation(this)
+
     }
 }

@@ -68,37 +68,6 @@ class TelaRF10Configuracao : AppCompatActivity() {
             builder.show()
         }
 
-        // 🔥 BARRA DE TAREFAS (BOTTOM NAV)
-        val navHome = findViewById<ImageView>(R.id.navHome)
-        val navCarrinho = findViewById<ImageView>(R.id.navCarrinho)
-        val navBusca = findViewById<ImageView>(R.id.navBusca)
-        val navFavoritos = findViewById<ImageView>(R.id.navFavoritos)
-        val navLista = findViewById<ImageView>(R.id.navLista)
-        val navUsuario = findViewById<ImageView>(R.id.navUsuario)
-
-        navHome.setOnClickListener {
-            startActivity(Intent(this, TelaRF09DashboardUsuario::class.java))
-        }
-
-        navCarrinho.setOnClickListener {
-            startActivity(Intent(this, TelaRF19::class.java))
-        }
-
-        navBusca.setOnClickListener {
-            startActivity(Intent(this, TelaRF12TelaDePesquisa::class.java))
-        }
-
-        navFavoritos.setOnClickListener {
-            startActivity(Intent(this, TelaRF17ListaDesejosActivity::class.java))
-        }
-
-        navLista.setOnClickListener {
-            startActivity(Intent(this, TelaRF16MinhaLivrariaActivity::class.java))
-        }
-
-        navUsuario.setOnClickListener {
-            startActivity(Intent(this, TelaRF18::class.java))
-        }
     }
 
     private fun abrirPopupApagarConta() {

@@ -20,7 +20,7 @@
             android:layout_height="48dp"
             android:layout_margin="16dp"
             android:gravity="center"
-            android:text="@string/fechar_x"
+            android:text="X"
             android:textColor="#1B3434"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -36,8 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintBottom_toTopOf="@id/bottomNav">
+        app:layout_constraintTop_toBottomOf="@id/header">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,7 +68,7 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_input_pill"
-                android:hint="@string/hint_nova_senha"
+                android:hint="HintNovaSenha"
                 android:inputType="textPassword"
                 android:paddingHorizontal="20dp"
                 android:importantForAutofill="no" />
@@ -79,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="@string/erro_senha_invalida"
+                android:text="Erro Senha Invalida"
                 android:textColor="#E53935"
                 android:textSize="12sp"
                 android:visibility="gone" />
@@ -100,7 +99,7 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_input_pill"
-                android:hint="@string/hint_confirmar_senha"
+                android:hint="HintConfirmarSenha"
                 android:inputType="textPassword"
                 android:paddingHorizontal="20dp"
                 android:importantForAutofill="no" />
@@ -110,7 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="@string/erro_senhas_nao_coincidem"
+                android:text="ErroSenhasNaoCoincidem"
                 android:textColor="#E53935"
                 android:textSize="12sp"
                 android:visibility="gone" />
@@ -121,7 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="40dp"
-                android:text="@string/btn_salvar_alteracoes"
+                android:text="Salvar Alterações"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textColor="@android:color/white"
@@ -131,70 +130,5 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- BOTTOM NAVIGATION FIXA NO RODAPÉ -->
-    <LinearLayout
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="#FFFFFF"
-        android:elevation="12dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <ImageView
-            android:id="@+id/navHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="18dp"
-            android:src="@android:drawable/ic_menu_view"
-            android:contentDescription="@string/nav_home" />
-
-        <ImageView
-            android:id="@+id/navCarrinho"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="18dp"
-            android:src="@android:drawable/ic_menu_add"
-            android:contentDescription="@string/nav_carrinho" />
-
-        <ImageView
-            android:id="@+id/navBusca"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="18dp"
-            android:src="@android:drawable/ic_menu_search"
-            android:contentDescription="@string/nav_busca" />
-
-        <ImageView
-            android:id="@+id/navFavoritos"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="18dp"
-            android:src="@android:drawable/ic_menu_agenda"
-            android:contentDescription="@string/nav_favoritos" />
-
-        <ImageView
-            android:id="@+id/navLista"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="18dp"
-            android:src="@android:drawable/ic_menu_sort_by_size"
-            android:contentDescription="@string/nav_lista" />
-
-        <ImageView
-            android:id="@+id/navUsuario"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="18dp"
-            android:src="@android:drawable/ic_menu_myplaces"
-            android:contentDescription="@string/nav_usuario" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

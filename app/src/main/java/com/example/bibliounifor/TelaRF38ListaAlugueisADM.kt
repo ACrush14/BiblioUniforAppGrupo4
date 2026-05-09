@@ -17,7 +17,7 @@ class TelaRF38ListaAlugueisADM : AppCompatActivity() {
         setContentView(R.layout.telarf38_lista_alugueis_adm)
 
         // 👇 BARRA ADM
-        NavigationUtils.setupAdminNavigation(this)
+
 
         // 1. Encontrar o botão pelo ID que está no XML
         val botaoVerLivro1 = findViewById<Button>(R.id.btnVerLivro1)

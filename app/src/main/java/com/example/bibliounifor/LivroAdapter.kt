@@ -14,7 +14,7 @@ class LivroAdapter(
 ) : RecyclerView.Adapter<LivroAdapter.LivroViewHolder>() {
 
     class LivroViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val imgLivro: ImageView = view.findViewById(R.id.imgLivro)
+        val imgLivro: ImageView = view.findViewById(R.id.imgLivroMinhaLivraria)
         val textTitulo: TextView = view.findViewById(R.id.textTituloLivro)
         val textAutor: TextView = view.findViewById(R.id.textAutorLivro)
     }

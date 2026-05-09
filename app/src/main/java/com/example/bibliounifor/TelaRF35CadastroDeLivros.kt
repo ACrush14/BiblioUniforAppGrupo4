@@ -51,7 +51,7 @@ class TelaRF35CadastroDeLivros : AppCompatActivity() {
         }
 
         // 👇 BARRA ADM
-        NavigationUtils.setupAdminNavigation(this)
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

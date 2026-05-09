@@ -27,8 +27,7 @@ class TelaRF12TelaDePesquisa : AppCompatActivity() {
         setContentView(R.layout.telarf12_teladepesquisa)
 
         // Padronização da Navegação e Cabeçalho
-        NavigationUtils.setupTopBar(this)
-        NavigationUtils.setupBottomNavigation(this)
+
 
         setupRecyclerView()
         setupListeners()

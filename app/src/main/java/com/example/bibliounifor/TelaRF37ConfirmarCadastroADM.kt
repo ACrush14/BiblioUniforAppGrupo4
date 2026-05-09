@@ -12,6 +12,6 @@ class TelaRF37ConfirmarCadastroADM : AppCompatActivity() {
         setContentView(R.layout.telarf37_confirmar_cadastro_adm)
 
         // 👇 BARRA ADM
-        NavigationUtils.setupAdminNavigation(this)
+
     }
 }

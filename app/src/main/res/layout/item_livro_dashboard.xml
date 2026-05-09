@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/cardLivro"
+
     android:layout_width="160dp"
     android:layout_height="wrap_content"
     android:layout_marginEnd="12dp"
@@ -15,7 +18,7 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/imgLivro"
+            android:id="@+id/imgLivroMinhaLivraria"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:scaleType="centerCrop"
@@ -65,20 +68,6 @@
             <Space
                 android:layout_width="4dp"
                 android:layout_height="wrap_content" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnComprar"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-                android:layout_width="0dp"
-                android:layout_height="32dp"
-                android:layout_weight="1"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:padding="0dp"
-                android:text="Comprar"
-                android:textSize="10sp"
-                app:backgroundTint="@color/biblio_cyan"
-                app:cornerRadius="4dp" />
 
         </LinearLayout>
     </LinearLayout>

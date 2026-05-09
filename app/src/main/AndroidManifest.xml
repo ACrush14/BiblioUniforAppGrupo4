@@ -11,8 +11,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BiblioUnifor">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
 
-        <!-- TELAS DE RECUPERAÇÃO DE SENHA -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider
+            >
+        <activity
+            android:name=".Telarf16MinhalivrariaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF15TelaLer"
+            android:exported="false" /> <!-- TELAS DE RECUPERAÇÃO DE SENHA -->
         <activity
             android:name=".TelaRF07ValidacaoDeCodigo"
             android:exported="false" />
@@ -22,15 +37,11 @@
         <activity
             android:name=".TelaRF08ConfirmarRedefinirSenha"
             android:exported="false" />
-
         <activity
             android:name=".TelaRF27RedefinirSenhaADM"
             android:exported="false" />
         <activity
             android:name=".TelaRF28NovaContaADM"
-            android:exported="false" />
-        <activity
-            android:name=".TelaRF29GoogleADM"
             android:exported="false" />
         <activity
             android:name=".TelaRF40ConfigADM"
@@ -120,9 +131,6 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".TelaRF04UsuarioGoogle"
-            android:exported="false" />
-        <activity
             android:name=".TelaRF05CadastroNovoUsuario"
             android:exported="false" />
         <activity
@@ -136,7 +144,8 @@
             android:exported="false" />
         <activity
             android:name=".RF14TelaVerMaisLivro"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="MissingClass"/>
         <activity
             android:name=".TelaRF20Solicitacoes"
             android:exported="false" />
@@ -157,9 +166,7 @@
             android:exported="false" />
         <activity
             android:name=".TelaRF42VerificarMidia"
-            android:exported="false" />
-
-        <!-- TELAS RF33 -->
+            android:exported="false" /> <!-- TELAS RF33 -->
         <activity
             android:name=".TelaRF33VerificarMidia"
             android:exported="false" />
@@ -179,12 +186,12 @@
             android:name=".TelaRF337ExcluirSolicitacao"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
-
         <activity
             android:name=".TelaRF01BemVindo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -10,8 +10,7 @@ class TelaRF22Historico : AppCompatActivity() {
         setContentView(R.layout.telarf22_historico)
 
         // Padronização da Navegação e Cabeçalho
-        NavigationUtils.setupTopBar(this)
-        NavigationUtils.setupBottomNavigation(this)
+
 
         val buttonRemoverHistorico = findViewById<Button>(R.id.btnRemoverHIstorico)
         buttonRemoverHistorico?.setOnClickListener {

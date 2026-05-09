@@ -33,6 +33,6 @@ class TelaRF33Solicitacoes : AppCompatActivity() {
         }
 
         // 👇 BARRA ADM
-        NavigationUtils.setupAdminNavigation(this)
+
     }
 }
