@@ -57,6 +57,15 @@
             android:name=".TelaRF18"
             android:exported="false" />
         <activity
+            android:name=".TelaRF18_2AdicionarAmigo"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF18BuscaAmigos"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF18PerfilAmigo"
+            android:exported="false" />
+        <activity
             android:name=".TelaRF35CadastroDeLivros"
             android:exported="false" />
         <activity
@@ -93,13 +102,13 @@
             android:name=".TelaRF09DashboardUsuario"
             android:exported="false" />
         <activity
-            android:name=".RF09DashboardUsuario"
-            android:exported="false" />
-        <activity
             android:name=".TelaRF16MinhaLivrariaActivity"
             android:exported="false" />
         <activity
             android:name=".TelaRF17ListaDesejosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF21Notificacoes"
             android:exported="false" />
         <activity
             android:name=".TelaRF22Historico"
@@ -132,10 +141,13 @@
             android:name=".TelaRF12TelaDePesquisa"
             android:exported="false" />
         <activity
+            android:name=".TelaRF12_5ResultadoPesquisa"
+            android:exported="false" />
+        <activity
             android:name=".TelaRF13TelaDoLivro"
             android:exported="false" />
         <activity
-            android:name=".RF14TelaVerMaisLivro"
+            android:name=".TelaRF14VerMaisLivro"
             android:exported="false" />
         <activity
             android:name=".TelaRF20Solicitacoes"

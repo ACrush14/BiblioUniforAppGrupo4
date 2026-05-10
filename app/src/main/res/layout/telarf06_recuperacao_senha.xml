@@ -31,6 +31,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="Acesse sua Conta"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="Redefinir Senha"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -74,15 +84,5 @@
             android:text="Enviar Código"
             android:textAllCaps="false"
             android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/buttonVoltarLog"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:text="Retornar à tela de login"
-            android:textAllCaps="false"
-            android:textColor="#6EC1C3" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

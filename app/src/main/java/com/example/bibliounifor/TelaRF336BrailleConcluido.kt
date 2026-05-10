@@ -12,15 +12,5 @@ class TelaRF336BrailleConcluido : AppCompatActivity() {
         setContentView(
             R.layout.popup_rf33_6_braille_concluido
         )
-
-        // BOTÃO VOLTAR
-
-        val btnVoltarBraille =
-            findViewById<Button>(R.id.btnVoltarBraille)
-
-        btnVoltarBraille.setOnClickListener {
-
-            finish()
-        }
     }
 }

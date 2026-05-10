@@ -13,13 +13,6 @@ class TelaRF33Solicitacoes : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.telarf33_solicitacoes)
 
-        // 👇 BOTÃO FECHAR (X)
-        val btnFechar = findViewById<TextView>(R.id.btnFechar)
-
-        btnFechar.setOnClickListener {
-            finish()
-        }
-
         // 👇 ITENS DE SOLICITAÇÃO
         val item1 = findViewById<LinearLayout>(R.id.itemSolicitacao1)
         val item2 = findViewById<LinearLayout>(R.id.itemSolicitacao2)

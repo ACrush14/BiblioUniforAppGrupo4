@@ -22,7 +22,6 @@ class TelaRF03LoginAluno : AppCompatActivity() {
         // TEXTOS
         val erro = findViewById<TextView>(R.id.textErroLogin)
         val criarConta = findViewById<TextView>(R.id.textCriarConta)
-        val voltar = findViewById<TextView>(R.id.textVoltar)
         val esqueceuSenha = findViewById<TextView>(R.id.textEsqueceuSenha)
 
         // LOGIN
@@ -69,11 +68,6 @@ class TelaRF03LoginAluno : AppCompatActivity() {
         esqueceuSenha.setOnClickListener {
             val intent = Intent(this, TelaRF06RecuperacaoSenha::class.java)
             startActivity(intent)
-        }
-
-        // VOLTAR
-        voltar.setOnClickListener {
-            finish()
         }
 
         // UX MELHORADA (remove erro ao focar)

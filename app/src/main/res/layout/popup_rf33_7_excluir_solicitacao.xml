@@ -53,6 +53,7 @@
             android:text="Cancelar"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
+            android:visibility="gone"
             android:backgroundTint="#6EC1C3"/>
 
         <Button

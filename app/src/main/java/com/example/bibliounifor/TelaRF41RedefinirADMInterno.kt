@@ -18,7 +18,6 @@ class TelaRF41RedefinirADMInterno : AppCompatActivity() {
 
         val etSenha = findViewById<EditText>(R.id.editTextTextPassword)
         val etSenhaConfirmacao = findViewById<EditText>(R.id.editTextTextPasswordConfirmacao)
-        val bntX = findViewById<TextView>(R.id.buttonX) // Alterado para TextView para evitar crash
         val bntSalvar = findViewById<Button>(R.id.buttonSalvar)
 
         // 👇 BARRA ADM
@@ -34,10 +33,6 @@ class TelaRF41RedefinirADMInterno : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "As senhas não coincidem", Toast.LENGTH_SHORT).show()
             }
-        }
-
-        bntX.setOnClickListener {
-            finish()
         }
     }
 }

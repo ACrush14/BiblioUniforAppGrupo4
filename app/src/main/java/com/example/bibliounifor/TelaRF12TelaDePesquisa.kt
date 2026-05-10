@@ -33,6 +33,13 @@ class TelaRF12TelaDePesquisa : AppCompatActivity() {
         setupRecyclerView()
         setupListeners()
         popularBancoDeDados()
+
+        // Verificar se há uma pesquisa vinda de outra tela
+        val query = intent.getStringExtra("QUERY")
+        if (!query.isNullOrEmpty()) {
+            findViewById<EditText>(R.id.editPesquisa).setText(query)
+            realizarPesquisa(query)
+        }
     }
 
     private fun setupRecyclerView() {
@@ -57,6 +64,8 @@ class TelaRF12TelaDePesquisa : AppCompatActivity() {
         val editPesquisa = findViewById<EditText>(R.id.editPesquisa)
         val btnPesquisar = findViewById<MaterialButton>(R.id.btnPesquisar)
         val btnFiltro = findViewById<ImageView>(R.id.btnFiltro)
+        val btnPorTitulo = findViewById<MaterialButton>(R.id.btnPorTitulo)
+        val btnPorISBN = findViewById<MaterialButton>(R.id.btnPorISBN)
 
         btnPesquisar.setOnClickListener {
             realizarPesquisa(editPesquisa.text.toString())
@@ -72,13 +81,28 @@ class TelaRF12TelaDePesquisa : AppCompatActivity() {
         btnFiltro.setOnClickListener {
             mostrarPopupFiltro()
         }
+
+        btnPorTitulo.setOnClickListener {
+            // Feedback visual ou mudança de modo se necessário
+            editPesquisa.hint = "Procurar por Título..."
+        }
+
+        btnPorISBN.setOnClickListener {
+            editPesquisa.hint = "Procurar por ISBN..."
+        }
     }
 
     private fun realizarPesquisa(query: String) {
-        lifecycleScope.launch {
-            val formatQuery = "%$query%"
-            livroDao.pesquisarLivros(formatQuery).collectLatest { resultados ->
-                adapter.updateData(resultados)
+        if (query.trim().lowercase().contains("alienista")) {
+            val intent = Intent(this, TelaRF12_5ResultadoPesquisa::class.java)
+            intent.putExtra("QUERY", query)
+            startActivity(intent)
+        } else {
+            lifecycleScope.launch {
+                val formatQuery = "%$query%"
+                livroDao.pesquisarLivros(formatQuery).collectLatest { resultados ->
+                    adapter.updateData(resultados)
+                }
             }
         }
     }

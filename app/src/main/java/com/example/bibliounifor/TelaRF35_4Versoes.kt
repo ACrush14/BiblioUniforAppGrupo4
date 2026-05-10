@@ -28,19 +28,10 @@ class TelaRF35_4Versoes : AppCompatActivity() {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.telarf35_6_popup_sucesso, null)
         val builder = AlertDialog.Builder(this)
             .setView(dialogView)
-            .setCancelable(false)
+            .setCancelable(true)
 
         val dialog = builder.create()
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-
-        val btnVoltarPopup = dialogView.findViewById<MaterialButton>(R.id.btnVoltarPopup)
-        btnVoltarPopup.setOnClickListener {
-            dialog.dismiss()
-            val intent = Intent(this, TelaRF30DashboardADM::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(intent)
-            finish()
-        }
 
         dialog.show()
     }

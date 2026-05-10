@@ -16,19 +16,8 @@ class TelaRF40ConfigADM : AppCompatActivity() {
         NavigationUtils.setupAdminNavigation(this)
 
         // Botões específicos da tela de configuração
-        val btnVoltarDashboard = findViewById<MaterialButton>(R.id.btnVoltarDashboard)
-        val btnVoltar = findViewById<MaterialButton>(R.id.btnVoltar)
         val btnRedefinirSenha = findViewById<MaterialButton>(R.id.btnRedefinirSenha)
         val btnApagarConta = findViewById<MaterialButton>(R.id.btnApagarConta)
-
-        btnVoltarDashboard?.setOnClickListener {
-            val intent = Intent(this, TelaRF30DashboardADM::class.java)
-            startActivity(intent)
-        }
-
-        btnVoltar?.setOnClickListener {
-            finish() // Fecha a tela atual e volta para a anterior
-        }
 
         btnRedefinirSenha?.setOnClickListener {
             val intent = Intent(this, TelaRF41RedefinirADMInterno::class.java)

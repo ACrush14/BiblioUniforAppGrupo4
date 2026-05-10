@@ -17,7 +17,6 @@ class TelaRF33VerificarMidia : AppCompatActivity() {
         // =========================
 
         val btnFiltro = findViewById<ImageView>(R.id.btnFiltro)
-        val btnSolicitacoesUsuario = findViewById<Button>(R.id.btnSolicitacoesUsuario)
         val btnEnviarAudio = findViewById<Button>(R.id.btnEnviarAudio)
         val btnEnviarPdf = findViewById<Button>(R.id.btnEnviarPdf)
         val btnBraille = findViewById<Button>(R.id.btnBraille)
@@ -29,11 +28,6 @@ class TelaRF33VerificarMidia : AppCompatActivity() {
 
         btnFiltro.setOnClickListener {
             startActivity(Intent(this, TelaRF332Filtro::class.java))
-        }
-
-        btnSolicitacoesUsuario.setOnClickListener {
-            // Volta para a lista ou tela anterior de solicitações
-            finish()
         }
 
         btnEnviarAudio.setOnClickListener {

@@ -98,6 +98,7 @@
                         android:id="@+id/materialButton22"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:text="Voltar"
                         android:textColor="@android:color/white"
                         app:backgroundTint="@color/biblio_dark"

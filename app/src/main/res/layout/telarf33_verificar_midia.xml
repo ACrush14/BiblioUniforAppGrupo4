@@ -137,6 +137,7 @@
                         android:layout_marginTop="16dp"
                         android:text="Ver solicitações do usuário"
                         android:textAllCaps="false"
+                        android:visibility="gone"
                         app:backgroundTint="#6EC1C3"
                         app:cornerRadius="10dp"/>
 

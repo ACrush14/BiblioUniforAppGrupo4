@@ -104,11 +104,10 @@ class TelaRF05CadastroNovoUsuario : AppCompatActivity() {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.popup_sucesso_cadastro, null)
         val dialog = AlertDialog.Builder(this, R.style.CustomAlertDialog)
             .setView(dialogView)
-            .setCancelable(false)
+            .setCancelable(true)
             .create()
 
-        dialogView.findViewById<Button>(R.id.btnRetorneLogin).setOnClickListener {
-            dialog.dismiss()
+        dialog.setOnDismissListener {
             irParaLogin()
         }
         dialog.show()

@@ -1,15 +1,14 @@
 package com.example.bibliounifor
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import com.example.bibliounifor.ui.screens.TelaMinhaLivrariaScreen
+import androidx.appcompat.app.AppCompatActivity
 
-class TelaRF16MinhaLivrariaActivity : ComponentActivity() {
+class TelaRF16MinhaLivrariaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            TelaMinhaLivrariaScreen()
-        }
+        setContentView(R.layout.telarf16_minha_livraria)
+
+        NavigationUtils.setupBottomNavigation(this)
+        NavigationUtils.setupTopBar(this)
     }
 }

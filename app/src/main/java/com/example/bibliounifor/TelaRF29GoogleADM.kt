@@ -15,7 +15,6 @@ class GoogleLoginActivity : AppCompatActivity() {
 
         val edtEmailGoogle = findViewById<EditText>(R.id.edtEmailGoogle)
         val btnProxima = findViewById<Button>(R.id.btnProxima)
-        val txtVoltar = findViewById<TextView>(R.id.txtCriarContaGoogle)
 
         btnProxima.setOnClickListener {
             val email = edtEmailGoogle.text.toString()
@@ -25,10 +24,6 @@ class GoogleLoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Conectado com a conta: $email", Toast.LENGTH_LONG).show()
             }
-        }
-
-        txtVoltar.setOnClickListener {
-            finish()
         }
     }
 }

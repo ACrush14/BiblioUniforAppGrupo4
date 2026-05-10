@@ -15,18 +15,8 @@ class TelaRF337ExcluirSolicitacao : AppCompatActivity() {
 
         // BOTÕES
 
-        val btnCancelarExcluir =
-            findViewById<Button>(R.id.btnCancelarExcluir)
-
         val btnConfirmarExcluir =
             findViewById<Button>(R.id.btnConfirmarExcluir)
-
-        // CANCELAR
-
-        btnCancelarExcluir.setOnClickListener {
-
-            finish()
-        }
 
         // EXCLUIR
 

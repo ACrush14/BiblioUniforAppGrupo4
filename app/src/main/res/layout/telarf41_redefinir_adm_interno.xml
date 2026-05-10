@@ -39,16 +39,27 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/textViewUserEmail"
+            android:id="@+id/tvAcesseSuaConta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/cardAvatar"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
+            android:text="Acesse sua Conta"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAcesseSuaConta"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
             android:text="Joãobobo@gmail.com"
             android:textColor="#FFFFFF"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
@@ -74,7 +85,8 @@
                 android:text="X"
                 android:textColor="#000000"
                 android:textSize="32sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="gone" />
 
             <TextView
                 android:layout_width="wrap_content"

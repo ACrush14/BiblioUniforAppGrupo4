@@ -2,11 +2,13 @@ package com.example.bibliounifor
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 
@@ -21,79 +23,116 @@ class TelaRF11RedefinirSenha : AppCompatActivity() {
         val editConfirmarSenha = findViewById<EditText>(R.id.editConfirmarSenha)
         val btnSalvar = findViewById<MaterialButton>(R.id.buttonSalvar)
 
-        val erroSenha = findViewById<TextView>(R.id.textErroSenha)
+        // MENSAGENS DE ERRO
+        val erroObrigatorio = findViewById<TextView>(R.id.textErroSenha)
+        val erroAntiga = findViewById<TextView>(R.id.textErroSenhaAntiga)
+        val erroCaracteres = findViewById<TextView>(R.id.textErroSenhaCaracteres)
+        val erroNumero = findViewById<TextView>(R.id.textErroSenhaNumero)
+        val erroMaiuscula = findViewById<TextView>(R.id.textErroSenhaMaiuscula)
         val erroConfirmar = findViewById<TextView>(R.id.textErroConfirmar)
 
-        // BOTÃO FECHAR (X)
-        val btnFechar = findViewById<TextView>(R.id.btnFechar)
-        btnFechar.setOnClickListener {
-            finish()
-        }
+        // HEADER
+        val textHeaderNome = findViewById<TextView>(R.id.textHeaderNome)
+        val textHeaderEmail = findViewById<TextView>(R.id.textHeaderEmail)
+        
+        // Simulação de dados do usuário
+        textHeaderNome.text = "João Bobo"
+        textHeaderEmail.text = "joao.bobo@email.com"
 
         // 🔥 VALIDAÇÃO + SALVAR
         btnSalvar.setOnClickListener {
-
             val senha = editNovaSenha.text.toString()
             val confirmar = editConfirmarSenha.text.toString()
 
-            erroSenha.visibility = View.GONE
+            // Resetar visibilidade dos erros
+            erroObrigatorio.visibility = View.GONE
+            erroAntiga.visibility = View.GONE
+            erroCaracteres.visibility = View.GONE
+            erroNumero.visibility = View.GONE
+            erroMaiuscula.visibility = View.GONE
             erroConfirmar.visibility = View.GONE
 
             var valido = true
 
-            if (senha.length < 8) {
-                erroSenha.visibility = View.VISIBLE
-                erroSenha.text = "Mínimo 8 caracteres"
+            // 1. Campo obrigatório
+            if (senha.isEmpty()) {
+                erroObrigatorio.visibility = View.VISIBLE
                 valido = false
+            } else {
+                // 2. Senha antiga (Simulação: antiga era "12345678")
+                if (senha == "12345678") {
+                    erroAntiga.visibility = View.VISIBLE
+                    valido = false
+                }
+
+                // 3. Mínimo 8 caracteres
+                if (senha.length < 8) {
+                    erroCaracteres.visibility = View.VISIBLE
+                    valido = false
+                }
+
+                // 4. Um número
+                if (!senha.any { it.isDigit() }) {
+                    erroNumero.visibility = View.VISIBLE
+                    valido = false
+                }
+
+                // 5. Uma letra maiúscula
+                if (!senha.any { it.isUpperCase() }) {
+                    erroMaiuscula.visibility = View.VISIBLE
+                    valido = false
+                }
             }
 
-            if (senha != confirmar) {
+            // 6. Confirmação diferente
+            if (senha != confirmar && confirmar.isNotEmpty()) {
                 erroConfirmar.visibility = View.VISIBLE
-                erroConfirmar.text = "Senhas diferentes"
+                valido = false
+            } else if (confirmar.isEmpty() && senha.isNotEmpty()) {
+                erroConfirmar.visibility = View.VISIBLE
+                erroConfirmar.text = "Confirme sua senha"
                 valido = false
             }
 
             if (valido) {
-                Toast.makeText(this, "Senha alterada!", Toast.LENGTH_SHORT).show()
-
-                // VOLTA PRA RF10
-                val intent = Intent(this, TelaRF10Configuracao::class.java)
-                startActivity(intent)
-                finish()
+                showSuccessPopup()
             }
         }
 
         // 🔥 BARRA DE TAREFAS
-
-        val navHome = findViewById<ImageView>(R.id.navHome)
-        val navCarrinho = findViewById<ImageView>(R.id.navCarrinho)
-        val navBusca = findViewById<ImageView>(R.id.navBusca)
-        val navFavoritos = findViewById<ImageView>(R.id.navFavoritos)
-        val navLista = findViewById<ImageView>(R.id.navLista)
-        val navUsuario = findViewById<ImageView>(R.id.navUsuario)
-
-        navHome.setOnClickListener {
+        NavigationUtils.setupBottomNavigation(this)
+        
+        // Configuração manual dos ícones caso o Utils não cubra todos os cliques
+        findViewById<ImageView>(R.id.navHome).setOnClickListener {
             startActivity(Intent(this, TelaRF09DashboardUsuario::class.java))
         }
-
-        navCarrinho.setOnClickListener {
-            startActivity(Intent(this, TelaRF19::class.java))
-        }
-
-        navBusca.setOnClickListener {
-            startActivity(Intent(this, TelaRF12TelaDePesquisa::class.java))
-        }
-
-        navFavoritos.setOnClickListener {
-            startActivity(Intent(this, TelaRF17ListaDesejosActivity::class.java))
-        }
-
-        navLista.setOnClickListener {
-            startActivity(Intent(this, TelaRF16MinhaLivrariaActivity::class.java))
-        }
-
-        navUsuario.setOnClickListener {
+        findViewById<ImageView>(R.id.navUsuario).setOnClickListener {
             startActivity(Intent(this, TelaRF18::class.java))
         }
+    }
+
+    private fun showSuccessPopup() {
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.popup_salvar_sucesso, null)
+        val builder = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .setCancelable(true)
+
+        val alertDialog = builder.create()
+        
+        val tvMensagem = dialogView.findViewById<TextView>(R.id.tvMensagem)
+        tvMensagem.text = "Alterações salvas com sucesso!"
+        
+        val btnOk = dialogView.findViewById<Button>(R.id.btnOk)
+        btnOk.text = "Voltar"
+
+        btnOk.setOnClickListener {
+            alertDialog.dismiss()
+            val intent = Intent(this, TelaRF10Configuracao::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+            finish()
+        }
+
+        alertDialog.show()
     }
 }

@@ -23,16 +23,11 @@ class TelaRF10Configuracao : AppCompatActivity() {
         setContentView(R.layout.telarf10_configuracao)
 
         val btnRedefinir = findViewById<MaterialButton>(R.id.btnRedefinirSenha)
-        val btnVoltar = findViewById<MaterialButton>(R.id.btnVoltarTelaInicial)
         val btnApagar = findViewById<MaterialButton>(R.id.btnApagarConta)
 
         btnRedefinir.setOnClickListener {
             val intent = Intent(this, TelaRF11RedefinirSenha::class.java)
             startActivity(intent)
-        }
-
-        btnVoltar.setOnClickListener {
-            finish()
         }
 
         btnApagar.setOnClickListener {
@@ -69,36 +64,7 @@ class TelaRF10Configuracao : AppCompatActivity() {
         }
 
         // 🔥 BARRA DE TAREFAS (BOTTOM NAV)
-        val navHome = findViewById<ImageView>(R.id.navHome)
-        val navCarrinho = findViewById<ImageView>(R.id.navCarrinho)
-        val navBusca = findViewById<ImageView>(R.id.navBusca)
-        val navFavoritos = findViewById<ImageView>(R.id.navFavoritos)
-        val navLista = findViewById<ImageView>(R.id.navLista)
-        val navUsuario = findViewById<ImageView>(R.id.navUsuario)
-
-        navHome.setOnClickListener {
-            startActivity(Intent(this, TelaRF09DashboardUsuario::class.java))
-        }
-
-        navCarrinho.setOnClickListener {
-            startActivity(Intent(this, TelaRF19::class.java))
-        }
-
-        navBusca.setOnClickListener {
-            startActivity(Intent(this, TelaRF12TelaDePesquisa::class.java))
-        }
-
-        navFavoritos.setOnClickListener {
-            startActivity(Intent(this, TelaRF17ListaDesejosActivity::class.java))
-        }
-
-        navLista.setOnClickListener {
-            startActivity(Intent(this, TelaRF16MinhaLivrariaActivity::class.java))
-        }
-
-        navUsuario.setOnClickListener {
-            startActivity(Intent(this, TelaRF18::class.java))
-        }
+        NavigationUtils.setupBottomNavigation(this)
     }
 
     private fun abrirPopupApagarConta() {
@@ -107,7 +73,6 @@ class TelaRF10Configuracao : AppCompatActivity() {
         val editSenha = viewPopup.findViewById<EditText>(R.id.editSenhaPopup)
         val textErro = viewPopup.findViewById<TextView>(R.id.textErroPopup)
         val iconOlho = viewPopup.findViewById<ImageView>(R.id.iconOlho)
-        val btnVoltarPopup = viewPopup.findViewById<Button>(R.id.btnVoltarPopup)
         val btnConfirmarPopup = viewPopup.findViewById<Button>(R.id.btnConfirmarPopup)
 
         val dialog = AlertDialog.Builder(this)
@@ -118,10 +83,6 @@ class TelaRF10Configuracao : AppCompatActivity() {
         dialog.show()
 
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-
-        btnVoltarPopup.setOnClickListener {
-            dialog.dismiss()
-        }
 
         btnConfirmarPopup.setOnClickListener {
             val senha = editSenha.text.toString().trim()

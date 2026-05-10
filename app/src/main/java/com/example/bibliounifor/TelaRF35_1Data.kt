@@ -15,7 +15,6 @@ class TelaRF35_1Data : AppCompatActivity() {
 
         val datePicker = findViewById<DatePicker>(R.id.datePicker)
         val btnConfirmarData = findViewById<MaterialButton>(R.id.btnConfirmarData)
-        val btnVoltarData = findViewById<TextView>(R.id.btnVoltarData)
 
         btnConfirmarData.setOnClickListener {
             val dia = datePicker.dayOfMonth
@@ -28,10 +27,6 @@ class TelaRF35_1Data : AppCompatActivity() {
             val intent = Intent()
             intent.putExtra("dataSelecionada", dataFormatada)
             setResult(RESULT_OK, intent)
-            finish()
-        }
-
-        btnVoltarData.setOnClickListener {
             finish()
         }
     }

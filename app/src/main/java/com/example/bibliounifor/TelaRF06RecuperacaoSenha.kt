@@ -16,7 +16,6 @@ class TelaRF06RecuperacaoSenha : AppCompatActivity() {
 
         val etEmail = findViewById<EditText>(R.id.editTextEmaiREC)
         val btnEnviar = findViewById<Button>(R.id.buttonEnviarCOD)
-        val btnVoltar = findViewById<Button>(R.id.buttonVoltarLog)
         val textErroEmail = findViewById<TextView>(R.id.textErroEmail)
 
         btnEnviar.setOnClickListener {
@@ -35,11 +34,5 @@ class TelaRF06RecuperacaoSenha : AppCompatActivity() {
             }
         }
 
-        btnVoltar.setOnClickListener {
-            val intent = Intent(this, TelaRF03LoginAluno::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-            startActivity(intent)
-            finish()
-        }
     }
 }
