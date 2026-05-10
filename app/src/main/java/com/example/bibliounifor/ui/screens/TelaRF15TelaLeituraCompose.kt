@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -47,6 +48,14 @@ fun TelaLeituraScreen(
         viewModel.carregarLivro(livroId)
     }
 
+    TelaLeituraContent(livro = livro, onBack = onBack)
+}
+
+@Composable
+fun TelaLeituraContent(
+    livro: EntidadeLivro?,
+    onBack: () -> Unit
+) {
     Scaffold(
         topBar = { BiblioTopAppBar(title = "Leitura") },
         bottomBar = { BiblioBottomNavigation() }
@@ -99,21 +108,23 @@ fun TelaLeituraScreen(
     }
 }
 
+@Preview(showBackground = true)
 @Composable
-fun BookActionButton(
-    text: String,
-    modifier: Modifier = Modifier,
-    onClick: () -> Unit = {}
-) {
-    Button(
-        onClick = onClick,
-        modifier = modifier.height(48.dp),
-        shape = RoundedCornerShape(8.dp),
-        colors = ButtonDefaults.buttonColors(
-            containerColor = BiblioCyan,
-            contentColor = BiblioDark
-        )
-    ) {
-        Text(text = text, fontSize = 16.sp, fontWeight = FontWeight.Bold)
-    }
+fun PreviewBookActionButton() {
+    BookActionButton(text = "Botão Exemplo", modifier = Modifier.fillMaxWidth())
 }
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewTelaLeituraScreen() {
+    TelaLeituraContent(
+        livro = EntidadeLivro(
+            id = 1,
+            title = "O Alienista",
+            author = "Machado de Assis"
+        ),
+        onBack = {}
+    )
+}
+
+

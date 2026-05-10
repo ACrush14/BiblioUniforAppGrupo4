@@ -28,29 +28,24 @@ object NavigationUtils {
             }
         }
         // 4. Coração -> RF17
-        activity.findViewById<ImageView>(R.id.navFavorites)?.setOnClickListener {
-            activity.startActivity(Intent(activity, TelaRF17ListaDesejosActivity::class.java))
-        }
-        // 5. Livro -> RF19
-        activity.findViewById<ImageView>(R.id.navRentals)?.setOnClickListener {
-            activity.startActivity(Intent(activity, TelaRF19::class.java))
-        }
-        // 6. Pessoa -> RF18
-        activity.findViewById<ImageView>(R.id.navFriends)?.setOnClickListener {
-            activity.startActivity(Intent(activity, TelaRF18::class.java))
-        activity.findViewById<ImageView>(R.id.navDesejos)?.setOnClickListener {
+        val navDesejos = activity.findViewById<ImageView>(R.id.navDesejos) ?: activity.findViewById<ImageView>(R.id.navFavoritos)
+        navDesejos?.setOnClickListener {
             if (activity !is TelaRF17ListaDesejosActivity) {
                 activity.startActivity(Intent(activity, TelaRF17ListaDesejosActivity::class.java))
             }
         }
+
         // 5. Livro -> RF19
-        activity.findViewById<ImageView>(R.id.navAluguel)?.setOnClickListener {
+        val navAluguel = activity.findViewById<ImageView>(R.id.navAluguel) ?: activity.findViewById<ImageView>(R.id.navLista)
+        navAluguel?.setOnClickListener {
             if (activity !is TelaRF19) {
                 activity.startActivity(Intent(activity, TelaRF19::class.java))
             }
         }
+
         // 6. Pessoa -> RF18
-        activity.findViewById<ImageView>(R.id.navAmigos)?.setOnClickListener {
+        val navAmigos = activity.findViewById<ImageView>(R.id.navAmigos) ?: activity.findViewById<ImageView>(R.id.navUsuario)
+        navAmigos?.setOnClickListener {
             if (activity !is TelaRF18) {
                 activity.startActivity(Intent(activity, TelaRF18::class.java))
             }

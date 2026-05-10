@@ -57,5 +57,57 @@
     <string name="btn_remover_historico">Remover do Histórico</string>
     <string name="nome_usuario">João Bobo</string>
 
+    <!-- Configuration Screen (telarf10_configuracao) -->
+    <string name="desc_perfil">Foto de perfil</string>
+    <string name="email_usuario_exemplo">usuario@exemplo.com</string>
+    <string name="desc_editar_usuario">Editar usuário</string>
+    <string name="desc_pesquisa">Ícone de pesquisa</string>
+    <string name="label_pesquisa">PESQUISA</string>
+    <string name="label_nome">NOME</string>
+    <string name="hint_nome">Digite seu nome</string>
+    <string name="desc_editar_campo">Editar campo</string>
+    <string name="label_usuario">USUÁRIO</string>
+    <string name="usuario_exemplo">joao.bobo</string>
+    <string name="hint_usuario">Digite seu usuário</string>
+    <string name="label_bio">BIO</string>
+    <string name="bio_exemplo">Sou um estudante apaixonado por livros.</string>
+    <string name="hint_bio">Escreva algo sobre você</string>
+    <string name="label_senha_atual">SENHA ATUAL</string>
+    <string name="placeholder_senha">********</string>
+    <string name="btn_redefinir_senha_config">Redefinir Senha</string>
+    <string name="btn_voltar_inicial">Voltar para Tela Inicial</string>
+    <string name="btn_apagar_conta_config">Apagar Conta</string>
+
+    <!-- Redefinir Senha (telarf11_redefinirsenha) -->
+    <string name="fechar_x">X</string>
+    <string name="hint_nova_senha">Digite sua nova senha</string>
+    <string name="erro_senha_invalida">Senha inválida</string>
+    <string name="hint_confirmar_senha">Confirme sua nova senha</string>
+    <string name="erro_senhas_nao_coincidem">As senhas não coincidem</string>
+    <string name="btn_salvar_alteracoes">Salvar Alterações</string>
+    <string name="nav_home">Início</string>
+    <string name="nav_carrinho">Carrinho</string>
+    <string name="nav_busca">Busca</string>
+    <string name="nav_favoritos">Favoritos</string>
+    <string name="nav_lista">Minha Lista</string>
+    <string name="nav_usuario">Perfil</string>
+
+    <!-- Ver Mais Livro (telarf14_telavermaislivro) -->
+    <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+
+    <!-- Dashboard Navigation Descriptions -->
+    <string name="nav_home_desc">Início</string>
+    <string name="nav_carrinho_desc">Carrinho</string>
+    <string name="nav_busca_desc">Busca</string>
+    <string name="nav_favoritos_desc">Favoritos</string>
+    <string name="nav_lista_desc">Minha Lista</string>
+    <string name="nav_perfil_desc">Meu Perfil</string>
+
+    <!-- Delete Account Popup -->
+    <string name="apagar_conta_titulo">Apagar Conta</string>
+    <string name="apagar_conta_subtitulo">Confirme sua senha para apagar a conta</string>
+    <string name="apagar_conta_erro">Erro ao apagar conta. Verifique sua senha.</string>
+    <string name="hint_sua_senha">Digite sua senha</string>
+    <string name="desc_mostrar_ocultar_senha">Mostrar ou ocultar senha</string>
 
 </resources>
