@@ -1,0 +1,43 @@
+Index: app/src/main/java/com/example/bibliounifor/RF09Dashboardusuario.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.bibliounifor\r\n\r\nimport android.os.Bundle\r\nimport android.widget.ImageView\r\nimport androidx.activity.enableEdgeToEdge\r\nimport androidx.appcompat.app.AppCompatActivity\r\n\r\nclass RF09DashboardUsuario : AppCompatActivity() {\r\n\r\n    lateinit var navHome: ImageView\r\n    lateinit var navPerfil: ImageView\r\n    lateinit var navCalendario: ImageView\r\n    lateinit var navAjuda: ImageView\r\n    lateinit var navConfig: ImageView\r\n\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        enableEdgeToEdge()\r\n        setContentView(R.layout.telarf09_dashboardusuario)\r\n\r\n        navHome = findViewById(R.id.navHome)\r\n        navPerfil = findViewById(R.id.navPerfil)\r\n        navCalendario = findViewById(R.id.navCalendario)\r\n        navAjuda = findViewById(R.id.navAjuda)\r\n        navConfig = findViewById(R.id.navConfig)\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/bibliounifor/RF09Dashboardusuario.kt b/app/src/main/java/com/example/bibliounifor/RF09Dashboardusuario.kt
+--- a/app/src/main/java/com/example/bibliounifor/RF09Dashboardusuario.kt	(revision 15e6e5d6b3edfe833ef2b4dede0353137449cc14)
++++ b/app/src/main/java/com/example/bibliounifor/RF09Dashboardusuario.kt	(date 1778072131732)
+@@ -8,11 +8,11 @@
+ class RF09DashboardUsuario : AppCompatActivity() {
+ 
+     lateinit var navHome: ImageView
+-    lateinit var navPerfil: ImageView
+-    lateinit var navCalendario: ImageView
+-    lateinit var navAjuda: ImageView
+-    lateinit var navConfig: ImageView
+-
++    lateinit var navLivraria: ImageView
++    lateinit var navSearch: ImageView
++    lateinit var navFavorites: ImageView
++    lateinit var navRentals: ImageView
++    lateinit var navFriends: ImageView
+ 
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+@@ -20,10 +20,10 @@
+         setContentView(R.layout.telarf09_dashboardusuario)
+ 
+         navHome = findViewById(R.id.navHome)
+-        navPerfil = findViewById(R.id.navPerfil)
+-        navCalendario = findViewById(R.id.navCalendario)
+-        navAjuda = findViewById(R.id.navAjuda)
+-        navConfig = findViewById(R.id.navConfig)
+-
++        navLivraria = findViewById(R.id.navLivraria)
++        navSearch = findViewById(R.id.navSearch)
++        navFavorites = findViewById(R.id.navFavorites)
++        navRentals = findViewById(R.id.navRentals)
++        navFriends = findViewById(R.id.navFriends)
+     }
+ }

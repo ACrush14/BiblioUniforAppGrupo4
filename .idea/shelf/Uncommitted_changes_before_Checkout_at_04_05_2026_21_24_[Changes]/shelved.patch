@@ -1,0 +1,26 @@
+Index: .idea/deploymentTargetSelector.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetSelector\">\r\n    <selectionStates>\r\n      <SelectionState runConfigName=\"app\">\r\n        <option name=\"selectionMode\" value=\"DROPDOWN\" />\r\n        <DialogSelection />\r\n      </SelectionState>\r\n      <SelectionState runConfigName=\"TelaRF10Configuracao\">\r\n        <option name=\"selectionMode\" value=\"DROPDOWN\" />\r\n        <DialogSelection />\r\n      </SelectionState>\r\n      <SelectionState runConfigName=\"TelaRF10Configuracao (1)\">\r\n        <option name=\"selectionMode\" value=\"DROPDOWN\" />\r\n        <DialogSelection />\r\n      </SelectionState>\r\n      <SelectionState runConfigName=\"TelaRF10Configuracao (2)\">\r\n        <option name=\"selectionMode\" value=\"DROPDOWN\" />\r\n        <DialogSelection />\r\n      </SelectionState>\r\n      <SelectionState runConfigName=\"TelaRF10Configuracao (3)\">\r\n        <option name=\"selectionMode\" value=\"DROPDOWN\" />\r\n        <DialogSelection />\r\n      </SelectionState>\r\n      <SelectionState runConfigName=\"TelaRF10Configuracao (4)\">\r\n        <option name=\"selectionMode\" value=\"DROPDOWN\" />\r\n        <DialogSelection />\r\n      </SelectionState>\r\n    </selectionStates>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/deploymentTargetSelector.xml b/.idea/deploymentTargetSelector.xml
+--- a/.idea/deploymentTargetSelector.xml	(revision abbbc88ab21d5337994cbaa2771782112bd0f062)
++++ b/.idea/deploymentTargetSelector.xml	(date 1777940618789)
+@@ -26,6 +26,14 @@
+         <option name="selectionMode" value="DROPDOWN" />
+         <DialogSelection />
+       </SelectionState>
++      <SelectionState runConfigName="TelaRF01BemVindo (1)">
++        <option name="selectionMode" value="DROPDOWN" />
++        <DialogSelection />
++      </SelectionState>
++      <SelectionState runConfigName="TelaRF10Configuracao (2)">
++        <option name="selectionMode" value="DROPDOWN" />
++        <DialogSelection />
++      </SelectionState>
+     </selectionStates>
+   </component>
+ </project>
+\ No newline at end of file

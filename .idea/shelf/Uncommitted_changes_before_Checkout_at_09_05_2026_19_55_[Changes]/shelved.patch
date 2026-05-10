@@ -1,0 +1,210 @@
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">BiblioUnifor</string>\r\n    <string name=\"acesse_sua_conta\">Acesse sua Conta</string>\r\n\r\n    <string name=\"titulo_redefinir\">Redefinir Senha</string>\r\n    <string name=\"descricao_redefinir\">\r\n        Preencha os campos abaixo com a sua nova senha.\r\n    </string>\r\n\r\n    <string name=\"descricao_confirmacao_codigo\">\r\n        Por favor, insira abaixo o código de\r\n        \\n verificação enviado ao seu e-mail.\r\n        \\n O código será expirado em 2:00.\r\n    </string>\r\n\r\n    <string name=\"nova_senha\">Nova senha</string>\r\n    <string name=\"confirmar_senha\">Confirme a senha</string>\r\n    <string name=\"digite_codigo\">Digite aqui seu código</string>\r\n\r\n    <string name=\"btn_redefinir\">Redefinir Senha</string>\r\n    <string name=\"btn_enviar\">Enviar</string>\r\n    <string name=\"voltar\">Voltar</string>\r\n    <string name=\"reenviar\">Reenviar Código</string>\r\n\r\n    <string name=\"erro_campo\">Campo Obrigatório</string>\r\n    <string name=\"erro_codigo\">Codigo Incorreto</string>\r\n\r\n    <string name=\"requisitos_senha\">\r\n    A senha deve conter:\r\n    \\n• Pelo menos 8 caracteres\r\n    \\n• Uma letra maiúscula\r\n    \\n• Um número\r\n    </string>\r\n\r\n    <string name=\"erro_senha_igual\">A senha é a mesma da antiga</string>\r\n    <string name=\"erro_senha_diferente\">As senhas estão diferentes, verifique!</string>\r\n\r\n    <string name=\"titulo_renovacao_aluguel\">Renovação de Aluguel</string>\r\n\r\n    <string name=\"descricao_renovacao_aluguel\">\r\n        Por quantos dias a mais você deseja\r\n        \\n estender o aluguel desse livro?\r\n    </string>\r\n    <string name=\"btn_confirmar\">Confirmar</string>\r\n\r\n    <string name=\"btn_solicitar_pdf\">Solicitar PDF</string>\r\n    <string name=\"btn_solicitar_braile\">Solicitar Braile</string>\r\n    <string name=\"btn_solicitar_audiobook\">Solicitar Audiobook</string>\r\n    <string name=\"btn_reservar\">Reservar</string>\r\n    <string name=\"btn_comprar_amazon\">Comprar (Amazon)</string>\r\n    <string name=\"btn_setor_localizado\">Setor Localizado</string>\r\n\r\n    <string name=\"titulo_livro\">O Alienista</string>\r\n    <string name=\"autor_livro\">por Machado de Assis</string>\r\n    <string name=\"genero_livro\">Novela</string>\r\n\r\n    <string name=\"btn_remover_historico\">Remover do Histórico</string>\r\n    <string name=\"nome_usuario\">João Bobo</string>\r\n\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(revision b89d16130409cb9cf5071d7d9ebca4182028c803)
++++ b/app/src/main/res/values/strings.xml	(date 1778367182665)
+@@ -57,5 +57,57 @@
+     <string name="btn_remover_historico">Remover do Histórico</string>
+     <string name="nome_usuario">João Bobo</string>
+ 
++    <!-- Configuration Screen (telarf10_configuracao) -->
++    <string name="desc_perfil">Foto de perfil</string>
++    <string name="email_usuario_exemplo">usuario@exemplo.com</string>
++    <string name="desc_editar_usuario">Editar usuário</string>
++    <string name="desc_pesquisa">Ícone de pesquisa</string>
++    <string name="label_pesquisa">PESQUISA</string>
++    <string name="label_nome">NOME</string>
++    <string name="hint_nome">Digite seu nome</string>
++    <string name="desc_editar_campo">Editar campo</string>
++    <string name="label_usuario">USUÁRIO</string>
++    <string name="usuario_exemplo">joao.bobo</string>
++    <string name="hint_usuario">Digite seu usuário</string>
++    <string name="label_bio">BIO</string>
++    <string name="bio_exemplo">Sou um estudante apaixonado por livros.</string>
++    <string name="hint_bio">Escreva algo sobre você</string>
++    <string name="label_senha_atual">SENHA ATUAL</string>
++    <string name="placeholder_senha">********</string>
++    <string name="btn_redefinir_senha_config">Redefinir Senha</string>
++    <string name="btn_voltar_inicial">Voltar para Tela Inicial</string>
++    <string name="btn_apagar_conta_config">Apagar Conta</string>
++
++    <!-- Redefinir Senha (telarf11_redefinirsenha) -->
++    <string name="fechar_x">X</string>
++    <string name="hint_nova_senha">Digite sua nova senha</string>
++    <string name="erro_senha_invalida">Senha inválida</string>
++    <string name="hint_confirmar_senha">Confirme sua nova senha</string>
++    <string name="erro_senhas_nao_coincidem">As senhas não coincidem</string>
++    <string name="btn_salvar_alteracoes">Salvar Alterações</string>
++    <string name="nav_home">Início</string>
++    <string name="nav_carrinho">Carrinho</string>
++    <string name="nav_busca">Busca</string>
++    <string name="nav_favoritos">Favoritos</string>
++    <string name="nav_lista">Minha Lista</string>
++    <string name="nav_usuario">Perfil</string>
++
++    <!-- Ver Mais Livro (telarf14_telavermaislivro) -->
++    <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
++
++    <!-- Dashboard Navigation Descriptions -->
++    <string name="nav_home_desc">Início</string>
++    <string name="nav_carrinho_desc">Carrinho</string>
++    <string name="nav_busca_desc">Busca</string>
++    <string name="nav_favoritos_desc">Favoritos</string>
++    <string name="nav_lista_desc">Minha Lista</string>
++    <string name="nav_perfil_desc">Meu Perfil</string>
++
++    <!-- Delete Account Popup -->
++    <string name="apagar_conta_titulo">Apagar Conta</string>
++    <string name="apagar_conta_subtitulo">Confirme sua senha para apagar a conta</string>
++    <string name="apagar_conta_erro">Erro ao apagar conta. Verifique sua senha.</string>
++    <string name="hint_sua_senha">Digite sua senha</string>
++    <string name="desc_mostrar_ocultar_senha">Mostrar ou ocultar senha</string>
+ 
+ </resources>
+\ No newline at end of file
+Index: app/src/main/java/com/example/bibliounifor/ui/screens/TelaRF15TelaLeituraCompose.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.bibliounifor.ui.screens\r\n\r\nimport androidx.compose.foundation.Image\r\nimport androidx.compose.foundation.background\r\nimport androidx.compose.foundation.layout.*\r\nimport androidx.compose.foundation.rememberScrollState\r\nimport androidx.compose.foundation.shape.RoundedCornerShape\r\nimport androidx.compose.foundation.verticalScroll\r\nimport androidx.compose.material.icons.Icons\r\nimport androidx.compose.material.icons.automirrored.filled.ArrowBack\r\nimport androidx.compose.material3.*\r\nimport androidx.compose.runtime.*\r\nimport androidx.compose.ui.Alignment\r\nimport androidx.compose.ui.Modifier\r\nimport androidx.compose.ui.graphics.Color\r\nimport androidx.compose.ui.layout.ContentScale\r\nimport androidx.compose.ui.res.painterResource\r\nimport androidx.compose.ui.text.font.FontWeight\r\nimport androidx.compose.ui.unit.dp\r\nimport androidx.compose.ui.unit.sp\r\nimport androidx.lifecycle.viewmodel.compose.viewModel\r\nimport com.example.bibliounifor.R\r\nimport com.example.bibliounifor.data.EntidadeLivro\r\nimport com.example.bibliounifor.ui.theme.*\r\n\r\n@Composable\r\nfun BookActionButton(text: String, modifier: Modifier = Modifier, onClick: () -> Unit = {}) {\r\n    Button(\r\n        onClick = onClick,\r\n        modifier = modifier.height(55.dp),\r\n        colors = ButtonDefaults.buttonColors(containerColor = BiblioCyan),\r\n        shape = RoundedCornerShape(12.dp)\r\n    ) {\r\n        Text(text, fontSize = 18.sp, fontWeight = FontWeight.Bold)\r\n    }\r\n}\r\n\r\n@Composable\r\nfun TelaLeituraScreen(\r\n    livroId: Int = 1,\r\n    onBack: () -> Unit = {},\r\n    viewModel: XXLeituraViewModel = viewModel()\r\n) {\r\n    val livro by viewModel.livroAtual.collectAsState()\r\n\r\n    LaunchedEffect(livroId) {\r\n        viewModel.carregarLivro(livroId)\r\n    }\r\n\r\n    Scaffold(\r\n        topBar = { BiblioTopAppBar(title = \"Leitura\") },\r\n        bottomBar = { BiblioBottomNavigation() }\r\n    ) { padding ->\r\n        Column(\r\n            modifier = Modifier\r\n                .fillMaxSize()\r\n                .background(Color.White)\r\n                .padding(padding)\r\n                .verticalScroll(rememberScrollState())\r\n        ) {\r\n            Box(\r\n                modifier = Modifier\r\n                    .fillMaxWidth()\r\n                    .background(BiblioCyan)\r\n                    .padding(16.dp)\r\n            ) {\r\n                Column {\r\n                    IconButton(onClick = onBack) {\r\n                        Icon(Icons.AutoMirrored.Filled.ArrowBack, \"Voltar\", tint = Color.White)\r\n                    }\r\n\r\n                    Row(verticalAlignment = Alignment.CenterVertically) {\r\n                        Card(\r\n                            shape = RoundedCornerShape(4.dp),\r\n                            modifier = Modifier.size(width = 110.dp, height = 160.dp)\r\n                        ) {\r\n                            Image(\r\n                                painter = painterResource(id = R.drawable.o_alienista_capa),\r\n                                contentDescription = \"Capa\",\r\n                                contentScale = ContentScale.Crop,\r\n                                modifier = Modifier.fillMaxSize()\r\n                            )\r\n                        }\r\n                        Spacer(modifier = Modifier.width(16.dp))\r\n                        Column {\r\n                            Text(livro?.title ?: \"O Alienista\", fontSize = 22.sp, fontWeight = FontWeight.Bold, color = Color.White)\r\n                            Text(livro?.author ?: \"Machado de Assis\", fontSize = 18.sp, color = Color.White)\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n            \r\n            Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {\r\n                BookActionButton(text = \"Abrir PDF\", modifier = Modifier.fillMaxWidth())\r\n                BookActionButton(text = \"Abrir Audiobook\", modifier = Modifier.fillMaxWidth())\r\n                BookActionButton(text = \"Reservar\", modifier = Modifier.fillMaxWidth())\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n@Composable\r\nfun BookActionButton(\r\n    text: String,\r\n    modifier: Modifier = Modifier,\r\n    onClick: () -> Unit = {}\r\n) {\r\n    Button(\r\n        onClick = onClick,\r\n        modifier = modifier.height(48.dp),\r\n        shape = RoundedCornerShape(8.dp),\r\n        colors = ButtonDefaults.buttonColors(\r\n            containerColor = BiblioCyan,\r\n            contentColor = BiblioDark\r\n        )\r\n    ) {\r\n        Text(text = text, fontSize = 16.sp, fontWeight = FontWeight.Bold)\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/bibliounifor/ui/screens/TelaRF15TelaLeituraCompose.kt b/app/src/main/java/com/example/bibliounifor/ui/screens/TelaRF15TelaLeituraCompose.kt
+--- a/app/src/main/java/com/example/bibliounifor/ui/screens/TelaRF15TelaLeituraCompose.kt	(revision b89d16130409cb9cf5071d7d9ebca4182028c803)
++++ b/app/src/main/java/com/example/bibliounifor/ui/screens/TelaRF15TelaLeituraCompose.kt	(date 1778367182692)
+@@ -16,6 +16,7 @@
+ import androidx.compose.ui.layout.ContentScale
+ import androidx.compose.ui.res.painterResource
+ import androidx.compose.ui.text.font.FontWeight
++import androidx.compose.ui.tooling.preview.Preview
+ import androidx.compose.ui.unit.dp
+ import androidx.compose.ui.unit.sp
+ import androidx.lifecycle.viewmodel.compose.viewModel
+@@ -47,6 +48,14 @@
+         viewModel.carregarLivro(livroId)
+     }
+ 
++    TelaLeituraContent(livro = livro, onBack = onBack)
++}
++
++@Composable
++fun TelaLeituraContent(
++    livro: EntidadeLivro?,
++    onBack: () -> Unit
++) {
+     Scaffold(
+         topBar = { BiblioTopAppBar(title = "Leitura") },
+         bottomBar = { BiblioBottomNavigation() }
+@@ -99,21 +108,23 @@
+     }
+ }
+ 
++@Preview(showBackground = true)
+ @Composable
+-fun BookActionButton(
+-    text: String,
+-    modifier: Modifier = Modifier,
+-    onClick: () -> Unit = {}
+-) {
+-    Button(
+-        onClick = onClick,
+-        modifier = modifier.height(48.dp),
+-        shape = RoundedCornerShape(8.dp),
+-        colors = ButtonDefaults.buttonColors(
+-            containerColor = BiblioCyan,
+-            contentColor = BiblioDark
+-        )
+-    ) {
+-        Text(text = text, fontSize = 16.sp, fontWeight = FontWeight.Bold)
+-    }
++fun PreviewBookActionButton() {
++    BookActionButton(text = "Botão Exemplo", modifier = Modifier.fillMaxWidth())
++}
++
++@Preview(showBackground = true)
++@Composable
++fun PreviewTelaLeituraScreen() {
++    TelaLeituraContent(
++        livro = EntidadeLivro(
++            id = 1,
++            title = "O Alienista",
++            author = "Machado de Assis"
++        ),
++        onBack = {}
++    )
+ }
++
++
+Index: app/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    alias(libs.plugins.android.application)\r\n    id(\"org.jetbrains.kotlin.android\")\r\n    id(\"org.jetbrains.kotlin.plugin.compose\")\r\n    id(\"com.google.devtools.ksp\")\r\n}\r\n\r\nandroid {\r\n    namespace = \"com.example.bibliounifor\"\r\n    compileSdk = 36\r\n\r\n    defaultConfig {\r\n        applicationId = \"com.example.bibliounifor\"\r\n        minSdk = 28\r\n        targetSdk = 36\r\n        versionCode = 1\r\n        versionName = \"1.0\"\r\n\r\n        testInstrumentationRunner = \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildFeatures {\r\n        compose = true\r\n    }\r\n\r\n    compileOptions {\r\n        sourceCompatibility = JavaVersion.VERSION_17\r\n        targetCompatibility = JavaVersion.VERSION_17\r\n    }\r\n\r\n    kotlinOptions {\r\n        jvmTarget = \"17\"\r\n    }\r\n}\r\n\r\nkotlin {\r\n    jvmToolchain(17)\r\n}\r\n\r\ndependencies {\r\n    implementation(libs.androidx.activity.ktx)\r\n    implementation(libs.androidx.core.ktx)\r\n    implementation(libs.androidx.appcompat)\r\n    implementation(libs.material)\r\n    implementation(libs.androidx.activity)\r\n    implementation(libs.androidx.constraintlayout)\r\n    implementation(libs.play.services.maps3d)\r\n\r\n    val composeBom = platform(\"androidx.compose:compose-bom:2024.02.00\")\r\n    implementation(composeBom)\r\n    implementation(\"androidx.compose.ui:ui\")\r\n    implementation(\"androidx.compose.ui:ui-graphics\")\r\n    implementation(\"androidx.compose.ui:ui-tooling-preview\")\r\n    implementation(\"androidx.compose.ui:ui-tooling\")\r\n    implementation(\"androidx.compose.material3:material3\")\r\n    implementation(\"androidx.compose.foundation:foundation\")\r\n    implementation(\"androidx.activity:activity-compose:1.9.0\")\r\n    implementation(\"androidx.navigation:navigation-compose:2.7.7\")\r\n\r\n    // --- DEPENDÊNCIAS DO ROOM (BANCO DE DADOS) ---\r\n    implementation(libs.androidx.room.runtime)\r\n    implementation(libs.androidx.room.ktx)\r\n    ksp(libs.androidx.room.compiler)\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+--- a/app/build.gradle.kts	(revision b89d16130409cb9cf5071d7d9ebca4182028c803)
++++ b/app/build.gradle.kts	(date 1778367182717)
+@@ -61,4 +61,9 @@
+     implementation(libs.androidx.room.runtime)
+     implementation(libs.androidx.room.ktx)
+     ksp(libs.androidx.room.compiler)
++
++    // --- TEST DEPENDENCIES ---
++    testImplementation(libs.junit)
++    androidTestImplementation(libs.androidx.junit)
++    androidTestImplementation(libs.androidx.espresso.core)
+ }
+Index: app/src/main/java/com/example/bibliounifor/NavigationUtils.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.bibliounifor\r\n\r\nimport android.app.Activity\r\nimport android.content.Intent\r\nimport android.widget.ImageView\r\n\r\nobject NavigationUtils {\r\n\r\n    // --- NAVEGAÇÃO DO USUÁRIO (RF09, RF12, etc.) ---\r\n\r\n    fun setupBottomNavigation(activity: Activity) {\r\n        // 1. Casa -> RF09\r\n        activity.findViewById<ImageView>(R.id.navHome)?.setOnClickListener {\r\n            if (activity !is TelaRF09DashboardUsuario) {\r\n                activity.startActivity(Intent(activity, TelaRF09DashboardUsuario::class.java))\r\n            }\r\n        }\r\n        // 2. Tenda -> RF16\r\n        activity.findViewById<ImageView>(R.id.navLivraria)?.setOnClickListener {\r\n            if (activity !is TelaRF16MinhaLivrariaActivity) {\r\n                activity.startActivity(Intent(activity, TelaRF16MinhaLivrariaActivity::class.java))\r\n            }\r\n        }\r\n        // 3. Lupa -> RF12\r\n        activity.findViewById<ImageView>(R.id.navSearch)?.setOnClickListener {\r\n            if (activity !is TelaRF12TelaDePesquisa) {\r\n                activity.startActivity(Intent(activity, TelaRF12TelaDePesquisa::class.java))\r\n            }\r\n        }\r\n        // 4. Coração -> RF17\r\n        activity.findViewById<ImageView>(R.id.navFavorites)?.setOnClickListener {\r\n            activity.startActivity(Intent(activity, TelaRF17ListaDesejosActivity::class.java))\r\n        }\r\n        // 5. Livro -> RF19\r\n        activity.findViewById<ImageView>(R.id.navRentals)?.setOnClickListener {\r\n            activity.startActivity(Intent(activity, TelaRF19::class.java))\r\n        }\r\n        // 6. Pessoa -> RF18\r\n        activity.findViewById<ImageView>(R.id.navFriends)?.setOnClickListener {\r\n            activity.startActivity(Intent(activity, TelaRF18::class.java))\r\n        activity.findViewById<ImageView>(R.id.navDesejos)?.setOnClickListener {\r\n            if (activity !is TelaRF17ListaDesejosActivity) {\r\n                activity.startActivity(Intent(activity, TelaRF17ListaDesejosActivity::class.java))\r\n            }\r\n        }\r\n        // 5. Livro -> RF19\r\n        activity.findViewById<ImageView>(R.id.navAluguel)?.setOnClickListener {\r\n            if (activity !is TelaRF19) {\r\n                activity.startActivity(Intent(activity, TelaRF19::class.java))\r\n            }\r\n        }\r\n        // 6. Pessoa -> RF18\r\n        activity.findViewById<ImageView>(R.id.navAmigos)?.setOnClickListener {\r\n            if (activity !is TelaRF18) {\r\n                activity.startActivity(Intent(activity, TelaRF18::class.java))\r\n            }\r\n        }\r\n    }\r\n\r\n    fun setupTopBar(activity: Activity) {\r\n        // Sino -> Notificações (RF21)\r\n        activity.findViewById<ImageView>(R.id.btnNotificacao)?.setOnClickListener {\r\n            if (activity !is TelaRF21Notificacoes) {\r\n                activity.startActivity(Intent(activity, TelaRF21Notificacoes::class.java))\r\n            }\r\n        }\r\n        // Engrenagem -> Configurações (RF10)\r\n        activity.findViewById<ImageView>(R.id.btnConfig)?.setOnClickListener {\r\n            if (activity !is TelaRF10Configuracao) {\r\n                activity.startActivity(Intent(activity, TelaRF10Configuracao::class.java))\r\n            }\r\n        }\r\n    }\r\n\r\n    // --- NAVEGAÇÃO DO ADMINISTRADOR (RF30 a RF42) ---\r\n\r\n    // Versão unificada que muitas telas chamam\r\n    fun setupAdminNavigation(activity: Activity) {\r\n        setupAdminBottomNavigation(activity)\r\n        setupAdminTopBar(activity)\r\n    }\r\n\r\n    fun setupAdminBottomNavigation(activity: Activity) {\r\n        val navDashboard = activity.findViewById<ImageView>(R.id.navHomeAdm) ?: activity.findViewById<ImageView>(R.id.navDashboard)\r\n        val navFinanceiro = activity.findViewById<ImageView>(R.id.navFinanceiroAdm) ?: activity.findViewById<ImageView>(R.id.navFinanceiro)\r\n        val navSolicitacoes = activity.findViewById<ImageView>(R.id.navSolicitacoesAdm) ?: activity.findViewById<ImageView>(R.id.navSolicitacoes)\r\n        val navLivrosADM = activity.findViewById<ImageView>(R.id.navVerificarMidiaAdm) ?: activity.findViewById<ImageView>(R.id.navLivrosADM)\r\n        val navUsuarios = activity.findViewById<ImageView>(R.id.navGerenciarUsuariosAdm) ?: activity.findViewById<ImageView>(R.id.navUsuarios)\r\n\r\n        navDashboard?.setOnClickListener {\r\n            if (activity !is TelaRF30DashboardADM) {\r\n                activity.startActivity(Intent(activity, TelaRF30DashboardADM::class.java))\r\n            }\r\n        }\r\n\r\n        navFinanceiro?.setOnClickListener {\r\n            if (activity !is TelaRF36FinanceiroADM) {\r\n                activity.startActivity(Intent(activity, TelaRF36FinanceiroADM::class.java))\r\n            }\r\n        }\r\n\r\n        navSolicitacoes?.setOnClickListener {\r\n            if (activity !is TelaRF33VerificarMidia && activity !is TelaRF33Solicitacoes) {\r\n                activity.startActivity(Intent(activity, TelaRF33VerificarMidia::class.java))\r\n            }\r\n        }\r\n\r\n        navLivrosADM?.setOnClickListener {\r\n            if (activity !is TelaRF34LivrosCRUD && activity !is TelaRF42VerificarMidia) {\r\n                activity.startActivity(Intent(activity, TelaRF34LivrosCRUD::class.java))\r\n            }\r\n        }\r\n\r\n        navUsuarios?.setOnClickListener {\r\n            if (activity !is TelaRF31GerenciamentoDeUsuarios) {\r\n                activity.startActivity(Intent(activity, TelaRF31GerenciamentoDeUsuarios::class.java))\r\n            }\r\n        }\r\n\r\n        highlightActiveAdminIcon(activity)\r\n    }\r\n\r\n    fun setupAdminTopBar(activity: Activity) {\r\n        // Engrenagem no Topo Esquerdo -> Config ADM (RF40)\r\n        activity.findViewById<ImageView>(R.id.btnConfigAdm)?.setOnClickListener {\r\n            if (activity !is TelaRF40ConfigADM) {\r\n                activity.startActivity(Intent(activity, TelaRF40ConfigADM::class.java))\r\n            }\r\n        }\r\n    }\r\n\r\n    private fun highlightActiveAdminIcon(activity: Activity) {\r\n        val activeColor = 0xFF6EC1C3.toInt()\r\n        val inactiveColor = 0xFFA0A0A0.toInt()\r\n\r\n        val navHome = activity.findViewById<ImageView>(R.id.navHomeAdm) ?: activity.findViewById<ImageView>(R.id.navDashboard)\r\n        val navFin = activity.findViewById<ImageView>(R.id.navFinanceiroAdm) ?: activity.findViewById<ImageView>(R.id.navFinanceiro)\r\n        val navSol = activity.findViewById<ImageView>(R.id.navSolicitacoesAdm) ?: activity.findViewById<ImageView>(R.id.navSolicitacoes)\r\n        val navMidia = activity.findViewById<ImageView>(R.id.navVerificarMidiaAdm) ?: activity.findViewById<ImageView>(R.id.navLivrosADM)\r\n        val navUser = activity.findViewById<ImageView>(R.id.navGerenciarUsuariosAdm) ?: activity.findViewById<ImageView>(R.id.navUsuarios)\r\n\r\n        listOf(navHome, navFin, navSol, navMidia, navUser).forEach { it?.setColorFilter(inactiveColor) }\r\n\r\n        when (activity) {\r\n            is TelaRF30DashboardADM -> navHome?.setColorFilter(activeColor)\r\n            is TelaRF36FinanceiroADM -> navFin?.setColorFilter(activeColor)\r\n            is TelaRF33VerificarMidia, is TelaRF33Solicitacoes -> navSol?.setColorFilter(activeColor)\r\n            is TelaRF42VerificarMidia, is TelaRF34LivrosCRUD, is TelaRF35CadastroDeLivros, \r\n            is TelaRF35_3InfosAdicionais, is TelaRF35_4Versoes, is TelaRF38ListaAlugueisADM, \r\n            is TelaRF39InfoLivroADM -> navMidia?.setColorFilter(activeColor)\r\n            is TelaRF31GerenciamentoDeUsuarios, is TelaRF32UsuariosParaADM, \r\n            is TelaRF37ConfirmarCadastroADM -> navUser?.setColorFilter(activeColor)\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/bibliounifor/NavigationUtils.kt b/app/src/main/java/com/example/bibliounifor/NavigationUtils.kt
+--- a/app/src/main/java/com/example/bibliounifor/NavigationUtils.kt	(revision b89d16130409cb9cf5071d7d9ebca4182028c803)
++++ b/app/src/main/java/com/example/bibliounifor/NavigationUtils.kt	(date 1778367182745)
+@@ -28,29 +28,24 @@
+             }
+         }
+         // 4. Coração -> RF17
+-        activity.findViewById<ImageView>(R.id.navFavorites)?.setOnClickListener {
+-            activity.startActivity(Intent(activity, TelaRF17ListaDesejosActivity::class.java))
+-        }
+-        // 5. Livro -> RF19
+-        activity.findViewById<ImageView>(R.id.navRentals)?.setOnClickListener {
+-            activity.startActivity(Intent(activity, TelaRF19::class.java))
+-        }
+-        // 6. Pessoa -> RF18
+-        activity.findViewById<ImageView>(R.id.navFriends)?.setOnClickListener {
+-            activity.startActivity(Intent(activity, TelaRF18::class.java))
+-        activity.findViewById<ImageView>(R.id.navDesejos)?.setOnClickListener {
++        val navDesejos = activity.findViewById<ImageView>(R.id.navDesejos) ?: activity.findViewById<ImageView>(R.id.navFavoritos)
++        navDesejos?.setOnClickListener {
+             if (activity !is TelaRF17ListaDesejosActivity) {
+                 activity.startActivity(Intent(activity, TelaRF17ListaDesejosActivity::class.java))
+             }
+         }
++
+         // 5. Livro -> RF19
+-        activity.findViewById<ImageView>(R.id.navAluguel)?.setOnClickListener {
++        val navAluguel = activity.findViewById<ImageView>(R.id.navAluguel) ?: activity.findViewById<ImageView>(R.id.navLista)
++        navAluguel?.setOnClickListener {
+             if (activity !is TelaRF19) {
+                 activity.startActivity(Intent(activity, TelaRF19::class.java))
+             }
+         }
++
+         // 6. Pessoa -> RF18
+-        activity.findViewById<ImageView>(R.id.navAmigos)?.setOnClickListener {
++        val navAmigos = activity.findViewById<ImageView>(R.id.navAmigos) ?: activity.findViewById<ImageView>(R.id.navUsuario)
++        navAmigos?.setOnClickListener {
+             if (activity !is TelaRF18) {
+                 activity.startActivity(Intent(activity, TelaRF18::class.java))
+             }

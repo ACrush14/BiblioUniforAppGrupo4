@@ -1,0 +1,63 @@
+Index: app/src/main/java/com/example/bibliounifor/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.bibliounifor\r\n\r\nimport android.os.Bundle\r\nimport androidx.activity.ComponentActivity\r\nimport androidx.activity.compose.setContent\r\nimport androidx.compose.foundation.layout.fillMaxSize\r\nimport androidx.compose.material3.MaterialTheme\r\nimport androidx.compose.material3.Surface\r\nimport androidx.compose.ui.Modifier\r\nimport com.example.bibliounifor.ui.screens.LoginScreen\r\nimport androidx.activity.enableEdgeToEdge\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport androidx.core.view.ViewCompat\r\nimport androidx.core.view.WindowInsetsCompat\r\nimport com.example.bibliounifor.ui.screens.AppNavigation\r\n\r\nclass MainActivity : ComponentActivity() {\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContent {\r\n            Surface (\r\n                modifier = Modifier.fillMaxSize(),\r\n                color = MaterialTheme.colorScheme.background\r\n            ) {\r\n                AppNavigation()\r\n            }\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/bibliounifor/MainActivity.kt b/app/src/main/java/com/example/bibliounifor/MainActivity.kt
+--- a/app/src/main/java/com/example/bibliounifor/MainActivity.kt	(revision 426671a10455f2e89879900c38384302c09f40e9)
++++ b/app/src/main/java/com/example/bibliounifor/MainActivity.kt	(date 1776689802128)
+@@ -1,29 +1,34 @@
+-package com.example.bibliounifor
++package com.example.bibliouniforapp_final
+ 
++import android.content.Intent
+ import android.os.Bundle
+-import androidx.activity.ComponentActivity
+-import androidx.activity.compose.setContent
+-import androidx.compose.foundation.layout.fillMaxSize
+-import androidx.compose.material3.MaterialTheme
+-import androidx.compose.material3.Surface
+-import androidx.compose.ui.Modifier
+-import com.example.bibliounifor.ui.screens.LoginScreen
++import android.widget.Button
+ import androidx.activity.enableEdgeToEdge
+ import androidx.appcompat.app.AppCompatActivity
+ import androidx.core.view.ViewCompat
+ import androidx.core.view.WindowInsetsCompat
+-import com.example.bibliounifor.ui.screens.AppNavigation
+ 
+-class MainActivity : ComponentActivity() {
++class MainActivity : AppCompatActivity() {
++
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+-        setContent {
+-            Surface (
+-                modifier = Modifier.fillMaxSize(),
+-                color = MaterialTheme.colorScheme.background
+-            ) {
+-                AppNavigation()
+-            }
++        enableEdgeToEdge()
++        setContentView(R.layout.activity_main)
++
++        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.textTitulo)) { v, insets ->
++            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
++            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
++            insets
++        }
++
++        // 👉 BOTÃO COMEÇAR
++        val botao = findViewById<Button>(R.id.buttonComecar)
++
++        botao.setOnClickListener {
++
++            val intent = Intent(this, TelaIntermediaria::class.java)
++            startActivity(intent)
++
+         }
+     }
+ }
+\ No newline at end of file
