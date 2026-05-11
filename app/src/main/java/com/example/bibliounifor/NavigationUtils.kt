@@ -9,41 +9,73 @@ object NavigationUtils {
     // --- NAVEGAÇÃO DO USUÁRIO (RF09, RF12, etc.) ---
 
     fun setupBottomNavigation(activity: Activity) {
+        val navHome = activity.findViewById<ImageView>(R.id.navHome)
+        val navLivraria = activity.findViewById<ImageView>(R.id.navLivraria)
+        val navSearch = activity.findViewById<ImageView>(R.id.navSearch)
+        val navDesejos = activity.findViewById<ImageView>(R.id.navDesejos)
+        val navAluguel = activity.findViewById<ImageView>(R.id.navAluguel)
+        val navAmigos = activity.findViewById<ImageView>(R.id.navAmigos)
+
         // 1. Casa -> RF09
-        activity.findViewById<ImageView>(R.id.navHome)?.setOnClickListener {
+        navHome?.setOnClickListener {
             if (activity !is TelaRF09DashboardUsuario) {
                 activity.startActivity(Intent(activity, TelaRF09DashboardUsuario::class.java))
             }
         }
         // 2. Tenda -> RF16
-        activity.findViewById<ImageView>(R.id.navLivraria)?.setOnClickListener {
+        navLivraria?.setOnClickListener {
             if (activity !is TelaRF16MinhaLivrariaActivity) {
                 activity.startActivity(Intent(activity, TelaRF16MinhaLivrariaActivity::class.java))
             }
         }
         // 3. Lupa -> RF12
-        activity.findViewById<ImageView>(R.id.navSearch)?.setOnClickListener {
+        navSearch?.setOnClickListener {
             if (activity !is TelaRF12TelaDePesquisa) {
                 activity.startActivity(Intent(activity, TelaRF12TelaDePesquisa::class.java))
             }
         }
         // 4. Coração -> RF17
-        activity.findViewById<ImageView>(R.id.navDesejos)?.setOnClickListener {
+        navDesejos?.setOnClickListener {
             if (activity !is TelaRF17ListaDesejosActivity) {
                 activity.startActivity(Intent(activity, TelaRF17ListaDesejosActivity::class.java))
             }
         }
         // 5. Livro -> RF19
-        activity.findViewById<ImageView>(R.id.navAluguel)?.setOnClickListener {
+        navAluguel?.setOnClickListener {
             if (activity !is TelaRF19) {
                 activity.startActivity(Intent(activity, TelaRF19::class.java))
             }
         }
         // 6. Pessoa -> RF18
-        activity.findViewById<ImageView>(R.id.navAmigos)?.setOnClickListener {
+        navAmigos?.setOnClickListener {
             if (activity !is TelaRF18) {
                 activity.startActivity(Intent(activity, TelaRF18::class.java))
             }
+        }
+
+        highlightActiveUserIcon(activity)
+    }
+
+    private fun highlightActiveUserIcon(activity: Activity) {
+        val activeColor = 0xFF6EC1C3.toInt()
+        val inactiveColor = 0xFFA0A0A0.toInt()
+
+        val navHome = activity.findViewById<ImageView>(R.id.navHome)
+        val navLivraria = activity.findViewById<ImageView>(R.id.navLivraria)
+        val navSearch = activity.findViewById<ImageView>(R.id.navSearch)
+        val navDesejos = activity.findViewById<ImageView>(R.id.navDesejos)
+        val navAluguel = activity.findViewById<ImageView>(R.id.navAluguel)
+        val navAmigos = activity.findViewById<ImageView>(R.id.navAmigos)
+
+        listOf(navHome, navLivraria, navSearch, navDesejos, navAluguel, navAmigos).forEach { it?.setColorFilter(inactiveColor) }
+
+        when (activity) {
+            is TelaRF09DashboardUsuario -> navHome?.setColorFilter(activeColor)
+            is TelaRF16MinhaLivrariaActivity -> navLivraria?.setColorFilter(activeColor)
+            is TelaRF12TelaDePesquisa -> navSearch?.setColorFilter(activeColor)
+            is TelaRF17ListaDesejosActivity -> navDesejos?.setColorFilter(activeColor)
+            is TelaRF19 -> navAluguel?.setColorFilter(activeColor)
+            is TelaRF18 -> navAmigos?.setColorFilter(activeColor)
         }
     }
 

@@ -5,8 +5,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import com.example.bibliounifor.data.AppDatabase
+import kotlinx.coroutines.launch
 
 class TelaRF03LoginAluno : AppCompatActivity() {
+
+    private val db by lazy { AppDatabase.getDatabase(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,28 +37,36 @@ class TelaRF03LoginAluno : AppCompatActivity() {
 
             erro.visibility = View.GONE
 
-            // Base de dados mockada
-            val usuariosValidos = mapOf(
-                "teste@email.com" to "12345678",
-                "anderson.link.crush@hotmail.com" to "123456"
-            )
+            if (textoEmail.isEmpty() || textoSenha.isEmpty()) {
+                erro.text = "Preencha todos os campos"
+                erro.visibility = View.VISIBLE
+                return@setOnClickListener
+            }
 
-            when {
-                textoEmail.isEmpty() || textoSenha.isEmpty() -> {
-                    erro.text = "Preencha todos os campos"
-                    erro.visibility = View.VISIBLE
-                }
-
-                usuariosValidos[textoEmail] != textoSenha -> {
-                    erro.text = "E-mail ou senha incorretos"
-                    erro.visibility = View.VISIBLE
-                }
-
-                else -> {
-                    Toast.makeText(this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, TelaRF09DashboardUsuario::class.java)
+            lifecycleScope.launch {
+                val usuario = db.usuarioDao().autenticar(textoEmail, textoSenha)
+                
+                if (usuario != null) {
+                    Toast.makeText(this@TelaRF03LoginAluno, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@TelaRF03LoginAluno, TelaRF09DashboardUsuario::class.java)
                     startActivity(intent)
-                    finish() // Opcional: encerra a tela de login para não voltar a ela ao apertar 'back'
+                    finish()
+                } else {
+                    // Fallback para usuários mockados legados para não quebrar testes rápidos
+                    val usuariosValidos = mapOf(
+                        "teste@email.com" to "12345678",
+                        "anderson.link.crush@hotmail.com" to "123456"
+                    )
+                    
+                    if (usuariosValidos[textoEmail] == textoSenha) {
+                        Toast.makeText(this@TelaRF03LoginAluno, "Login realizado com sucesso (Mock)!", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this@TelaRF03LoginAluno, TelaRF09DashboardUsuario::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        erro.text = "E-mail ou senha incorretos"
+                        erro.visibility = View.VISIBLE
+                    }
                 }
             }
         }

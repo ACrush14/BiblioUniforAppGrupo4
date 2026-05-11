@@ -20,7 +20,7 @@ class TelaRF19 : AppCompatActivity() {
 
         // Mock data
         val mockBooks = listOf(
-            com.example.bibliounifor.data.EntidadeLivro(1, "O Senhor dos Anéis", "J.R.R. Tolkien", coverResourceId = R.drawable.osda)
+            com.example.bibliounifor.data.EntidadeLivro(1, "O Senhor dos Anéis", "J.R.R. Tolkien", content = "Resumo do livro...", coverResourceId = R.drawable.osda)
         )
 
         val adapter = LivroAdapter(mockBooks) { livro ->

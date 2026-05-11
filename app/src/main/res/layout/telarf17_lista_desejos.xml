@@ -81,6 +81,18 @@
         app:layout_constraintBottom_toTopOf="@id/includeBottomNav"
         tools:listitem="@layout/item_book_card" />
 
+    <TextView
+        android:id="@+id/txtListaVazia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sua lista de desejos está vazia."
+        android:textColor="#888888"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/rvListaDesejos"
+        app:layout_constraintBottom_toBottomOf="@id/rvListaDesejos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <!-- Bottom Navigation -->
     <include
         android:id="@+id/includeBottomNav"

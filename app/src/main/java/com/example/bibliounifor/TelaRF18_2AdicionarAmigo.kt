@@ -12,9 +12,12 @@ class TelaRF18_2AdicionarAmigo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.telarf18_2_adicionar_amigo)
 
+        val etSearch = findViewById<android.widget.EditText>(R.id.etSearchAddAmigo)
         val btnProcurar = findViewById<MaterialButton>(R.id.btnProcurarAmigo)
         btnProcurar.setOnClickListener {
+            val query = etSearch.text.toString()
             val intent = Intent(this@TelaRF18_2AdicionarAmigo, TelaRF18BuscaAmigos::class.java)
+            intent.putExtra("SEARCH_QUERY", query)
             startActivity(intent)
         }
 

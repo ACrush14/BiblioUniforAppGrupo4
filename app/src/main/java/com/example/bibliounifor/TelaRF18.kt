@@ -30,17 +30,20 @@ class TelaRF18 : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val mockFriends = listOf(
-            Amigo(1, "Ronaldo Alves"),
-            Amigo(2, "Robson Gonçalves"),
-            Amigo(3, "Vitória Ferreira"),
-            Amigo(4, "Marta Viana"),
-            Amigo(5, "Adriano de Souza")
+            Amigo(1, "Ronaldo Alves", usuario = "@ronaldo_alves", bio = "Gosto de ler suspenses."),
+            Amigo(2, "Robson Gonçalves", usuario = "@robson_g", bio = "Estudante de Engenharia."),
+            Amigo(3, "Vitória Ferreira", usuario = "@vitoria_f", bio = "Amante de poesia."),
+            Amigo(4, "Marta Viana", usuario = "@marta_v", bio = "Bibliotecária por paixão."),
+            Amigo(5, "Adriano de Souza", usuario = "@adriano_s", bio = "Leitor voraz de ficção científica.")
         )
 
         val adapter = AmigoAdapter(mockFriends) { amigo ->
             // Abre perfil ao clicar
             val intent = Intent(this, TelaRF18PerfilAmigo::class.java)
             intent.putExtra("AMIGO_ID", amigo.id)
+            intent.putExtra("AMIGO_NOME", amigo.nome)
+            intent.putExtra("AMIGO_USER", amigo.usuario)
+            intent.putExtra("AMIGO_BIO", amigo.bio)
             startActivity(intent)
         }
         recyclerView.adapter = adapter
