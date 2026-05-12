@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BiblioUnifor">
+
+        <!-- TELAS DE RECUPERAÇÃO DE SENHA -->
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF07ValidacaoDeCodigo"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF08RedefinirSenha"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF08ConfirmarRedefinirSenha"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF27RedefinirSenhaADM"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF28NovaContaADM"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF29GoogleADM"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF40ConfigADM"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF37ConfirmarCadastroADM"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF39InfoLivroADM"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF38ListaAlugueisADM"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF36FinanceiroADM"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF31GerenciamentoDeUsuarios"
+            android:exported="false" />
+        <activity
+            android:name="TelaRF19"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF18"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF35CadastroDeLivros"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF32UsuariosParaADM"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF35_1Data"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF35_3InfosAdicionais"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF35_4Versoes"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF11RedefinirSenha"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF33Solicitacoes"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF10Configuracao"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF34LivrosCRUD"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF03LoginAluno"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF02Intermediaria"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF09DashboardUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".RF09DashboardUsuario"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF16MinhaLivrariaActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF17ListaDesejosActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF22Historico"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF30DashboardADM"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF24"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF25"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF30CrudADM"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TelaRF04UsuarioGoogle"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF05CadastroNovoUsuario"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF06RecuperacaoSenha"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF12TelaDePesquisa"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF13TelaDoLivro"
+            android:exported="false" />
+        <activity
+            android:name=".RF14TelaVerMaisLivro"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF20Solicitacoes"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF20SolicitacoesTermosCondicoes"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF20SolicitacoesVoltarBiblioteca"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF15LeituraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GoogleLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF41RedefinirADMInterno"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF42VerificarMidia"
+            android:exported="false" />
+
+        <!-- TELAS RF33 -->
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF33VerificarMidia"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF332Filtro"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF335UsuarioNotificado"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF336BrailleConcluido"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF337ExcluirSolicitacao"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+
+        <activity
+            android:name="com.example.bibliounifornew.TelaRF01BemVindo"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
