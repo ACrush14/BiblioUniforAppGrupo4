@@ -2,12 +2,8 @@ package com.example.bibliounifor
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 
@@ -29,15 +25,15 @@ class TelaRF09DashboardUsuario : AppCompatActivity() {
         val btnAmigos = findViewById<MaterialButton>(R.id.btnAmigosDash)
         val btnHistorico = findViewById<MaterialButton>(R.id.btnHistoricoDash)
         val btnStatusAluguel = findViewById<MaterialButton>(R.id.btnStatusAluguelDash)
-        val btnSalvar = findViewById<MaterialButton>(R.id.btnSalvarDash)
         val btnSair = findViewById<MaterialButton>(R.id.btnSairDash)
+        val cardLivro = findViewById<androidx.cardview.widget.CardView>(R.id.cardLivro)
+        val bntSalvar = findViewById<MaterialButton>(R.id.bntSalvar)
 
         // Navegação via Engrenagem -> Configuração (RF10)
         btnConfig.setOnClickListener {
             startActivity(Intent(this, TelaRF10Configuracao::class.java))
         }
 
-        // ISSUE 1: Sininho (Notificações)
         btnNotificacao.setOnClickListener {
             startActivity(Intent(this, TelaRF21Notificacoes::class.java))
         }
@@ -67,84 +63,99 @@ class TelaRF09DashboardUsuario : AppCompatActivity() {
             startActivity(Intent(this, TelaRF19::class.java))
         }
 
-        // ISSUE 2: Popup Salvar Alterações
-        btnSalvar.setOnClickListener {
-            showSalvarSucessoPopup()
-        }
-
-        // ISSUE 3: Popup Sair da Conta
         btnSair.setOnClickListener {
-            showSairContaPopup()
+            //PopUp sair da conta
+            val dialog = android.app.AlertDialog.Builder(this)
+                .setTitle("ATENÇÃO!")
+                .setMessage("Confirme que deseja sair da sua conta")
+                .setPositiveButton("Sair") { _, _ ->
+
+                    val intent = Intent(this, MainActivity::class.java)
+
+                    intent.flags =
+                        Intent.FLAG_ACTIVITY_NEW_TASK or
+                                Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+                    startActivity(intent)
+                }
+
+                .setNegativeButton("Cancelar", null)
+                .create()
+
+            dialog.show()
+
+            // FUNDO BRANCO
+            dialog.window?.setBackgroundDrawableResource(android.R.color.white)
+
+            // BOTÃO SAIR
+            dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE)
+                .setBackgroundColor(getColor(R.color.biblio_red))
+
+            dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE)
+                .setTextColor(getColor(android.R.color.white))
+
+            // BOTÃO CANCELAR
+            dialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE)
+                .setBackgroundColor(android.graphics.Color.TRANSPARENT)
+
+            dialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE)
+                .setTextColor(getColor(R.color.biblio_red))
+
+            // TÍTULO VERMELHO
+            dialog.findViewById<TextView>(
+                resources.getIdentifier(
+                    "alertTitle",
+                    "id",
+                    "android"
+                )
+            )?.setTextColor(getColor(R.color.biblio_red))
+
+            // MENSAGEM VERMELHA
+            dialog.findViewById<TextView>(
+                android.R.id.message
+            )?.setTextColor(getColor(R.color.biblio_red))
         }
 
-        // ISSUE 4, 5 e 6: Configurar Livros do Dashboard (Includes)
-        setupLivroDash(R.id.livro1)
-        setupLivroDash(R.id.livro2)
-        setupLivroDash(R.id.livro3)
-
-        // 🔥 BARRA DE TAREFAS (BOTTOM NAV - USANDO UTILS)
-        NavigationUtils.setupBottomNavigation(this)
-    }
-
-    private fun setupLivroDash(includeId: Int) {
-        val layoutLivro = findViewById<View>(includeId)
-        val imgLivro = layoutLivro.findViewById<ImageView>(R.id.imgLivro)
-        val btnAlugar = layoutLivro.findViewById<Button>(R.id.btnAlugar)
-        val btnComprar = layoutLivro.findViewById<Button>(R.id.btnComprar)
-
-        // ISSUE 4: Abrir Tela do Livro
-        imgLivro.setOnClickListener {
-            startActivity(Intent(this, TelaRF13TelaDoLivro::class.java))
+        cardLivro.setOnClickListener {
+            startActivity(
+                Intent(this, TelaRF13TelaDoLivro::class.java)
+            )
         }
 
-        // ISSUE 5: Botão Alugar -> Solicitações
-        btnAlugar.setOnClickListener {
-            startActivity(Intent(this, TelaRF20Solicitacoes::class.java))
+        bntSalvar.setOnClickListener {
+
+            val dialog = android.app.AlertDialog.Builder(this)
+                .setTitle("Sucesso!")
+                .setMessage("Alterações salvas com sucesso!")
+                .setPositiveButton("Voltar", null)
+                .create()
+
+            dialog.show()
+
+            // FUNDO BRANCO
+            dialog.window?.setBackgroundDrawableResource(android.R.color.white)
+
+            // BOTÃO CIANO
+            dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE)
+                .setBackgroundColor(getColor(R.color.biblio_cyan))
+
+            dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE)
+                .setTextColor(getColor(android.R.color.white))
+
+            // TÍTULO CIANO
+            dialog.findViewById<TextView>(
+                resources.getIdentifier(
+                    "alertTitle",
+                    "id",
+                    "android"
+                )
+            )?.setTextColor(getColor(R.color.biblio_cyan))
+
+            // TEXTO CIANO
+            dialog.findViewById<TextView>(
+                android.R.id.message
+            )?.setTextColor(getColor(R.color.biblio_cyan))
         }
 
-        // ISSUE 6: Botão Comprar -> Lista de Desejos
-        btnComprar.setOnClickListener {
-            startActivity(Intent(this, TelaRF17ListaDesejosActivity::class.java))
-        }
-    }
-
-    private fun showSalvarSucessoPopup() {
-        val dialogView = LayoutInflater.from(this).inflate(R.layout.popup_salvar_sucesso, null)
-        val builder = AlertDialog.Builder(this)
-            .setView(dialogView)
-            .setCancelable(true)
-
-        val alertDialog = builder.create()
-        val btnOk = dialogView.findViewById<Button>(R.id.btnOk)
-
-        btnOk.setOnClickListener {
-            alertDialog.dismiss()
-        }
-
-        alertDialog.show()
-    }
-
-    private fun showSairContaPopup() {
-        val dialogView = LayoutInflater.from(this).inflate(R.layout.popup_sair_conta, null)
-        val builder = AlertDialog.Builder(this)
-            .setView(dialogView)
-            .setCancelable(true)
-
-        val alertDialog = builder.create()
-        val btnConfirmar = dialogView.findViewById<Button>(R.id.btnConfirmarSair)
-        val btnCancelar = dialogView.findViewById<TextView>(R.id.btnCancelarSair)
-
-        btnConfirmar.setOnClickListener {
-            alertDialog.dismiss()
-            val intent = Intent(this, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-        }
-
-        btnCancelar.setOnClickListener {
-            alertDialog.dismiss()
-        }
-
-        alertDialog.show()
     }
 }
