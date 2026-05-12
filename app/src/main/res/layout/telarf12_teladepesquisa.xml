@@ -172,7 +172,6 @@
         tools:listitem="@layout/item_livro_dashboard" />
 
     <!-- BOTTOM NAV -->
-
     <FrameLayout
         android:id="@+id/bottomNavContainer"
         android:layout_width="match_parent"

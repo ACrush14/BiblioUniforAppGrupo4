@@ -62,7 +62,6 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:visibility="gone"
         android:backgroundTint="#50C4C9"
         android:text="Voltar"
         android:textAllCaps="false"

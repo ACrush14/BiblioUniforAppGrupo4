@@ -43,8 +43,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:padding="8dp"
-            android:visibility="gone" />
+            android:padding="8dp" />
     </LinearLayout>
 
     <!-- CONTEÚDO ROLÁVEL -->

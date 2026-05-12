@@ -57,56 +57,5 @@
     <string name="btn_remover_historico">Remover do Histórico</string>
     <string name="nome_usuario">João Bobo</string>
 
-    <!-- Bottom Navigation Descriptions -->
-    <string name="nav_home_desc">Início</string>
-    <string name="nav_carrinho_desc">Carrinho</string>
-    <string name="nav_busca_desc">Busca</string>
-    <string name="nav_favoritos_desc">Favoritos</string>
-    <string name="nav_lista_desc">Lista</string>
-    <string name="nav_perfil_desc">Perfil</string>
-
-    <!-- Apagar Conta -->
-    <string name="apagar_conta_titulo">Apagar Conta</string>
-    <string name="apagar_conta_subtitulo">Tem certeza que deseja apagar sua conta?</string>
-    <string name="apagar_conta_erro">Senha incorreta</string>
-    <string name="hint_sua_senha">Sua senha</string>
-    <string name="desc_mostrar_ocultar_senha">Mostrar ou ocultar senha</string>
-
-    <!-- Configuração -->
-    <string name="desc_perfil">Foto de perfil</string>
-    <string name="email_usuario_exemplo">usuario@email.com</string>
-    <string name="desc_editar_usuario">Editar usuário</string>
-    <string name="desc_pesquisa">Pesquisar</string>
-    <string name="label_pesquisa">Pesquisa</string>
-    <string name="label_nome">Nome</string>
-    <string name="hint_nome">Digite seu nome</string>
-    <string name="desc_editar_campo">Editar campo</string>
-    <string name="label_usuario">Usuário</string>
-    <string name="hint_usuario">Digite seu usuário</string>
-    <string name="usuario_exemplo">joao_bobo</string>
-    <string name="label_bio">Bio</string>
-    <string name="hint_bio">Conte um pouco sobre você</string>
-    <string name="bio_exemplo">Estudante de engenharia</string>
-    <string name="label_senha_atual">Senha atual</string>
-    <string name="placeholder_senha">********</string>
-    <string name="btn_redefinir_senha_config">Redefinir Senha</string>
-    <string name="btn_voltar_inicial">Voltar ao Início</string>
-    <string name="btn_apagar_conta_config">Apagar Conta</string>
-
-    <string name="fechar_x">X</string>
-    <string name="hint_nova_senha">Nova senha</string>
-    <string name="erro_senha_invalida">Senha inválida</string>
-    <string name="hint_confirmar_senha">Confirmar senha</string>
-    <string name="erro_senhas_nao_coincidem">As senhas não coincidem</string>
-    <string name="btn_salvar_alteracoes">Salvar Alterações</string>
-
-    <string name="nav_home">Home</string>
-    <string name="nav_carrinho">Carrinho</string>
-    <string name="nav_busca">Busca</string>
-    <string name="nav_favoritos">Favoritos</string>
-    <string name="nav_lista">Lista</string>
-    <string name="nav_perfil">Perfil</string>
-    <string name="nav_usuario">Usuário</string>
-    <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
 
 </resources>

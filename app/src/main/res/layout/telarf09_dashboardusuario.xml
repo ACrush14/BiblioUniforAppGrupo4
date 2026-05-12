@@ -72,7 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintBottom_toTopOf="@id/includeBottomNav">
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -236,17 +236,11 @@
                     android:orientation="horizontal">
 
                     <!-- LIVRO 1 -->
-                    <include
-                        android:id="@+id/livro1"
-                        layout="@layout/item_livro_dashboard" />
+                    <include layout="@layout/item_livro_dashboard" />
                     <!-- LIVRO 2 -->
-                    <include
-                        android:id="@+id/livro2"
-                        layout="@layout/item_livro_dashboard" />
+                    <include layout="@layout/item_livro_dashboard" />
                     <!-- LIVRO 3 -->
-                    <include
-                        android:id="@+id/livro3"
-                        layout="@layout/item_livro_dashboard" />
+                    <include layout="@layout/item_livro_dashboard" />
 
                 </LinearLayout>
             </HorizontalScrollView>
@@ -255,11 +249,69 @@
     </ScrollView>
 
     <!-- BOTTOM NAV -->
-    <include
-        android:id="@+id/includeBottomNav"
-        layout="@layout/bottom_navigation_placeholder"
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:background="#FFFFFF"
+        android:elevation="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_view"
+            android:contentDescription="@string/nav_home_desc" />
+
+        <ImageView
+            android:id="@+id/navCarrinho"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_add"
+            android:contentDescription="@string/nav_carrinho_desc" />
+
+        <ImageView
+            android:id="@+id/navBusca"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:contentDescription="@string/nav_busca_desc" />
+
+        <ImageView
+            android:id="@+id/navFavoritos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_agenda"
+            android:contentDescription="@string/nav_favoritos_desc" />
+
+        <ImageView
+            android:id="@+id/navLista"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            android:contentDescription="@string/nav_lista_desc" />
+
+        <ImageView
+            android:id="@+id/navUsuario"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="18dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:contentDescription="@string/nav_perfil_desc" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

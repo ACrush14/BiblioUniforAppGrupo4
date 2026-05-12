@@ -30,9 +30,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Acesse sua Conta"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
                 android:layout_marginTop="8dp" />
 
         </LinearLayout>
@@ -112,7 +111,6 @@
                 android:text="@string/voltar"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
-                android:visibility="gone"
                 app:backgroundTint="#415E5E"
                 app:cornerRadius="30dp"
                 app:elevation="6dp" />

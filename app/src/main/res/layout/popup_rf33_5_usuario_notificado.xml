@@ -46,7 +46,6 @@
         android:text="Voltar"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        android:visibility="gone"
         android:backgroundTint="#6EC1C3"/>
 
 </LinearLayout>

@@ -14,186 +14,174 @@
 
         <!-- TELAS DE RECUPERAÇÃO DE SENHA -->
         <activity
-            android:name=".TelaRF07ValidacaoDeCodigo"
+            android:name="com.example.bibliounifornew.TelaRF07ValidacaoDeCodigo"
             android:exported="false" />
         <activity
-            android:name=".TelaRF08RedefinirSenha"
+            android:name="com.example.bibliounifornew.TelaRF08RedefinirSenha"
             android:exported="false" />
         <activity
             android:name=".TelaRF08ConfirmarRedefinirSenha"
             android:exported="false" />
 
         <activity
-            android:name=".TelaRF27RedefinirSenhaADM"
+            android:name="com.example.bibliounifornew.TelaRF27RedefinirSenhaADM"
             android:exported="false" />
         <activity
-            android:name=".TelaRF28NovaContaADM"
+            android:name="com.example.bibliounifornew.TelaRF28NovaContaADM"
             android:exported="false" />
         <activity
             android:name=".TelaRF29GoogleADM"
             android:exported="false" />
         <activity
-            android:name=".TelaRF40ConfigADM"
+            android:name="com.example.bibliounifornew.TelaRF40ConfigADM"
             android:exported="false" />
         <activity
-            android:name=".TelaRF37ConfirmarCadastroADM"
+            android:name="com.example.bibliounifornew.TelaRF37ConfirmarCadastroADM"
             android:exported="false" />
         <activity
-            android:name=".TelaRF39InfoLivroADM"
+            android:name="com.example.bibliounifornew.TelaRF39InfoLivroADM"
             android:exported="false" />
         <activity
-            android:name=".TelaRF38ListaAlugueisADM"
+            android:name="com.example.bibliounifornew.TelaRF38ListaAlugueisADM"
             android:exported="false" />
         <activity
-            android:name=".TelaRF36FinanceiroADM"
+            android:name="com.example.bibliounifornew.TelaRF36FinanceiroADM"
             android:exported="false" />
         <activity
-            android:name=".TelaRF31GerenciamentoDeUsuarios"
+            android:name="com.example.bibliounifornew.TelaRF31GerenciamentoDeUsuarios"
             android:exported="false" />
         <activity
-            android:name=".TelaRF19"
+            android:name="TelaRF19"
             android:exported="false" />
         <activity
-            android:name=".TelaRF18"
+            android:name="com.example.bibliounifornew.TelaRF18"
             android:exported="false" />
         <activity
-            android:name=".TelaRF18_2AdicionarAmigo"
+            android:name="com.example.bibliounifornew.TelaRF35CadastroDeLivros"
             android:exported="false" />
         <activity
-            android:name=".TelaRF18BuscaAmigos"
+            android:name="com.example.bibliounifornew.TelaRF32UsuariosParaADM"
             android:exported="false" />
         <activity
-            android:name=".TelaRF18PerfilAmigo"
+            android:name="com.example.bibliounifornew.TelaRF35_1Data"
             android:exported="false" />
         <activity
-            android:name=".TelaRF35CadastroDeLivros"
+            android:name="com.example.bibliounifornew.TelaRF35_3InfosAdicionais"
             android:exported="false" />
         <activity
-            android:name=".TelaRF32UsuariosParaADM"
+            android:name="com.example.bibliounifornew.TelaRF35_4Versoes"
             android:exported="false" />
         <activity
-            android:name=".TelaRF35_1Data"
+            android:name="com.example.bibliounifornew.TelaRF11RedefinirSenha"
             android:exported="false" />
         <activity
-            android:name=".TelaRF35_3InfosAdicionais"
+            android:name="com.example.bibliounifornew.TelaRF33Solicitacoes"
             android:exported="false" />
         <activity
-            android:name=".TelaRF35_4Versoes"
+            android:name="com.example.bibliounifornew.TelaRF10Configuracao"
             android:exported="false" />
         <activity
-            android:name=".TelaRF11RedefinirSenha"
+            android:name="com.example.bibliounifornew.TelaRF34LivrosCRUD"
             android:exported="false" />
         <activity
-            android:name=".TelaRF33Solicitacoes"
+            android:name="com.example.bibliounifornew.TelaRF03LoginAluno"
             android:exported="false" />
         <activity
-            android:name=".TelaRF10Configuracao"
+            android:name="com.example.bibliounifornew.TelaRF02Intermediaria"
             android:exported="false" />
         <activity
-            android:name=".TelaRF34LivrosCRUD"
+            android:name="com.example.bibliounifornew.TelaRF09DashboardUsuario"
             android:exported="false" />
         <activity
-            android:name=".TelaRF03LoginAluno"
+            android:name=".RF09DashboardUsuario"
             android:exported="false" />
         <activity
-            android:name=".TelaRF02Intermediaria"
+            android:name="com.example.bibliounifornew.TelaRF16MinhaLivrariaActivity"
             android:exported="false" />
         <activity
-            android:name=".TelaRF09DashboardUsuario"
+            android:name="com.example.bibliounifornew.TelaRF17ListaDesejosActivity"
             android:exported="false" />
         <activity
-            android:name=".TelaRF16MinhaLivrariaActivity"
+            android:name="com.example.bibliounifornew.TelaRF22Historico"
             android:exported="false" />
         <activity
-            android:name=".TelaRF17ListaDesejosActivity"
+            android:name="com.example.bibliounifornew.TelaRF30DashboardADM"
             android:exported="false" />
         <activity
-            android:name=".TelaRF21Notificacoes"
+            android:name="com.example.bibliounifornew.TelaRF24"
             android:exported="false" />
         <activity
-            android:name=".TelaRF22Historico"
+            android:name="com.example.bibliounifornew.TelaRF25"
             android:exported="false" />
         <activity
-            android:name=".TelaRF30DashboardADM"
+            android:name="com.example.bibliounifornew.TelaRF30CrudADM"
             android:exported="false" />
         <activity
-            android:name=".TelaRF24"
-            android:exported="false" />
-        <activity
-            android:name=".TelaRF25"
-            android:exported="false" />
-        <activity
-            android:name=".TelaRF30CrudADM"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name="com.example.bibliounifornew.MainActivity"
             android:exported="false" />
         <activity
             android:name=".TelaRF04UsuarioGoogle"
             android:exported="false" />
         <activity
-            android:name=".TelaRF05CadastroNovoUsuario"
+            android:name="com.example.bibliounifornew.TelaRF05CadastroNovoUsuario"
             android:exported="false" />
         <activity
-            android:name=".TelaRF06RecuperacaoSenha"
+            android:name="com.example.bibliounifornew.TelaRF06RecuperacaoSenha"
             android:exported="false" />
         <activity
-            android:name=".TelaRF12TelaDePesquisa"
+            android:name="com.example.bibliounifornew.TelaRF12TelaDePesquisa"
             android:exported="false" />
         <activity
-            android:name=".TelaRF12_5ResultadoPesquisa"
+            android:name="com.example.bibliounifornew.TelaRF13TelaDoLivro"
             android:exported="false" />
         <activity
-            android:name=".TelaRF13TelaDoLivro"
+            android:name=".RF14TelaVerMaisLivro"
             android:exported="false" />
         <activity
-            android:name=".TelaRF14VerMaisLivro"
+            android:name="com.example.bibliounifornew.TelaRF20Solicitacoes"
             android:exported="false" />
         <activity
-            android:name=".TelaRF20Solicitacoes"
+            android:name="com.example.bibliounifornew.TelaRF20SolicitacoesTermosCondicoes"
             android:exported="false" />
         <activity
-            android:name=".TelaRF20SolicitacoesTermosCondicoes"
+            android:name="com.example.bibliounifornew.TelaRF20SolicitacoesVoltarBiblioteca"
             android:exported="false" />
         <activity
-            android:name=".TelaRF20SolicitacoesVoltarBiblioteca"
-            android:exported="false" />
-        <activity
-            android:name=".TelaRF15LeituraActivity"
+            android:name="com.example.bibliounifornew.TelaRF15LeituraActivity"
             android:exported="false" />
         <activity
             android:name=".GoogleLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".TelaRF41RedefinirADMInterno"
+            android:name="com.example.bibliounifornew.TelaRF41RedefinirADMInterno"
             android:exported="false" />
         <activity
-            android:name=".TelaRF42VerificarMidia"
+            android:name="com.example.bibliounifornew.TelaRF42VerificarMidia"
             android:exported="false" />
 
         <!-- TELAS RF33 -->
         <activity
-            android:name=".TelaRF33VerificarMidia"
+            android:name="com.example.bibliounifornew.TelaRF33VerificarMidia"
             android:exported="false" />
         <activity
-            android:name=".TelaRF332Filtro"
+            android:name="com.example.bibliounifornew.TelaRF332Filtro"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity
-            android:name=".TelaRF335UsuarioNotificado"
+            android:name="com.example.bibliounifornew.TelaRF335UsuarioNotificado"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity
-            android:name=".TelaRF336BrailleConcluido"
+            android:name="com.example.bibliounifornew.TelaRF336BrailleConcluido"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity
-            android:name=".TelaRF337ExcluirSolicitacao"
+            android:name="com.example.bibliounifornew.TelaRF337ExcluirSolicitacao"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
 
         <activity
-            android:name=".TelaRF01BemVindo"
+            android:name="com.example.bibliounifornew.TelaRF01BemVindo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

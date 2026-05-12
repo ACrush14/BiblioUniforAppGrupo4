@@ -11,58 +11,21 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:background="#6EC1C3"
+        android:background="#87DEDE"
         app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/bg_circle"
-                android:padding="10dp"
-                android:src="@mipmap/ic_launcher" />
-
-            <TextView
-                android:id="@+id/textHeaderNome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="João Bobo"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textHeaderEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="joao.bobo@email.com"
-                android:textColor="#000000"
-                android:textSize="14sp" />
-        </LinearLayout>
 
         <TextView
             android:id="@+id/btnFechar"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_margin="16dp"
-            android:clickable="true"
-            android:focusable="true"
             android:gravity="center"
             android:text="@string/fechar_x"
             android:textColor="#1B3434"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -116,47 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Campo obrigatório"
-                android:textColor="#E53935"
-                android:textSize="12sp"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/textErroSenhaAntiga"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="A senha é a mesma da antiga"
-                android:textColor="#E53935"
-                android:textSize="12sp"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/textErroSenhaCaracteres"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="A senha deve conter pelo menos 8 caracteres"
-                android:textColor="#E53935"
-                android:textSize="12sp"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/textErroSenhaNumero"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Um número"
-                android:textColor="#E53935"
-                android:textSize="12sp"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/textErroSenhaMaiuscula"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Uma letra maiúscula"
+                android:text="@string/erro_senha_invalida"
                 android:textColor="#E53935"
                 android:textSize="12sp"
                 android:visibility="gone" />
@@ -187,7 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="As senhas estão diferentes, verifique!"
+                android:text="@string/erro_senhas_nao_coincidem"
                 android:textColor="#E53935"
                 android:textSize="12sp"
                 android:visibility="gone" />

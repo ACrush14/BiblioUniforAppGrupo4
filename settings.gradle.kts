@@ -1,6 +1,12 @@
 pluginManagement {
     repositories {
-        google() // Remova o bloco 'content { ... }' daqui
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
         mavenCentral()
         gradlePluginPortal()
     }
@@ -16,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BiblioUnifor"
+rootProject.name = "BiblioUnifor NEW"
 include(":app")
  
