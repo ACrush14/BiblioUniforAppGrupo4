@@ -17,7 +17,7 @@ class TelaRF05CadastroNovoUsuario : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.telarf05_cadastrar_novo_usuario)
+        setContentView(R.layout.telarf04_cadastrar_novo_usuario)
 
         etNome = findViewById(R.id.editTextNome)
         etUsuario = findViewById(R.id.editTextUsuario)

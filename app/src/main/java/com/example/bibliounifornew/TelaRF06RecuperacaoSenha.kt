@@ -4,7 +4,7 @@ class TelaRF06RecuperacaoSenha : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.telarf06_recuperacao_senha)
+        setContentView(R.layout.telarf05_recuperacao_senha)
 
         val etEmail = findViewById<EditText>(R.id.editTextEmaiREC)
         val btnEnviar = findViewById<Button>(R.id.buttonEnviarCOD)

@@ -130,7 +130,7 @@
                 android:id="@+id/Criar"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:backgroundTint="#87DEDE"
+                android:backgroundTint="@color/biblio_cyan"
                 android:text="Criar"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
