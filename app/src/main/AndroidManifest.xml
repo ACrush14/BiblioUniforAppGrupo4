@@ -20,17 +20,10 @@
             android:name="com.example.bibliounifornew.TelaRF08RedefinirSenha"
             android:exported="false" />
         <activity
-            android:name=".TelaRF08ConfirmarRedefinirSenha"
-            android:exported="false" />
-
-        <activity
             android:name="com.example.bibliounifornew.TelaRF27RedefinirSenhaADM"
             android:exported="false" />
         <activity
             android:name="com.example.bibliounifornew.TelaRF28NovaContaADM"
-            android:exported="false" />
-        <activity
-            android:name=".TelaRF29GoogleADM"
             android:exported="false" />
         <activity
             android:name="com.example.bibliounifornew.TelaRF40ConfigADM"
