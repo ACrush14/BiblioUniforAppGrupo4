@@ -17,6 +17,8 @@ class TelaRF01BemVindo : AppCompatActivity() {
         botaoComecar.setOnClickListener {
             val intent = Intent(this, TelaRF02Intermediaria::class.java)
             startActivity(intent)
+
+            //dont die
         }
     }
 }
